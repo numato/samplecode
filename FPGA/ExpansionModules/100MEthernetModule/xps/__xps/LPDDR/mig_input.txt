@@ -1,0 +1,16 @@
+SET_FLAG FLOW SOCKETABLE 
+SET_FLAG MODE BATCH 
+SET_FLAG  DRCMODE  ERROR 
+SET_FLAG COMPONENT_NAME LPDDR
+SET_PREFERENCE projectname LPDDR
+SET_PREFERENCE devicefamily  spartan6
+SET_PREFERENCE devicesubfamily  
+SET_PREFERENCE partname xc6slx45csg324-2
+SET_PREFERENCE device  xc6slx45
+SET_PREFERENCE package  csg324
+SET_PREFERENCE speedgrade -2
+SET_PREFERENCE outputdirectory ./
+SET_PREFERENCE workingdirectory ./
+SET_PREFERENCE subworkingdirectory ./
+SET_PREFERENCE InputParamsFile param_input.xml
+SET_PREFERENCE OutputParamsFile param_output.xml

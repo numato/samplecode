@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.xilinx.sdk.debug.ui.launchConfigurationWrapper">
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.REMOTE_TCP" value="true"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.verboseMode" value="false"/>
+<intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
+<stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.xilinx.sdk.debug.core.XMDDebuggerId"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug\SaturnV3Ethernet.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="SaturnV3Ethernet"/>
+<booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="xilinx.gnu.mb.exe.debug.1504562546"/>
+<booleanAttribute key="org.eclipse.cdt.launch.use_terminal" value="true"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/SaturnV3Ethernet"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="xilinx.data.files.list" value=""/>
+<booleanAttribute key="xilinx.elf.verify" value="false"/>
+<stringAttribute key="xilinx.init.tcl" value="ps7_init is applicable only for zynq platforms"/>
+<booleanAttribute key="xilinx.no.download.program" value="false"/>
+<booleanAttribute key="xilinx.profile.enable" value="false"/>
+<intAttribute key="xilinx.reset.type" value="0"/>
+<stringAttribute key="xilinx.romem.base" value=""/>
+<stringAttribute key="xilinx.romem.size" value=""/>
+<stringAttribute key="xilinx.stdio.baud" value="9600"/>
+<booleanAttribute key="xilinx.stdio.connect" value="false"/>
+<stringAttribute key="xilinx.stdio.port" value="COM6"/>
+<booleanAttribute key="xilinx.xmd.crosstrigger" value="false"/>
+<booleanAttribute key="xilinx.xmd.safe.mode" value="false"/>
+</launchConfiguration>

@@ -1,0 +1,36 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for Seven Segment Display Expansion Modules on Saturn Expansion Connector #
+# To use it in your project :                                                                   #
+# * Remove or comment the lines corresponding to unused pins                                    #
+# * Rename the used signals according to the your project                                       #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+
+   # Clock 100 MHz
+      NET "Clk"                LOC = V10   | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+	  NET "rst_n"                          IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST | PULLUP;
+	  
+#**************************************************************************************************************************************************#
+#                                            When Saturn Expansion Connector LED is OFF                                                             #
+#**************************************************************************************************************************************************#	
+####################################################################################################################################################
+#                                            Seven Segment Display Expansion Module		                                                           #
+####################################################################################################################################################	
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P8	                                                                   #
+####################################################################################################################################################
+	 NET "Enable[0]"           LOC = T11   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[1]"           LOC = R11   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[2]"           LOC = N11   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[3]"           LOC = M11   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P10	                                                                   #
+#################################################################################################################################################### 
+     NET "SevenSegment[7]"     LOC = V9   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;    #a
+     NET "SevenSegment[6]"     LOC = T9   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;    #b
+     NET "SevenSegment[5]"     LOC = N7   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;    #c
+     NET "SevenSegment[4]"     LOC = V7   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;    #d
+     NET "SevenSegment[3]"     LOC = U7   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;    #e
+     NET "SevenSegment[2]"     LOC = N10  | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;    #f
+     NET "SevenSegment[1]"     LOC = P11  | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;    #g
+     NET "SevenSegment[0]"     LOC = P8   | IOSTANDARD = LVCMOS33   | DRIVE = 8  | SLEW = FAST;    #Dot	

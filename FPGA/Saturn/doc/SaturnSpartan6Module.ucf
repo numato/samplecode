@@ -1,0 +1,265 @@
+#Uncomment lines as necessary
+
+CONFIG VCCAUX = "3.3" ;
+
+#NET "CLK" LOC = V10;
+TIMESPEC TS_CLK = PERIOD "CLK" 100 MHz HIGH 50%;
+
+############################################################################
+# FTDI FT2232H-Channel B used as USB Asynchronnous FIFO
+############################################################################
+
+#NET "data<0>"    LOC = "L17"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "data<1>"    LOC = "L18"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "data<2>"    LOC = "M16"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "data<3>"    LOC = "M18"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "data<4>"    LOC = "N17"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "data<5>"    LOC = "N18"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "data<6>"    LOC = "P17"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "data<7>"    LOC = "P18"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+
+#NET "rxf"        LOC = "K18"   | IOSTANDARD = LVTTL;
+#NET "txe"        LOC = "K17"   | IOSTANDARD = LVTTL;
+#NET "rd"         LOC = "J18"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "wr"         LOC = "J16"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+#NET "siwua"      LOC = "H18"   | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8 ;
+
+
+############################################################################
+# LPDDR
+############################################################################
+
+#NET  "mcb3_dram_a[0]"                            LOC = "J7" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[1]"                            LOC = "J6" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[2]"                            LOC = "H5" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[3]"                            LOC = "L7" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[4]"                            LOC = "F3" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[5]"                            LOC = "H4" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[6]"                            LOC = "H3" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[7]"                            LOC = "H6" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[8]"                            LOC = "D2" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[9]"                            LOC = "D1" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[10]"                           LOC = "F4" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[11]"                           LOC = "D3" | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_a[12]"                           LOC = "G6" | IOSTANDARD = MOBILE_DDR;
+
+#NET  "mcb3_dram_dq[0]"                           LOC = "L2"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[1]"                           LOC = "L1"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[2]"                           LOC = "K2"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[3]"                           LOC = "K1"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[4]"                           LOC = "H2"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[5]"                           LOC = "H1"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[6]"                           LOC = "J3"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[7]"                           LOC = "J1"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[8]"                           LOC = "M3"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[9]"                           LOC = "M1"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[10]"                          LOC = "N2"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[11]"                          LOC = "N1"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[12]"                          LOC = "T2"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[13]"                          LOC = "T1"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[14]"                          LOC = "U2"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dq[15]"                          LOC = "U1"  | IOSTANDARD = MOBILE_DDR;
+
+#NET  "mcb3_dram_ba[0]"                           LOC = "F2"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_ba[1]"                           LOC = "F1"  | IOSTANDARD = MOBILE_DDR;
+
+#NET  "mcb3_dram_ras_n"                           LOC = "L5"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_cas_n"                           LOC = "K5"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_we_n"                            LOC = "E3"  | IOSTANDARD = MOBILE_DDR;
+
+#NET  "mcb3_dram_ck"                              LOC = "G3"  | IOSTANDARD = DIFF_MOBILE_DDR;	
+#NET  "mcb3_dram_ck_n"                            LOC = "G1"  | IOSTANDARD = DIFF_MOBILE_DDR;
+#NET  "mcb3_dram_cke"                             LOC = "H7"  | IOSTANDARD = MOBILE_DDR;
+
+#NET  "mcb3_dram_dm"                              LOC = "K3"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_dqs"                             LOC = "L4"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_udm"                             LOC = "K4"  | IOSTANDARD = MOBILE_DDR;
+#NET  "mcb3_dram_udqs"                            LOC = "P2"  | IOSTANDARD = MOBILE_DDR;
+ 
+#NET  "mcb3_rzq"                                  LOC = "N4"  | IOSTANDARD = MOBILE_DDR;
+
+#NET  "c3_sys_clk"                                LOC = "V10" | IOSTANDARD = LVCMOS33;
+#NET  "c3_sys_rst_n"                              LOC = "M13" | IOSTANDARD = LVCMOS33 | PULLUP;
+
+#NET  "calib_done"                               LOC = "K13"  | IOSTANDARD = LVCMOS33;
+#NET  "error"                                    LOC = "K12"  | IOSTANDARD = LVCMOS33;
+
+############################################################################
+# GPIOs
+############################################################################
+
+#Header P3
+
+#NET "gpio<5>" 	LOC = G13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<6>" 	LOC = H12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<9>" 	LOC = H16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<10>" 	LOC = H15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<13>" 	LOC = G14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<14>" 	LOC = F14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<17>" 	LOC = F16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<18>" 	LOC = F15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<21>" 	LOC = E18 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<22>" 	LOC = E16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<25>" 	LOC = C18 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<26>" 	LOC = C17 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<29>" 	LOC = A15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<30>" 	LOC = C15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<33>" 	LOC = A14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<34>" 	LOC = B14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<37>" 	LOC = A13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<38>" 	LOC = C13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<41>" 	LOC = C12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<42>" 	LOC = D12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<45>" 	LOC = E11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<46>" 	LOC = F11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+
+#Header P2
+
+#NET "gpio<7>" 	LOC = K14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<8>" 	LOC = J13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<11>" 	LOC = H14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<12>" 	LOC = H13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<15>" 	LOC = G18 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<16>" 	LOC = G16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<19>" 	LOC = F18 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<20>" 	LOC = F17 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<23>" 	LOC = D18 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<24>" 	LOC = D17 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<27>" 	LOC = A16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<28>" 	LOC = B16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<31>" 	LOC = C14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<32>" 	LOC = D14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<35>" 	LOC = E13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<36>" 	LOC = F13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<39>" 	LOC = E12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<40>" 	LOC = F12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<43>" 	LOC = A12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<44>" 	LOC = B12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<47>" 	LOC = C11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<48>" 	LOC = D11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+
+#Header P5
+
+#NET "gpio<53>" 	LOC = F10 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<54>" 	LOC = G11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<57>" 	LOC = A10 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<58>" 	LOC = C10 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<61>" 	LOC = C9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<62>" 	LOC = D9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<65>" 	LOC = F8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<66>" 	LOC = G8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<69>" 	LOC = C8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<70>" 	LOC = D8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<73>" 	LOC = E6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<73>" 	LOC = F7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<74>" 	LOC = A6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<75>" 	LOC = B6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<81>" 	LOC = A5 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<82>" 	LOC = C5 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<85>" 	LOC = A3 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<86>" 	LOC = B3 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+
+#Header P4
+
+#NET "gpio<55>" 	LOC = A11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<56>" 	LOC = B11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<59>" 	LOC = F9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<60>" 	LOC = G9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<63>" 	LOC = A9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<64>" 	LOC = B9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<67>" 	LOC = E8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<68>" 	LOC = E7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<71>" 	LOC = A8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<72>" 	LOC = B8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<75>" 	LOC = A7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<76>" 	LOC = C7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<79>" 	LOC = C6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<80>" 	LOC = D6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<83>" 	LOC = A4 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<84>" 	LOC = B4 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<87>" 	LOC = A2 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<88>" 	LOC = B2 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+
+#Header P6
+
+#NET "gpio<105>" 	LOC = R3 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<106>" 	LOC = T3 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<109>" 	LOC = R5 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<110>" 	LOC = T5 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<113>" 	LOC = N5 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<114>" 	LOC = P6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<117>" 	LOC = R7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<118>" 	LOC = T7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<121>" 	LOC = U7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<122>" 	LOC = V7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<125>" 	LOC = N7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<126>" 	LOC = P8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<129>" 	LOC = T9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<130>" 	LOC = V9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<133>" 	LOC = R10 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<134>" 	LOC = T10 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<137>" 	LOC = N10 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<138>" 	LOC = P11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+
+#Header P7
+
+#NET "gpio<107>" 	LOC = T4 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<108>" 	LOC = V4 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<111>" 	LOC = U5 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<112>" 	LOC = V5 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<115>" 	LOC = T6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<116>" 	LOC = V6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<119>" 	LOC = N6 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<120>" 	LOC = P7 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<123>" 	LOC = U8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<124>" 	LOC = V8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<127>" 	LOC = M8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<128>" 	LOC = N8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<131>" 	LOC = R8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<132>" 	LOC = T8 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<135>" 	LOC = M10 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<136>" 	LOC = N9 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<139>" 	LOC = U11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<140>" 	LOC = V11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+
+#Header P9
+
+#NET "gpio<149>" 	LOC = R11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<150>" 	LOC = T11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<153>" 	LOC = T12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<154>" 	LOC = V12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<157>" 	LOC = T14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<158>" 	LOC = V14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<161>" 	LOC = U16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<162>" 	LOC = V16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<165>" 	LOC = T17 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<166>" 	LOC = T18 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<169>" 	LOC = K15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<170>" 	LOC = K16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<173>" 	LOC = L12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<174>" 	LOC = L13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+ 
+
+#Header P8
+
+#NET "gpio<151>" 	LOC = M11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<152>" 	LOC = N11 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<155>" 	LOC = U13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<156>" 	LOC = V13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<159>" 	LOC = U15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<160>" 	LOC = V15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<163>" 	LOC = U17 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<164>" 	LOC = U18 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<167>" 	LOC = P15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<168>" 	LOC = P16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<171>" 	LOC = N15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<172>" 	LOC = N16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<175>" 	LOC = L15 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<176>" 	LOC = L16 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<179>" 	LOC = M14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<180>" 	LOC = N14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<183>" 	LOC = L14 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<184>" 	LOC = M13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<187>" 	LOC = K12 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+#NET "gpio<188>" 	LOC = K13 | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST | PULLUP ;
+

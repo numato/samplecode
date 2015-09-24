@@ -1,0 +1,34 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for Seven Segment Display Expansion Module on Elbert V2                  #
+# To use it in your project :                                                                  #
+# * Remove or comment the lines corresponding to unused pins                                   #
+# * Rename the used signals according to the your project                                      #
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+   # Clock 12 MHz
+       NET "Clk"               LOC = P129  | IOSTANDARD = LVCMOS33 | PERIOD = 12MHz;
+	   NET "rst_n"             LOC = P80   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST | PULLUP;
+		
+####################################################################################################################################################
+#                                            Seven Segment Display Expansion Module                                                                #
+####################################################################################################################################################	
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P7	                                                                   #
+####################################################################################################################################################
+	 NET "Enable[0]"           LOC = P31  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[1]"           LOC = P32  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[2]"           LOC = P28  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[3]"           LOC = P30  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+	 
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P6	                                                                   #
+####################################################################################################################################################
+     NET "SevenSegment[7]"     LOC = P20  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;    #a
+     NET "SevenSegment[6]"     LOC = P18  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;    #b
+     NET "SevenSegment[5]"     LOC = P15  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;    #c
+     NET "SevenSegment[4]"     LOC = P13  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;    #d
+     NET "SevenSegment[3]"     LOC = P12  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;    #e
+     NET "SevenSegment[2]"     LOC = P19  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;    #f
+     NET "SevenSegment[1]"     LOC = P21  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;    #g
+     NET "SevenSegment[0]"     LOC = P16  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;    #Dot	
+	 

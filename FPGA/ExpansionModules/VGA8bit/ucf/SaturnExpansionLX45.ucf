@@ -1,0 +1,36 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for VGA Expansion Module on Saturn Expansion Connector                #
+# To use it in your project :                                                               #
+# * Remove or comment the lines corresponding to unused pins                                #
+# * Rename the used signals according to the your project                                   #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+  
+   # Clock 100 MHz
+      NET "Clk"       LOC = "V10"   | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	  
+#**************************************************************************************************************************************************#
+#                                            When Saturn Expansion Connector LED is OFF                                                             #
+#**************************************************************************************************************************************************#
+####################################################################################################################################################
+#                                            VGA Expansion Module	                                                                               #
+####################################################################################################################################################		
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P10	                                                                   #
+####################################################################################################################################################	 
+    NET "hsync"      LOC = P11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                     # Horizontal Sync
+    NET "vsync"      LOC = N10 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                     # Vertical Sync 
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P8	                                                                   #
+####################################################################################################################################################
+    NET "Red[2]"     LOC = N11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                     # RED
+    NET "Red[1]"     LOC = M11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "Red[0]"     LOC = T11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+	  
+    NET "Green[2]"   LOC = R11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                     # GREEN
+    NET "Green[1]"   LOC = U11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "Green[0]"   LOC = V11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+	  
+    NET "Blue[2]"    LOC = R10 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                     # BLUE
+    NET "Blue[1]"    LOC = T10 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+	

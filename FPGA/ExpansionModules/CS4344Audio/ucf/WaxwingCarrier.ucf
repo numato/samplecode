@@ -1,0 +1,22 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for Audio CS4344 Expansion Modules on Waxwing Spartan6 Mini Module Carrier     #
+# To use it in your project :                                                                        #
+# * Remove or comment the lines corresponding to unused pins                                         #
+# * Rename the used signals according to the your project                                            #
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+  
+  # Clock 100 MHz  
+	  NET "Clk"        LOC = V10 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+	  
+
+###################################################################################################################################################
+#                            Audio CS4344 Expansion Module                                                                                        #
+################################################################################################################################################### 
+###################################################################################################################################################
+#                                   HEADER P5                                                                                                     #
+###################################################################################################################################################	 
+     NET "SDIN"        LOC = T4 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "SCLK"        LOC = R3 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "LRCK"        LOC = T7 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "MCLK"        LOC = V5 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;

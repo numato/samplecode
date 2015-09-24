@@ -1,0 +1,28 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for LM4550 Audio Expansion Module on Waxwing Carrier                      #
+# To use it in your project :                                                                   #
+# * Remove or comment the lines corresponding to unused pins                                    #
+# * Rename the used signals according to the your project                                       #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+
+  
+   # Clock 100 MHz
+     NET "CLK"           LOC = "V10"   | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	 NET "Rst"                           IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST | PULLDOWN; 
+	 
+####################################################################################################################################################
+#                                            LM4550 Audio Expansion Module                                                                         #
+####################################################################################################################################################		
+####################################################################################################################################################
+#                                                    Header P5                                                                                     #
+####################################################################################################################################################
+
+    
+    NET "AC97SDO"       LOC = "T4"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97SDI"       LOC = "T3"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97Sync"      LOC = "T7"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97BitClock"  LOC = "R3"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97Rstn"      LOC = "R7"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+	
+ NET "AC97BitClock" CLOCK_DEDICATED_ROUTE = FALSE;

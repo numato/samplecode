@@ -1,0 +1,4 @@
+SET_ERROR_CODE 0
+SET_XMDF_PATH ./LPDDR_xmdf.tcl
+SET_PARAMETER component_name LPDDR
+SET_PARAMETER xml_input_file ./LPDDR/user_design/mig.prj

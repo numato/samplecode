@@ -1,0 +1,386 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:numato_kicad_lib
+LIBS:Mimas-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title "MIMAS SPARTAN 6 FPGA MODULE"
+Date "3 dec 2013"
+Rev ""
+Comp "Numato Lab"
+Comment1 "http://www.numato.com"
+Comment2 "License : CC BY-SA"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_2 P1
+U 1 1 5208AE8E
+P 1500 4000
+F 0 "P1" V 1500 4000 40  0000 C CNN
+F 1 "CONN_2" V 1550 4000 40  0001 C CNN
+F 2 "" H 1500 4000 60  0000 C CNN
+F 3 "" H 1500 4000 60  0000 C CNN
+	1    1500 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1850 4100 2100 4100
+Wire Wire Line
+	1850 3900 2650 3900
+Wire Wire Line
+	4700 1000 3950 1000
+$Comp
+L C C4
+U 1 1 5208B06B
+P 6200 1600
+F 0 "C4" H 6250 1700 50  0000 L CNN
+F 1 "10uF" H 6250 1500 50  0000 L CNN
+F 2 "" H 6200 1600 60  0000 C CNN
+F 3 "" H 6200 1600 60  0000 C CNN
+	1    6200 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 5208B087
+P 5750 1350
+F 0 "R6" V 5850 1350 50  0000 C CNN
+F 1 "220R" V 5750 1350 50  0000 C CNN
+F 2 "" H 5750 1350 60  0000 C CNN
+F 3 "" H 5750 1350 60  0000 C CNN
+	1    5750 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1000 6500 1000
+Wire Wire Line
+	5750 1100 5750 1000
+Connection ~ 5750 1000
+Wire Wire Line
+	5750 1600 5750 1700
+$Comp
+L R R7
+U 1 1 5208B0E1
+P 5750 1950
+F 0 "R7" V 5830 1950 50  0000 C CNN
+F 1 "330R" V 5750 1950 50  0000 C CNN
+F 2 "" H 5750 1950 60  0000 C CNN
+F 3 "" H 5750 1950 60  0000 C CNN
+	1    5750 1950
+	1    0    0    -1  
+$EndComp
+Connection ~ 5750 2200
+Wire Wire Line
+	6200 1400 6200 1000
+Connection ~ 6200 1000
+Wire Wire Line
+	5100 1500 5100 1650
+Wire Wire Line
+	5100 1650 5750 1650
+Connection ~ 5750 1650
+Text Label 3950 1000 0    60   ~ 0
+VCCIN
+Text Label 6500 1000 2    60   ~ 0
+VCCAUX
+Wire Wire Line
+	4700 2900 3950 2900
+$Comp
+L C C2
+U 1 1 5208B318
+P 6200 3500
+F 0 "C2" H 6250 3600 50  0000 L CNN
+F 1 "10uF" H 6250 3400 50  0000 L CNN
+F 2 "" H 6200 3500 60  0000 C CNN
+F 3 "" H 6200 3500 60  0000 C CNN
+	1    6200 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5208B31E
+P 5750 3250
+F 0 "R2" V 5850 3250 50  0000 C CNN
+F 1 "220R" V 5750 3250 50  0000 C CNN
+F 2 "" H 5750 3250 60  0000 C CNN
+F 3 "" H 5750 3250 60  0000 C CNN
+	1    5750 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2900 6500 2900
+Wire Wire Line
+	5750 3000 5750 2900
+Connection ~ 5750 2900
+Wire Wire Line
+	5750 3500 5750 3600
+$Comp
+L R R3
+U 1 1 5208B328
+P 5750 3850
+F 0 "R3" V 5830 3850 50  0000 C CNN
+F 1 "10R" V 5750 3850 50  0000 C CNN
+F 2 "" H 5750 3850 60  0000 C CNN
+F 3 "" H 5750 3850 60  0000 C CNN
+	1    5750 3850
+	1    0    0    -1  
+$EndComp
+Connection ~ 5750 4100
+Wire Wire Line
+	6200 3300 6200 2900
+Connection ~ 6200 2900
+Wire Wire Line
+	5100 3400 5100 3550
+Wire Wire Line
+	5100 3550 5750 3550
+Connection ~ 5750 3550
+Text Label 3950 2900 0    60   ~ 0
+VCCIN
+Text Label 6500 2900 2    60   ~ 0
+VCCINT
+Wire Wire Line
+	4750 5050 4000 5050
+$Comp
+L C C3
+U 1 1 5208B35B
+P 6250 5650
+F 0 "C3" H 6300 5750 50  0000 L CNN
+F 1 "10uF" H 6300 5550 50  0000 L CNN
+F 2 "" H 6250 5650 60  0000 C CNN
+F 3 "" H 6250 5650 60  0000 C CNN
+	1    6250 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5208B361
+P 5800 5400
+F 0 "R4" V 5900 5400 50  0000 C CNN
+F 1 "220" V 5800 5400 50  0000 C CNN
+F 2 "" H 5800 5400 60  0000 C CNN
+F 3 "" H 5800 5400 60  0000 C CNN
+	1    5800 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 5050 6550 5050
+Wire Wire Line
+	5800 5150 5800 5050
+Connection ~ 5800 5050
+Wire Wire Line
+	5800 5650 5800 5750
+$Comp
+L R R5
+U 1 1 5208B36B
+P 5800 6000
+F 0 "R5" V 5880 6000 50  0000 C CNN
+F 1 "330R" V 5800 6000 50  0000 C CNN
+F 2 "" H 5800 6000 60  0000 C CNN
+F 3 "" H 5800 6000 60  0000 C CNN
+	1    5800 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 5450 6250 5050
+Connection ~ 6250 5050
+Wire Wire Line
+	5150 5550 5150 5700
+Wire Wire Line
+	5150 5700 5800 5700
+Connection ~ 5800 5700
+Text Label 4000 5050 0    60   ~ 0
+VCCIN
+Text Label 6550 5050 2    60   ~ 0
+VCCIO
+$Comp
+L GS3 GS1
+U 1 1 5208B4D2
+P 2800 3800
+F 0 "GS1" H 2850 4000 50  0000 C CNN
+F 1 "GS3" H 2850 3601 40  0001 C CNN
+F 2 "" H 2800 3800 60  0000 C CNN
+F 3 "" H 2800 3800 60  0000 C CNN
+	1    2800 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3700 2650 3700
+Wire Wire Line
+	2950 3800 3750 3800
+Text Label 3750 3800 2    60   ~ 0
+VCCIN
+Text Label 1800 3700 0    60   ~ 0
+VUSB
+Text Label 2100 4100 2    60   ~ 0
+GND
+Text Label 6400 2200 2    60   ~ 0
+GND
+Text Label 6450 6650 2    60   ~ 0
+GND
+Text HLabel 6500 1000 2    60   Input ~ 0
+VCCAUX
+Text HLabel 6550 5050 2    60   Input ~ 0
+VCCIO
+Text HLabel 6500 2900 2    60   Input ~ 0
+VCCINT
+Text HLabel 1800 3700 0    60   Input ~ 0
+VUSB
+Text GLabel 2100 4100 2    60   Input ~ 0
+GND
+Wire Wire Line
+	3300 4050 3300 3800
+Connection ~ 3300 3800
+Wire Wire Line
+	3300 4450 3300 4550
+Wire Wire Line
+	3300 4550 3650 4550
+Text Label 3650 4550 2    60   ~ 0
+GND
+Wire Wire Line
+	5750 4100 6550 4100
+Text Label 6550 4100 2    60   ~ 0
+GND
+Wire Wire Line
+	5750 2200 6400 2200
+$Comp
+L CAPAPOL C1
+U 1 1 5215BCDB
+P 3300 4250
+F 0 "C1" H 3350 4350 50  0000 L CNN
+F 1 "47uF" H 3350 4150 50  0000 L CNN
+F 2 "" H 3300 4250 60  0000 C CNN
+F 3 "" H 3300 4250 60  0000 C CNN
+	1    3300 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3700 6200 4100
+Connection ~ 6200 4100
+Wire Wire Line
+	6200 1800 6200 2200
+Connection ~ 6200 2200
+$Comp
+L GS3 GS2
+U 1 1 521AF6F2
+P 5650 6450
+F 0 "GS2" H 5700 6650 50  0000 C CNN
+F 1 "GS3" H 5700 6251 40  0001 C CNN
+F 2 "" H 5650 6450 60  0000 C CNN
+F 3 "" H 5650 6450 60  0000 C CNN
+	1    5650 6450
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 521AF975
+P 5550 6000
+F 0 "R1" V 5630 6000 50  0000 C CNN
+F 1 "220R" V 5550 6000 50  0000 C CNN
+F 2 "" H 5550 6000 60  0000 C CNN
+F 3 "" H 5550 6000 60  0000 C CNN
+	1    5550 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 6650 5650 6600
+Wire Wire Line
+	5750 6300 5800 6300
+Wire Wire Line
+	5800 6300 5800 6250
+Wire Wire Line
+	5550 6300 5550 6250
+Wire Wire Line
+	5550 5750 5550 5700
+Connection ~ 5550 5700
+Wire Wire Line
+	5650 6650 6450 6650
+Wire Wire Line
+	6250 5850 6250 6650
+Connection ~ 6250 6650
+$Comp
+L GND #PWR01
+U 1 1 5220D19A
+P 3650 4600
+F 0 "#PWR01" H 3650 4600 30  0001 C CNN
+F 1 "GND" H 3650 4530 30  0001 C CNN
+F 2 "" H 3650 4600 60  0000 C CNN
+F 3 "" H 3650 4600 60  0000 C CNN
+	1    3650 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4550 3650 4600
+$Comp
+L LM317_SOT223 U3
+U 1 1 522FF4DD
+P 5100 1150
+F 0 "U3" H 5100 1450 60  0000 C CNN
+F 1 "LM317" H 4950 1550 60  0000 L CNN
+F 2 "~" H 5100 1150 60  0000 C CNN
+F 3 "~" H 5100 1150 60  0000 C CNN
+	1    5100 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM317_SOT223 U1
+U 1 1 522FF4EF
+P 5100 3050
+F 0 "U1" H 5100 3350 60  0000 C CNN
+F 1 "LM317" H 4950 3450 60  0000 L CNN
+F 2 "~" H 5100 3050 60  0000 C CNN
+F 3 "~" H 5100 3050 60  0000 C CNN
+	1    5100 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM317_SOT223 U2
+U 1 1 522FF4F5
+P 5150 5200
+F 0 "U2" H 5150 5500 60  0000 C CNN
+F 1 "LM317" H 5000 5600 60  0000 L CNN
+F 2 "~" H 5150 5200 60  0000 C CNN
+F 3 "~" H 5150 5200 60  0000 C CNN
+	1    5150 5200
+	1    0    0    -1  
+$EndComp
+Text Notes 1350 4250 1    59   ~ 0
+EXTERNAL POWER
+Text Notes 2400 3350 0    59   ~ 0
+POWER SELECT\n1-2 USB POWER\n2-3 EXT POWER
+Text Notes 5350 6550 1    59   ~ 0
+1 - 2 3.3V\n2 - 3 2.5V
+Text Notes 5150 6600 1    59   ~ 0
+BANK 0,1,3\nPower Select
+$EndSCHEMATC

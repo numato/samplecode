@@ -1,0 +1,27 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for IP4776CZ38 Expansion Module Transmitter on Waxwing Development Board  #
+# To use it in your project :                                                                   #
+# * Remove or comment the lines corresponding to unused pins                                    #
+# * Rename the used signals according to the your project                                       #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+
+   # Clock 100 MHz
+     NET "CLK"           LOC = "V10"   | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	 NET "RST"                            IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST | PULLUP; 
+	 
+####################################################################################################################################################
+#                                       IP4776CZ38 Expansion Module Transmitter                                                                    #
+####################################################################################################################################################		
+####################################################################################################################################################
+#                              Expansion Connector's HEADER P5 when Expansion Connector LED is OFF	                                               #
+####################################################################################################################################################
+	
+     NET "TMDS(0)"     LOC = "B3"   | IOSTANDARD = TMDS_33 | DRIVE = 8  | SLEW = FAST; # Blue
+     NET "TMDSN(0)"    LOC = "A3"   | IOSTANDARD = TMDS_33 | DRIVE = 8  | SLEW = FAST;
+     NET "TMDS(1)"     LOC = "C5"   | IOSTANDARD = TMDS_33 | DRIVE = 8  | SLEW = FAST; # Green    
+     NET "TMDSN(1)"    LOC = "A5"   | IOSTANDARD = TMDS_33 | DRIVE = 8  | SLEW = FAST;
+     NET "TMDS(2)"     LOC = "B4"   | IOSTANDARD = TMDS_33 | DRIVE = 8  | SLEW = FAST; # Red  
+     NET "TMDSN(2)"    LOC = "A4"   | IOSTANDARD = TMDS_33 | DRIVE = 8  | SLEW = FAST; 
+     NET "TMDS(3)"     LOC = "B2"   | IOSTANDARD = TMDS_33 | DRIVE = 8  | SLEW = FAST; # CLK
+     NET "TMDSN(3)"    LOC = "A2"   | IOSTANDARD = TMDS_33 | DRIVE = 8  | SLEW = FAST;

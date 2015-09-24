@@ -1,0 +1,35 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for Seven Segment Expansion Modules on Waxwing Spartan6 Development Board       #
+# To use it in your project :                                                                         #
+# * Remove or comment the lines corresponding to unused pins in the project                           #
+# * Rename the used signals according to the your project                                             #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+
+  
+  # Clock 100 MHz  
+	 NET "Clk"                     LOC = V10 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+	 NET "rst_n"                               IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST | PULLUP;
+	 
+###################################################################################################################################################
+#                      Seven Segment Display Expansion Module                                                                                     #
+###################################################################################################################################################
+###################################################################################################################################################
+#                                   HEADER P5                                                                                                     #
+################################################################################################################################################### 	
+	 NET "Enable[0]"              LOC = A5  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[1]"              LOC = C5  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[2]"              LOC = A4  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[3]"              LOC = B4  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+###################################################################################################################################################
+#                                   HEADER P4                                                                                                     #
+################################################################################################################################################### 
+     NET "SevenSegment[7]"        LOC = C11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #a
+     NET "SevenSegment[6]"        LOC = D11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #b
+     NET "SevenSegment[5]"        LOC = H15 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #c
+     NET "SevenSegment[4]"        LOC = E13 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #d
+     NET "SevenSegment[3]"        LOC = F13 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #e
+     NET "SevenSegment[2]"        LOC = B6  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #f
+     NET "SevenSegment[1]"        LOC = A6  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #g
+     NET "SevenSegment[0]"        LOC = H16 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #Dot
+

@@ -1,0 +1,41 @@
+#Please do not modify this file by hand
+XmpVersion: 14.7
+VerMgmt: 14.7
+IntStyle: default
+Flow: ise
+MHS File: SaturnV3Ethernet100M.mhs
+Architecture: spartan6
+Device: xc6slx45
+Package: csg324
+SpeedGrade: -2
+UserCmd1: 
+UserCmd1Type: 0
+UserCmd2: 
+UserCmd2Type: 0
+GenSimTB: 0
+SdkExportBmmBit: 1
+SdkExportDir: SDK/SDK_Export
+InsertNoPads: 0
+WarnForEAArch: 1
+HdlLang: VHDL
+SimModel: BEHAVIORAL
+ExternalMemSim: 0
+UcfFile: data/SaturnV3Ethernet100M.ucf
+EnableParTimingError: 1
+ShowLicenseDialog: 1
+BInfo: 
+ICacheAddr: LPDDR,C_S0_AXI_BASEADDR
+ICacheAddr: LPDDR,C_S1_AXI_BASEADDR
+ICacheAddr: LPDDR,C_S2_AXI_BASEADDR
+ICacheAddr: LPDDR,C_S3_AXI_BASEADDR
+ICacheAddr: LPDDR,C_S4_AXI_BASEADDR
+ICacheAddr: LPDDR,C_S5_AXI_BASEADDR
+DCacheAddr: LPDDR,C_S0_AXI_BASEADDR
+DCacheAddr: LPDDR,C_S1_AXI_BASEADDR
+DCacheAddr: LPDDR,C_S2_AXI_BASEADDR
+DCacheAddr: LPDDR,C_S3_AXI_BASEADDR
+DCacheAddr: LPDDR,C_S4_AXI_BASEADDR
+DCacheAddr: LPDDR,C_S5_AXI_BASEADDR
+Processor: microblaze_0
+ElfImp: 
+ElfSim: 

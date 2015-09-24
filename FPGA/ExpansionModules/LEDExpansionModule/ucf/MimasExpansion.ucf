@@ -1,0 +1,37 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for LED Expansion Modules on Mimas Expansion connector                #
+# To use it in your project :                                                               #
+# * Remove or comment the lines corresponding to unused pins                                #
+# * Rename the used signals according to the your project                                   #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+   # Clock 100 MHz
+       NET "Clk"         LOC = P126 | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	   
+
+#**************************************************************************************************************************************************#
+#                                            Mimas Expansion connector connected to HEADER P1 of Mimas Spartan6 Module                             #
+#**************************************************************************************************************************************************#		
+####################################################################################################################################################
+#                                            Push Buttons and LED Expansion Modules                                                                #
+####################################################################################################################################################		
+####################################################################################################################################################
+#           Push Buttons connected to Expansion Connector's HEADER P5 and LED's connected to Expansion Connector's HEADER P2	                   #
+####################################################################################################################################################
+	NET "LED[7]"     LOC = P140  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[6]"     LOC = P139  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[5]"     LOC = P137  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[4]"     LOC = P138  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[3]"     LOC = P133  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[2]"     LOC = P134  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[1]"     LOC = P131  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[0]"     LOC = P132  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+
+    NET "Switch[7]"  LOC = P30  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[6]"  LOC = P27  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[5]"  LOC = P26  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[4]"  LOC = P34  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[3]"  LOC = P29  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[2]"  LOC = P33  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[1]"  LOC = P32  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[0]"  LOC = P35  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;

@@ -1,0 +1,9 @@
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.

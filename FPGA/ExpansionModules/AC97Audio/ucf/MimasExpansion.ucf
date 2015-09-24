@@ -1,0 +1,25 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for LM4550 Audio Expansion Module on Mimas Expansion Connector            #
+# To use it in your project :                                                                   #
+# * Remove or comment the lines corresponding to unused pins                                    #
+# * Rename the used signals according to the your project                                       #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+ 
+   # Clock 100 MHz
+     NET "CLK"           LOC = "P126"  | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+	 NET "Rst"                           IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST | PULLDOWN; 
+	 
+####################################################################################################################################################
+#                                            LM4550 Audio Expansion Module                                                                         #
+####################################################################################################################################################		
+####################################################################################################################################################
+#                              Mimas Expansion Connector's HEADER P3 when connected to Header P1	                                               #
+####################################################################################################################################################
+
+    
+    NET "AC97SDO"       LOC = "P24"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97SDI"       LOC = "P21"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97Sync"      LOC = "P17"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97BitClock"  LOC = "P22"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97Rstn"      LOC = "P16"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+	

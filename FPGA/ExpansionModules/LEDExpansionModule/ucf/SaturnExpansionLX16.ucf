@@ -1,0 +1,36 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for LED Expansion Modules on Saturn Expansion Connector               #
+# To use it in your project :                                                               #
+# * Remove or comment the lines corresponding to unused pins                                #
+# * Rename the used signals according to the your project                                   #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+ 
+   # Clock 100 MHz
+      NET "Clk"         LOC = "V10"   | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	  
+####################################################################################################################################################
+#                                            SATURN EXPANSION CONNECTOR LED OFF                                                                    #
+####################################################################################################################################################
+####################################################################################################################################################
+#                                            Push Buttons and LED Expansion Modules                                                                #
+####################################################################################################################################################		
+####################################################################################################################################################
+#                 Push Buttons connected to Expansion Connector's HEADER P12 and LED's connected to Expansion Connector's HEADER P11	           #
+####################################################################################################################################################
+    NET "Switch[7]"     LOC = V14  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[6]"     LOC = V12  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[5]"     LOC = T12  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[4]"     LOC = T17  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[3]"     LOC = T14  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[2]"     LOC = V15  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[1]"     LOC = U15  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[0]"     LOC = T18  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+
+    NET "LED[7]"        LOC = N6 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[6]"        LOC = P7 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[5]"        LOC = T6 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[4]"        LOC = V6 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[3]"        LOC = U5 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[2]"        LOC = V5 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[1]"        LOC = T4 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[0]"        LOC = V4 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;

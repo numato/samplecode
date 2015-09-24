@@ -1,0 +1,35 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for VGA Expansion Modules on Mimas Expansion connector                #
+# To use it in your project :                                                               #
+# * Remove or comment the lines corresponding to unused pins                                #
+# * Rename the used signals according to the your project                                   #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+
+   # Clock 100 MHz
+       NET "Clk"      LOC = P126 | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	   
+#**************************************************************************************************************************************************#
+#                                Mimas Expansion connector connected to HEADER P1 of Mimas Spartan6 Module                                         #
+#**************************************************************************************************************************************************#	
+####################################################################################################################################################
+#                                            VGA Expansion Module                                                                                  #
+####################################################################################################################################################	
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P6	                                                                   #
+####################################################################################################################################################	 
+    NET "hsync"      LOC = P8  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                      # Horizontal Sync
+    NET "vsync"      LOC = P7  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                      # Vertical Sync
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P3	                                                                   #
+####################################################################################################################################################	
+    NET "Red[2]"     LOC = P24  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                     # RED
+    NET "Red[1]"     LOC = P23  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "Red[0]"     LOC = P22  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+	  
+    NET "Green[2]"   LOC = P21  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                     # GREEN
+    NET "Green[1]"   LOC = P16  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "Green[0]"   LOC = P17  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+	  
+    NET "Blue[2]"    LOC = P14  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                     # BLUE
+    NET "Blue[1]"    LOC = P15  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;	

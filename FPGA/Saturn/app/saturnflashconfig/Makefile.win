@@ -1,0 +1,49 @@
+# Project: saturnflashconfig
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 09/12/13 19:25
+
+WXLIBNAME = wxmsw29u
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/saturnflashconfigApp.o Objects/MingW/saturnflashconfigDlg.o Objects/MingW/saturnconfig.o Objects/MingW/saturnflashconfig_private.res
+LINKOBJ   = "Objects/MingW/saturnflashconfigApp.o" "Objects/MingW/saturnflashconfigDlg.o" "Objects/MingW/saturnconfig.o" Objects/MingW/saturnflashconfig_private.res
+LIBS      = -L"C:/Program Files/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files/Dev-Cpp/lib" -L"C:/Program Files/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32 libMPSSE.a  -s 
+INCS      = -I"C:/Program Files/Dev-Cpp/MinGW32/include"
+CXXINCS   = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/" -I"C:/Program Files/Dev-Cpp/include/common"
+RCINCS    = --include-dir "C:/PROGRA~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/saturnflashconfig.exe
+DEFINES   = -D__WXMSW__ -D__GNUWIN32__ -D_UNICODE
+CXXFLAGS  = $(CXXINCS) $(DEFINES)   -fexpensive-optimizations -O3
+CFLAGS    = $(INCS) $(DEFINES)   -fexpensive-optimizations -O3
+GPROF     = gprof.exe
+ifeq ($(OS),Windows_NT)
+   RM = del /Q
+   FixPath = $(subst /,\,$1)
+else
+   RM = rm -f
+   FixPath = $1
+endif
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(call FixPath,$(LINKOBJ)) "$(call FixPath,$(BIN))"
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
+
+Objects/MingW/saturnflashconfigApp.o: $(GLOBALDEPS) saturnflashconfigApp.cpp
+	$(CPP) -c saturnflashconfigApp.cpp -o Objects/MingW/saturnflashconfigApp.o $(CXXFLAGS)
+
+Objects/MingW/saturnflashconfigDlg.o: $(GLOBALDEPS) saturnflashconfigDlg.cpp
+	$(CPP) -c saturnflashconfigDlg.cpp -o Objects/MingW/saturnflashconfigDlg.o $(CXXFLAGS)
+
+Objects/MingW/saturnconfig.o: $(GLOBALDEPS) saturnconfig.cpp
+	$(CPP) -c saturnconfig.cpp -o Objects/MingW/saturnconfig.o $(CXXFLAGS)
+
+Objects/MingW/saturnflashconfig_private.res: Objects/MingW/saturnflashconfig_private.rc saturnflashconfigApp.rc 
+	$(WINDRES) --input-format=rc -o Objects/MingW/saturnflashconfig_private.res $(RCINCS) Objects/MingW/SATURN~1.RC -O coff

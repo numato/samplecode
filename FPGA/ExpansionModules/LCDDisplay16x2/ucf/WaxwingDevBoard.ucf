@@ -1,0 +1,27 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for LCD Expansion Modules on Waxwing Development Board                #
+# To use it in your project :                                                               #
+# * Remove or comment the lines corresponding to unused pins                                #
+# * Rename the used signals according to the your project                                   #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+  
+  # Clock 100 MHz  
+	  NET "Clk"                LOC = V10  | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	  	 
+###################################################################################################################################################
+#                                LCD Expansion Module                                                                                             #
+################################################################################################################################################### 
+###################################################################################################################################################
+#                                   HEADER P4                                                                                                     #
+###################################################################################################################################################
+     NET "en"                  LOC = D11  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # Enable PIN of LCD
+     NET "rs"                  LOC = A6   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # Register Select PIN of LCD
+     NET "rw"                  LOC = B6   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # Read/Write PIN of LCD
+    
+ # Four bits LCD Data
+     NET "LCD_out[3]"          LOC = C11  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 14 on LCD
+     NET "LCD_out[2]"          LOC = H15  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 13 on LCD
+     NET "LCD_out[1]"          LOC = H16  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 12 on LCD
+     NET "LCD_out[0]"          LOC = F13  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 11 on LCD
+	 

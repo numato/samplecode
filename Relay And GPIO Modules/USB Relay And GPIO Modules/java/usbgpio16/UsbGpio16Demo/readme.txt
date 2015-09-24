@@ -1,0 +1,2 @@
+Use Netbeans IDE to open and compile this project. Netbeans IDE is available at https://netbeans.org
+make sure to navigate to Project Properties > Run and change the COM port in the arguments field appropriately.

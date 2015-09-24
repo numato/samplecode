@@ -1,0 +1,36 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for Seven Segment Display Expansion Module on Mimas Expansion connector  #
+# To use it in your project :                                                                  #
+# * Remove or comment the lines corresponding to unused pins                                   #
+# * Rename the used signals according to the your project                                      #
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+   # Clock 100 MHz
+       NET "Clk"               LOC = P126 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+	   NET "rst_n"                          IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST | PULLUP;
+	   
+#**************************************************************************************************************************************************#
+#                                 Mimas Expansion connector connected to HEADER P1 of Mimas Spartan6 Module                                        #
+#**************************************************************************************************************************************************#
+####################################################################################################################################################
+#                                            Seven Segment Display Expansion Module                                                                #
+####################################################################################################################################################	
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P3	                                                                   #
+####################################################################################################################################################
+	 NET "Enable[0]"           LOC = P22  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[1]"           LOC = P21  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[2]"           LOC = P24  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+     NET "Enable[3]"           LOC = P23  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P6	                                                                   #
+####################################################################################################################################################
+     NET "SevenSegment[7]"     LOC = P6    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #a
+     NET "SevenSegment[6]"     LOC = P5    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #b
+     NET "SevenSegment[5]"     LOC = P1    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #c
+     NET "SevenSegment[4]"     LOC = P142  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #d
+     NET "SevenSegment[3]"     LOC = P141  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #e
+     NET "SevenSegment[2]"     LOC = P7    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #f
+     NET "SevenSegment[1]"     LOC = P8    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #g
+     NET "SevenSegment[0]"     LOC = P2    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;    #Dot	
+	 

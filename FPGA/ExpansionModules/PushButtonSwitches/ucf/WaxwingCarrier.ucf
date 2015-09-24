@@ -1,0 +1,38 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for LED Expansion Modules on Waxwing Spartan6 Mini Module Carrier               #
+# To use it in your project :                                                                         #
+# * Remove or comment the lines corresponding to unused pins in the project                           #
+# * Rename the used signals according to the your project                                             #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+  # Clock 100 MHz  
+	  NET "Clk"             LOC = V10 | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	  
+###################################################################################################################################################
+#                          Push Switches Expansion Module                                                                                         #
+################################################################################################################################################### 
+###################################################################################################################################################
+#                                   HEADER P7                                                                                                     #
+###################################################################################################################################################
+    NET "Switch[7]"        LOC = B6  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[6]"        LOC = D11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[5]"        LOC = C11 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[4]"        LOC = C8  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[3]"        LOC = A6  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[2]"        LOC = D6  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[1]"        LOC = C6  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[0]"        LOC = D8  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+	
+###################################################################################################################################################
+#                                   HEADER P5                                                                                                     #
+###################################################################################################################################################	 
+	NET "LED[7]"           LOC = T4 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[6]"           LOC = V4 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[5]"           LOC = R3 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[4]"           LOC = T3 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[3]"           LOC = T7 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[2]"           LOC = R7 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[1]"           LOC = V5 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[0]"           LOC = U5 | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+
+

@@ -1,0 +1,6 @@
+13:55:11 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+
+13:55:11 Build Finished (took 160ms)
+

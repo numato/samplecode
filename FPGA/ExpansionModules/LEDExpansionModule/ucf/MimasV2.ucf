@@ -1,0 +1,35 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for LED Expansion Modules on Mimas Expansion connector                #
+# To use it in your project :                                                               #
+# * Remove or comment the lines corresponding to unused pins                                #
+# * Rename the used signals according to the your project                                   #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+
+   # Clock 100 MHz
+       NET "Clk"         LOC = V10 | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	   
+	
+####################################################################################################################################################
+#                                            Push Buttons and LED Expansion Modules                                                                #
+####################################################################################################################################################		
+####################################################################################################################################################
+#           Push Buttons connected to Expansion Connector's HEADER P9 and LED's connected to Expansion Connector's HEADER P6	                   #
+####################################################################################################################################################
+	NET "LED[7]"     LOC = V7  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[6]"     LOC = U7  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[5]"     LOC = V4  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[4]"     LOC = T4  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[3]"     LOC = V5  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[2]"     LOC = U5  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[1]"     LOC = T3  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+    NET "LED[0]"     LOC = R3  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+
+    NET "Switch[7]"  LOC = K16  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[6]"  LOC = L16  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[5]"  LOC = L15  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[4]"  LOC = H17  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[3]"  LOC = K15  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[2]"  LOC = J18  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[1]"  LOC = J16  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+    NET "Switch[0]"  LOC = H18  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;

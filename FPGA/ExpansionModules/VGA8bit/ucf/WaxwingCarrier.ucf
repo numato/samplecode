@@ -1,0 +1,36 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for VGA Expansion Modules on Waxwing Spartan6 Mini Module Carrier     #
+# To use it in your project :                                                               #
+# * Remove or comment the lines corresponding to unused pins in the project                 #
+# * Rename the used signals according to the your project                                   #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+#**************************************************************************************************************************************************#
+#                                            UCF for Waxwing Spartan6 Mini Module Carrier for Expansion Modules                                    #
+#**************************************************************************************************************************************************#
+  
+  # Clock 100 MHz  
+	  NET "Clk"            LOC = V10 | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	  
+###################################################################################################################################################
+#                      VGA Expansion Module                                                                                                       #
+###################################################################################################################################################
+###################################################################################################################################################
+#                                   HEADER P6                                                                                                     #
+################################################################################################################################################### 	
+     NET "hsync"           LOC = B4 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;                      # Horizontal Sync
+     NET "vsync"           LOC = A4 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;                      # Vertical Sync  
+###################################################################################################################################################
+#                                   HEADER P5                                                                                                     #
+###################################################################################################################################################
+     NET "Red[2]"          LOC = T4 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;                     # RED
+     NET "Red[1]"          LOC = V4 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+     NET "Red[0]"          LOC = R3 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+	  
+     NET "Green[2]"        LOC = T3 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;                     # GREEN
+     NET "Green[1]"        LOC = R7 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+     NET "Green[0]"        LOC = T7 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+	  
+     NET "Blue[2]"         LOC = U5 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;                     # BLUE
+     NET "Blue[1]"         LOC = V5 | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = FAST;
+	 

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BluetoothGpio8Demo", "BluetoothGpio8Demo.vcxproj", "{B4C11824-AB95-4244-85EF-C745F40A35CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4C11824-AB95-4244-85EF-C745F40A35CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B4C11824-AB95-4244-85EF-C745F40A35CB}.Debug|Win32.Build.0 = Debug|Win32
+		{B4C11824-AB95-4244-85EF-C745F40A35CB}.Release|Win32.ActiveCfg = Release|Win32
+		{B4C11824-AB95-4244-85EF-C745F40A35CB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1759 @@
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Wed Jul 16 18:14:43 2014
+ make -f SaturnV3Ethernet100M.make netlist started...
+"****************************************************"
+"Creating system netlist for hardware specification.."
+"****************************************************"
+platgen -p xc6slx45csg324-2 -lang vhdl -intstyle default    -msg __xps/ise/xmsgprops.lst SaturnV3Ethernet100M.mhs
+
+Release 14.7 - platgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+Command Line: platgen -p xc6slx45csg324-2 -lang vhdl -intstyle default -msg
+__xps/ise/xmsgprops.lst SaturnV3Ethernet100M.mhs 
+
+Parse C:/SaurnV3Ethernet100M/xps/SaturnV3Ethernet100M.mhs ...
+
+Read MPD definitions ...
+WARNING:EDK:3605 - Use of the repository located at
+   C:\Xilinx\14.7\ISE_DS\edk_user_repository\ 
+   (equivalent of $XILINX_EDK/../edk_user_repository) is now deprecated. 
+   It is recommended that you use Global SearchPath preference to specify search
+   paths that apply to all the projects.
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:microblaze_0_intc - tcl is overriding
+   PARAMETER C_NUM_INTR_INPUTS value to 3 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
+   a\axi_intc_v2_1_0.mpd line 85 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ENDIANNESS value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ICACHE_USE_FSL value to 0 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_USE_FSL value to 0 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to spartan6 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding
+   PARAMETER C_BASEFAMILY value to spartan6 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:LPDDR - tcl is overriding
+   PARAMETER C_SYS_RST_PRESENT value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\
+   data\axi_s6_ddrx_v2_1_0.mpd line 239 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00007fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00007fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40600000-0x4060ffff) FT2232_UART	axi4lite_0
+  (0x40800000-0x4080ffff) I2C_interface	axi4lite_0
+  (0x40e00000-0x40e0ffff) Ethernet100M	axi4lite_0
+  (0x41200000-0x4120ffff) microblaze_0_intc	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41c00000-0x41c0ffff) Timer	axi4lite_0
+  (0xa4000000-0xa7ffffff) LPDDR	axi4_0
+INFO:EDK:4087 - IPNAME: axi_ethernetlite, INSTANCE: Ethernet100M - This design
+   requires design constraints to guarantee performance.
+   Please refer to the data sheet for details.  
+   The AXI clock frequency must be greater than or equal to 50 MHz for 100 Mbs
+   Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet
+   operation. - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 260
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data
+   \lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data
+   \lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
+   overriding PARAMETER C_MEMSIZE value to 0x8000 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 78 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 6 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4_0 - 2 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4180 - PORT: Interrupt_address_in, CONNECTOR: Interrupt_address_in -
+   No driver found. Port will be driven to GND -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
+   a\axi_intc_v2_1_0.mpd line 131 
+WARNING:EDK:4181 - PORT: Processor_ack_out, CONNECTOR: Processor_ack_out -
+   floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
+   a\axi_intc_v2_1_0.mpd line 132 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:microblaze_0_intc - tcl is overriding
+   PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111100 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
+   a\axi_intc_v2_1_0.mpd line 87 
+INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:microblaze_0_intc - tcl is overriding
+   PARAMETER C_KIND_OF_EDGE value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
+   a\axi_intc_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:microblaze_0_intc - tcl is overriding
+   PARAMETER C_KIND_OF_LVL value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
+   a\axi_intc_v2_1_0.mpd line 89 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl -
+   tcl is overriding PARAMETER C_MASK value to 0x44000000 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
+   _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl -
+   tcl is overriding PARAMETER C_MASK value to 0x44000000 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
+   _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_D_AXI value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ADDR_TAG_BITS value to 13 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_ADDR_TAG value to 13 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_INTERRUPT value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 401 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_BRK value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_NM_BRK value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi4_0; no DECERR
+checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4_0 - tcl is overriding
+   PARAMETER C_RANGE_CHECK value to 0 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:LPDDR - tcl is overriding
+   PARAMETER C_MEMCLK_PERIOD value to 5000 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\
+   data\axi_s6_ddrx_v2_1_0.mpd line 121 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:LPDDR - tcl is overriding
+   PARAMETER C_S1_AXI_REG_EN0 value to 0x0000F -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\
+   data\axi_s6_ddrx_v2_1_0.mpd line 176 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:LPDDR - tcl is overriding
+   PARAMETER C_S2_AXI_REG_EN0 value to 0x0000F -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\
+   data\axi_s6_ddrx_v2_1_0.mpd line 190 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:LPDDR - tcl is overriding
+   PARAMETER C_S3_AXI_REG_EN0 value to 0x0000F -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\
+   data\axi_s6_ddrx_v2_1_0.mpd line 204 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:LPDDR - tcl is overriding
+   PARAMETER C_S4_AXI_REG_EN0 value to 0x0000F -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\
+   data\axi_s6_ddrx_v2_1_0.mpd line 218 
+INFO:EDK:4130 - IPNAME: axi_s6_ddrx, INSTANCE:LPDDR - tcl is overriding
+   PARAMETER C_S5_AXI_REG_EN0 value to 0x0000F -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_s6_ddrx_v1_06_a\
+   data\axi_s6_ddrx_v2_1_0.mpd line 232 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Invoking MIG ...
+MIG returned 0
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+INTC INFO:: Processor_clk not connected. IRQ is generated on AXI clock.
+Port present in Ethernet100M
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INTC_INFO_CONSTRAINTS:: Adding Edge interrupt constraints
+INFO: Setting timing constaints for microblaze_0_ilmb.
+INFO: The microblaze_0_ilmb core has constraints automatically generated by XPS
+in implementation/microblaze_0_ilmb_wrapper/microblaze_0_ilmb_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: Setting timing constaints for microblaze_0_dlmb.
+INFO: The microblaze_0_dlmb core has constraints automatically generated by XPS
+in implementation/microblaze_0_dlmb_wrapper/microblaze_0_dlmb_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: Setting timing constaints for microblaze_0.
+INFO: The microblaze_0 core has constraints automatically generated by XPS in
+implementation/microblaze_0_wrapper/microblaze_0_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: No asynchronous clock conversions in axi_interconnect axi4lite_0.
+INFO: No asynchronous clock conversions in axi_interconnect axi4_0.
+INFO: Forcing parameter C_SIMULATION = "FALSE" in IP axi_s6_ddrx.
+INFO: The Ethernet100M core has constraints automatically generated by XPS in
+implementation/ethernet100m_wrapper/ethernet100m_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The Ethernet100M core has constraints automatically generated by XPS in
+implementation/ethernet100m_wrapper/ethernet100m_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 105 - elaborating IP
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 153 - elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 0.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 1.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:proc_sys_reset_0 - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs
+line 49 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_intc - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs
+line 62 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_ilmb - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs
+line 73 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_i_bram_ctrl -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 80 - Running XST
+synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_dlmb - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs
+line 89 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_d_bram_ctrl -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 96 - Running XST
+synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0_bram_block -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 105 - Running XST
+synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:microblaze_0 - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line
+112 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:debug_module - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line
+140 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:clock_generator_0 - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs
+line 153 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:timer - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 174 -
+Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:axi4lite_0 - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line
+186 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:axi4_0 - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 194 -
+Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:lpddr - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 201 -
+Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:ft2232_uart - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line
+245 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:ethernet100m - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line
+260 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+INSTANCE:i2c_interface - C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs
+line 282 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Running NGCBUILD ...
+IPNAME:SaturnV3Ethernet100M_microblaze_0_ilmb_wrapper INSTANCE:microblaze_0_ilmb
+- C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 73 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe -p
+xc6slx45csg324-2 -intstyle silent -i -sd ..
+SaturnV3Ethernet100M_microblaze_0_ilmb_wrapper.ngc
+../SaturnV3Ethernet100M_microblaze_0_ilmb_wrapper
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/microblaze_0_ilmb_wrapper/SaturnV3Eth
+ernet100M_microblaze_0_ilmb_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../SaturnV3Ethernet100M_microblaze_0_ilmb_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file
+"../SaturnV3Ethernet100M_microblaze_0_ilmb_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:SaturnV3Ethernet100M_microblaze_0_dlmb_wrapper INSTANCE:microblaze_0_dlmb
+- C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 89 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe -p
+xc6slx45csg324-2 -intstyle silent -i -sd ..
+SaturnV3Ethernet100M_microblaze_0_dlmb_wrapper.ngc
+../SaturnV3Ethernet100M_microblaze_0_dlmb_wrapper
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/microblaze_0_dlmb_wrapper/SaturnV3Eth
+ernet100M_microblaze_0_dlmb_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../SaturnV3Ethernet100M_microblaze_0_dlmb_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file
+"../SaturnV3Ethernet100M_microblaze_0_dlmb_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:SaturnV3Ethernet100M_microblaze_0_wrapper INSTANCE:microblaze_0 -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 112 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe -p
+xc6slx45csg324-2 -intstyle silent -i -sd ..
+SaturnV3Ethernet100M_microblaze_0_wrapper.ngc
+../SaturnV3Ethernet100M_microblaze_0_wrapper
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/microblaze_0_wrapper/SaturnV3Ethernet
+100M_microblaze_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../SaturnV3Ethernet100M_microblaze_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../SaturnV3Ethernet100M_microblaze_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:SaturnV3Ethernet100M_clock_generator_0_wrapper INSTANCE:clock_generator_0
+- C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 153 - Running
+NGCBUILD
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe -p
+xc6slx45csg324-2 -intstyle silent -i -sd ..
+SaturnV3Ethernet100M_clock_generator_0_wrapper.ngc
+../SaturnV3Ethernet100M_clock_generator_0_wrapper
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/clock_generator_0_wrapper/SaturnV3Eth
+ernet100M_clock_generator_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../SaturnV3Ethernet100M_clock_generator_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file
+"../SaturnV3Ethernet100M_clock_generator_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:SaturnV3Ethernet100M_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 186 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe -p
+xc6slx45csg324-2 -intstyle silent -i -sd ..
+SaturnV3Ethernet100M_axi4lite_0_wrapper.ngc
+../SaturnV3Ethernet100M_axi4lite_0_wrapper
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/axi4lite_0_wrapper/SaturnV3Ethernet10
+0M_axi4lite_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../SaturnV3Ethernet100M_axi4lite_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../SaturnV3Ethernet100M_axi4lite_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:SaturnV3Ethernet100M_axi4_0_wrapper INSTANCE:axi4_0 -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 194 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe -p
+xc6slx45csg324-2 -intstyle silent -i -sd ..
+SaturnV3Ethernet100M_axi4_0_wrapper.ngc ../SaturnV3Ethernet100M_axi4_0_wrapper
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/axi4_0_wrapper/SaturnV3Ethernet100M_a
+xi4_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../SaturnV3Ethernet100M_axi4_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../SaturnV3Ethernet100M_axi4_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:SaturnV3Ethernet100M_lpddr_wrapper INSTANCE:lpddr -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 201 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe -p
+xc6slx45csg324-2 -intstyle silent -i -sd ..
+SaturnV3Ethernet100M_lpddr_wrapper.ngc ../SaturnV3Ethernet100M_lpddr_wrapper
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/lpddr_wrapper/SaturnV3Ethernet100M_lp
+ddr_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../SaturnV3Ethernet100M_lpddr_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../SaturnV3Ethernet100M_lpddr_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:SaturnV3Ethernet100M_ethernet100m_wrapper INSTANCE:ethernet100m -
+C:\SaurnV3Ethernet100M\xps\SaturnV3Ethernet100M.mhs line 260 - Running NGCBUILD
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe -p
+xc6slx45csg324-2 -intstyle silent -i -sd ..
+SaturnV3Ethernet100M_ethernet100m_wrapper.ngc
+../SaturnV3Ethernet100M_ethernet100m_wrapper
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/ethernet100m_wrapper/SaturnV3Ethernet
+100M_ethernet100m_wrapper.ngc" ...
+Loading design module
+"../SaturnV3Ethernet100M_ethernet100m_wrapper_blk_mem_gen_v7_3.ngc"...
+Loading design module
+"../SaturnV3Ethernet100M_ethernet100m_wrapper_fifo_generator_v9_3.ngc"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../SaturnV3Ethernet100M_ethernet100m_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../SaturnV3Ethernet100M_ethernet100m_wrapper.blc"...
+
+NGCBUILD done.
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/SaturnV3Ethernet100M.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 438.00 seconds
+"Running synthesis..."
+cd synthesis & synthesis.cmd
+"xst -ifn "SaturnV3Ethernet100M_xst.scr" -intstyle silent"
+"Running XST synthesis ..."
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+"XST completed"
+Done!
+
+********************************************************************************
+At Local date and time: Wed Jul 16 18:23:06 2014
+ make -f SaturnV3Ethernet100M.make bits started...
+"*********************************************"
+"Running Xilinx Implementation tools.."
+"*********************************************"
+xflow -wd implementation -p xc6slx45csg324-2 -implement xflow.opt SaturnV3Ethernet100M.ngc
+Release 14.7 - Xflow P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc6slx45csg324-2 -implement xflow.opt
+SaturnV3Ethernet100M.ngc  
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+.... Copying flowfile C:/Xilinx/14.7/ISE_DS/ISE/xilinx/data/fpga.flw into
+working directory C:/SaurnV3Ethernet100M/xps/implementation 
+
+Using Flow File: C:/SaurnV3Ethernet100M/xps/implementation/fpga.flw 
+Using Option File(s): 
+ C:/SaurnV3Ethernet100M/xps/implementation/xflow.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc6slx45csg324-2 -nt timestamp -bm SaturnV3Ethernet100M.bmm
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M.ngc" -uc
+SaturnV3Ethernet100M.ucf SaturnV3Ethernet100M.ngd 
+#----------------------------------------------#
+Release 14.7 - ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -p
+xc6slx45csg324-2 -nt timestamp -bm SaturnV3Ethernet100M.bmm
+C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M.ngc -uc
+SaturnV3Ethernet100M.ucf SaturnV3Ethernet100M.ngd
+
+Reading NGO file
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M.ngc" ...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_ethernet100m_wra
+pper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_proc_sys_reset_0
+_wrapper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_clock_generator_
+0_wrapper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_ft2232_uart_wrap
+per.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_ilm
+b_wrapper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_dlm
+b_wrapper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_lpddr_wrapper.ng
+c"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_axi4lite_0_wrapp
+er.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_axi4_0_wrapper.n
+gc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_wra
+pper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_int
+c_wrapper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_i_b
+ram_ctrl_wrapper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_d_b
+ram_ctrl_wrapper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_debug_module_wra
+pper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_timer_wrapper.ng
+c"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_i2c_interface_wr
+apper.ngc"...
+Loading design module
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_bra
+m_block_wrapper.ngc"...
+Applying constraints in
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_ethernet100m_wra
+pper.ncf" to module "Ethernet100M"...
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6.000 BEFORE 
+   "PHY_rx_clk";>
+   [C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_ethernet100m_
+   wrapper.ncf(4)], is specified without a duration.  This will result in a lack
+   of hold time checks in timing reports.  If hold time checks are desired a
+   duration value should be specified following the 'VALID' keyword.
+
+Checking Constraint Associations...
+Applying constraints in
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_ilm
+b_wrapper.ncf" to module "microblaze_0_ilmb"...
+Checking Constraint Associations...
+Applying constraints in
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_dlm
+b_wrapper.ncf" to module "microblaze_0_dlmb"...
+Checking Constraint Associations...
+Applying constraints in
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_lpddr_wrapper.nc
+f" to module "LPDDR"...
+Checking Constraint Associations...
+Applying constraints in
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_axi4lite_0_wrapp
+er.ncf" to module "axi4lite_0"...
+Checking Constraint Associations...
+Applying constraints in
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_axi4_0_wrapper.n
+cf" to module "axi4_0"...
+Checking Constraint Associations...
+Applying constraints in
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_wra
+pper.ncf" to module "microblaze_0"...
+Checking Constraint Associations...
+Applying constraints in
+"C:/SaurnV3Ethernet100M/xps/implementation/SaturnV3Ethernet100M_microblaze_0_int
+c_wrapper.ncf" to module "microblaze_0_intc"...
+Checking Constraint Associations...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "SaturnV3Ethernet100M.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:135 - Constraint <INST
+   /SaturnV3Ethernet100M/EXPANDED/SaturnV3Ethernet100M/axi4_0/axi4_0\/si_convert
+   er_bank\/gen_conv_slot[0].clock_conv_inst\/interconnect_aresetn_resync<2>_inv
+   1_INV_0 TNM = FFS:axi4_0_reset_resync>: No instances of type FFS were found
+   under block
+   "axi4_0/axi4_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync<2>_inv1_INV_0" (type=INV).
+
+WARNING:ConstraintSystem:135 - Constraint <INST
+   /SaturnV3Ethernet100M/EXPANDED/SaturnV3Ethernet100M/axi4lite_0/axi4lite_0\/si
+   _converter_bank\/gen_conv_slot[0].clock_conv_inst\/interconnect_aresetn_resyn
+   c<2>_inv1_INV_0 TNM = FFS:axi4lite_0_r...>: No instances of type FFS were
+   found under block
+   "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync<2>_inv1_INV_0" (type=INV).
+
+WARNING:ConstraintSystem:58 - Constraint <TIMEGRP axi4lite_0_reset_source = FFS
+   PADS CPUS;>: CPUS "*" does not match any design objects.
+
+WARNING:ConstraintSystem:58 - Constraint <TIMEGRP axi4_0_reset_source = FFS PADS
+   CPUS;>: CPUS "*" does not match any design objects.
+
+WARNING:ConstraintSystem:194 - The TNM 'axi4_0_reset_resync', does not directly
+   or indirectly drive any flip-flops, latches and/or RAMs and is not actively
+   used by any referencing constraint.
+
+WARNING:ConstraintSystem:194 - The TNM 'axi4lite_0_reset_resync', does not
+   directly or indirectly drive any flip-flops, latches and/or RAMs and is not
+   actively used by any referencing constraint.
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_clk_400_0000MHz180PLL0_nobuf = PERIOD
+   "clk_400_0000MHz180PLL0_nobuf" TS_sys_clk_pin * 4 PHASE 1.25 ns HIGH 50>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clk_400_0000MHzPLL0_nobuf = PERIOD
+   "clk_400_0000MHzPLL0_nobuf" TS_sys_clk_pin * 4 HIGH 50>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2" TS_sys_clk_pin
+   HIGH 50>
+
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6000.000000000 pS
+   BEFORE Ethernet100M/PHY_rx_clk;>, is specified without a duration.  This will
+   result in a lack of hold time checks in timing reports.  If hold time checks
+   are desired a duration value should be specified following the 'VALID'
+   keyword.
+
+Done...
+
+Processing BMM file "SaturnV3Ethernet100M.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet100M/Ethernet100M/XEMAC_I/EMAC_I/COLLISION_SYNC_2' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.
+   Gen_Bits[27].MEM_EX_Result_Inst' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'I2C_interface/I2C_interface/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/FF_WRACK' has
+   unconnected output pin
+WARNING:NgdBuild:452 - logical net 'N24' has no driver
+WARNING:NgdBuild:452 - logical net 'N25' has no driver
+WARNING:NgdBuild:452 - logical net 'N26' has no driver
+WARNING:NgdBuild:452 - logical net 'N27' has no driver
+WARNING:NgdBuild:452 - logical net 'N28' has no driver
+WARNING:NgdBuild:452 - logical net 'N29' has no driver
+WARNING:NgdBuild:452 - logical net 'N30' has no driver
+WARNING:NgdBuild:452 - logical net 'N31' has no driver
+WARNING:NgdBuild:452 - logical net 'N32' has no driver
+WARNING:NgdBuild:452 - logical net 'N33' has no driver
+WARNING:NgdBuild:452 - logical net 'N34' has no driver
+WARNING:NgdBuild:452 - logical net 'N35' has no driver
+WARNING:NgdBuild:452 - logical net 'N36' has no driver
+WARNING:NgdBuild:452 - logical net 'N37' has no driver
+WARNING:NgdBuild:452 - logical net 'N38' has no driver
+WARNING:NgdBuild:452 - logical net 'N39' has no driver
+WARNING:NgdBuild:452 - logical net 'N40' has no driver
+WARNING:NgdBuild:452 - logical net 'N41' has no driver
+WARNING:NgdBuild:452 - logical net 'N42' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  30
+
+Writing NGD file "SaturnV3Ethernet100M.ngd" ...
+Total REAL time to NGDBUILD completion:  55 sec
+Total CPU time to NGDBUILD completion:   54 sec
+
+Writing NGDBUILD log file "SaturnV3Ethernet100M.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o SaturnV3Ethernet100M_map.ncd -w -pr b -ol high -timing -detail
+SaturnV3Ethernet100M.ngd SaturnV3Ethernet100M.pcf 
+#----------------------------------------------#
+Release 14.7 - Map P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/data/Xdh_PrimTypeLib.xda> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/data/Xdh_PrimTypeLib.xda>
+Using target part "6slx45csg324-2".
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal axi_ethernetlite_0_PHY_col_pin connected to top
+   level port axi_ethernetlite_0_PHY_col_pin has been removed.
+Writing file SaturnV3Ethernet100M_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+WARNING:Timing:3223 - Timing constraint PATH "TS_TIG_LPDDR_CALIB_DONE_SYNCH_path" TIG ignored during timing analysis.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 27 secs 
+Total CPU  time at the beginning of Placer: 20 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:d3458e6d) REAL time: 30 secs 
+
+Phase 2.7  Design Feasibility Check
+INFO:Place:834 - Only a subset of IOs are locked. Out of 66 IOs, 65 are locked
+   and 1 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:d3458e6d) REAL time: 30 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:580e801d) REAL time: 30 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+...
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:4af2bb1c) REAL time: 59 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:4af2bb1c) REAL time: 59 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:4af2bb1c) REAL time: 59 secs 
+
+Phase 7.3  Local Placement Optimization
+...
+Phase 7.3  Local Placement Optimization (Checksum:b4b7bcec) REAL time: 1 mins 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:457ef15e) REAL time: 1 mins 
+
+Phase 9.8  Global Placement
+.....................
+....................................
+.......................................
+..................................................................................
+......................
+Phase 9.8  Global Placement (Checksum:fc9949b) REAL time: 2 mins 39 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:fc9949b) REAL time: 2 mins 39 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:dbf2b852) REAL time: 2 mins 50 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:dbf2b852) REAL time: 2 mins 50 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:729f5c89) REAL time: 2 mins 51 secs 
+
+Total REAL time to Placer completion: 3 mins 
+Total CPU  time to Placer completion: 2 mins 49 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   28
+Slice Logic Utilization:
+  Number of Slice Registers:                 3,639 out of  54,576    6
+    Number used as Flip Flops:               3,631
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                8
+  Number of Slice LUTs:                      4,345 out of  27,288   15
+    Number used as logic:                    4,003 out of  27,288   14
+      Number using O6 output only:           3,011
+      Number using O5 output only:              79
+      Number using O5 and O6:                  913
+      Number used as ROM:                        0
+    Number used as Memory:                     234 out of   6,408    3
+      Number used as Dual Port RAM:             96
+        Number using O6 output only:             4
+        Number using O5 output only:             1
+        Number using O5 and O6:                 91
+      Number used as Single Port RAM:            4
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+      Number used as Shift Register:           134
+        Number using O6 output only:            40
+        Number using O5 output only:             1
+        Number using O5 and O6:                 93
+    Number used exclusively as route-thrus:    108
+      Number with same-slice register load:     98
+      Number with same-slice carry load:        10
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,818 out of   6,822   26
+  Number of MUXCYs used:                       660 out of  13,644    4
+  Number of LUT Flip Flop pairs used:        5,178
+    Number with an unused Flip Flop:         1,857 out of   5,178   35
+    Number with an unused LUT:                 833 out of   5,178   16
+    Number of fully used LUT-FF pairs:       2,488 out of   5,178   48
+    Number of unique control sets:             319
+    Number of slice register sites lost
+      to control set restrictions:           1,287 out of  54,576    2
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        66 out of     218   30
+    Number of LOCed IOBs:                       65 out of      66   98
+    IOB Flip Flops:                             18
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        28 out of     116   24
+  Number of RAMB8BWERs:                          0 out of     232    0
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0
+  Number of ILOGIC2/ISERDES2s:                  10 out of     376    2
+    Number used as ILOGIC2s:                    10
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        23 out of     376    6
+    Number used as IODELAY2s:                    0
+    Number used as IODRP2s:                      1
+    Number used as IODRP2_MCBs:                 22
+  Number of OLOGIC2/OSERDES2s:                  50 out of     376   13
+    Number used as OLOGIC2s:                     7
+    Number used as OSERDES2s:                   43
+  Number of BSCANs:                              1 out of       4   25
+  Number of BUFHs:                               0 out of     256    0
+  Number of BUFPLLs:                             0 out of       8    0
+  Number of BUFPLL_MCBs:                         1 out of       4   25
+  Number of DSP48A1s:                            3 out of      58    5
+  Number of ICAPs:                               0 out of       1    0
+  Number of MCBs:                                1 out of       2   50
+  Number of PCILOGICSEs:                         0 out of       2    0
+  Number of PLL_ADVs:                            1 out of       4   25
+  Number of PMVs:                                0 out of       1    0
+  Number of STARTUPs:                            0 out of       1    0
+  Number of SUSPEND_SYNCs:                       0 out of       1    0
+
+Average Fanout of Non-Clock Nets:                3.98
+
+Peak Memory Usage:  433 MB
+Total REAL time to MAP completion:  3 mins 8 secs 
+Total CPU time to MAP completion:   2 mins 54 secs 
+
+Mapping completed.
+See MAP report file "SaturnV3Ethernet100M_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high SaturnV3Ethernet100M_map.ncd SaturnV3Ethernet100M.ncd
+SaturnV3Ethernet100M.pcf 
+#----------------------------------------------#
+Release 14.7 - par P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/data/parBmgr.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/data/parBmgr.acd>
+
+
+
+Constraints file: SaturnV3Ethernet100M.pcf.
+Loading device for application Rf_Device from file '6slx45.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
+   "SaturnV3Ethernet100M" is an NCD, version 3.2, device xc6slx45, package csg324, speed -2
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6 ns BEFORE COMP "axi_ethernetlite_0_PHY_rx_clk_pin";>
+   [SaturnV3Ethernet100M.pcf(14814)], is specified without a duration.  This will result in a lack of hold time checks
+   in timing reports.  If hold time checks are desired a duration value should be specified following the 'VALID'
+   keyword.
+
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 3,639 out of  54,576    6
+    Number used as Flip Flops:               3,631
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                8
+  Number of Slice LUTs:                      4,345 out of  27,288   15
+    Number used as logic:                    4,003 out of  27,288   14
+      Number using O6 output only:           3,011
+      Number using O5 output only:              79
+      Number using O5 and O6:                  913
+      Number used as ROM:                        0
+    Number used as Memory:                     234 out of   6,408    3
+      Number used as Dual Port RAM:             96
+        Number using O6 output only:             4
+        Number using O5 output only:             1
+        Number using O5 and O6:                 91
+      Number used as Single Port RAM:            4
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+      Number used as Shift Register:           134
+        Number using O6 output only:            40
+        Number using O5 output only:             1
+        Number using O5 and O6:                 93
+    Number used exclusively as route-thrus:    108
+      Number with same-slice register load:     98
+      Number with same-slice carry load:        10
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,818 out of   6,822   26
+  Number of MUXCYs used:                       660 out of  13,644    4
+  Number of LUT Flip Flop pairs used:        5,178
+    Number with an unused Flip Flop:         1,857 out of   5,178   35
+    Number with an unused LUT:                 833 out of   5,178   16
+    Number of fully used LUT-FF pairs:       2,488 out of   5,178   48
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  54,576    0
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        66 out of     218   30
+    Number of LOCed IOBs:                       65 out of      66   98
+    IOB Flip Flops:                             18
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        28 out of     116   24
+  Number of RAMB8BWERs:                          0 out of     232    0
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0
+  Number of ILOGIC2/ISERDES2s:                  10 out of     376    2
+    Number used as ILOGIC2s:                    10
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        23 out of     376    6
+    Number used as IODELAY2s:                    0
+    Number used as IODRP2s:                      1
+    Number used as IODRP2_MCBs:                 22
+  Number of OLOGIC2/OSERDES2s:                  50 out of     376   13
+    Number used as OLOGIC2s:                     7
+    Number used as OSERDES2s:                   43
+  Number of BSCANs:                              1 out of       4   25
+  Number of BUFHs:                               0 out of     256    0
+  Number of BUFPLLs:                             0 out of       8    0
+  Number of BUFPLL_MCBs:                         1 out of       4   25
+  Number of DSP48A1s:                            3 out of      58    5
+  Number of ICAPs:                               0 out of       1    0
+  Number of MCBs:                                1 out of       2   50
+  Number of PCILOGICSEs:                         0 out of       2    0
+  Number of PLL_ADVs:                            1 out of       4   25
+  Number of PMVs:                                0 out of       1    0
+  Number of STARTUPs:                            0 out of       1    0
+  Number of SUSPEND_SYNCs:                       0 out of       1    0
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+WARNING:Timing:3223 - Timing constraint PATH "TS_TIG_LPDDR_CALIB_DONE_SYNCH_path" TIG; ignored during timing analysis.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
+   Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 17 secs 
+Finished initial Timing Analysis.  REAL time: 17 secs 
+
+WARNING:Par:288 - The signal
+   Ethernet100M/Ethernet100M/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/U0/xst_fifo_
+   generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_WriteThrough.DCache_I1/Mram_cacheline_copy1_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_WriteThrough.DCache_I1/Mram_cacheline_copy3_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_WriteThrough.DCache_I1/Mram_cacheline_copy4_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_WriteThrough.DCache_I1/Mram_cacheline_copy5_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_WriteThrough.DCache_I1/Mram_cacheline_copy2_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[0].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[8].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[2].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[1].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr<31> has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr<30> has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal
+   Ethernet100M/Ethernet100M/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/U0/xst_fifo_
+   generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[13].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[12].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[14].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[11].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[10].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[15].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[9].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[3].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[5].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[4].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[6].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[7].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 31659 unrouted;      REAL time: 19 secs 
+
+Phase  2  : 25963 unrouted;      REAL time: 21 secs 
+
+Phase  3  : 11053 unrouted;      REAL time: 34 secs 
+
+Phase  4  : 11062 unrouted; (Setup:0, Hold:316, Component Switching Limit:0)     REAL time: 37 secs 
+
+Updating file: SaturnV3Ethernet100M.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:304, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:304, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:304, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:304, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 
+Total REAL time to Router completion: 1 mins 
+Total CPU time to Router completion: 53 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+| clk_100_0000MHzPLL0 |  BUFGMUX_X2Y3| No   | 1501 |  0.705     |  2.413      |
++---------------------+--------------+------+------+------------+-------------+
+|microblaze_0_debug_D |              |      |      |            |             |
+|              bg_Clk | BUFGMUX_X3Y13| No   |   63 |  0.038     |  1.748      |
++---------------------+--------------+------+------+------------+-------------+
+|axi_ethernetlite_0_P |              |      |      |            |             |
+|  HY_rx_clk_pin_IBUF |         Local|      |   15 |  1.445     |  4.297      |
++---------------------+--------------+------+------+------------+-------------+
+|Ethernet100M/Etherne |              |      |      |            |             |
+|  t100M/phy_tx_clk_i |         Local|      |   19 |  1.477     |  2.867      |
++---------------------+--------------+------+------+------------+-------------+
+|microblaze_0_debug_D |              |      |      |            |             |
+|           bg_Update |         Local|      |   21 |  4.156     |  6.908      |
++---------------------+--------------+------+------+------------+-------------+
+|Ethernet100M_IP2INTC |              |      |      |            |             |
+|               _Irpt |         Local|      |    1 |  0.000     |  1.445      |
++---------------------+--------------+------+------+------------+-------------+
+|LPDDR/sysclk_2x_bufp |              |      |      |            |             |
+|                ll_o |         Local|      |   31 |  0.704     |  1.551      |
++---------------------+--------------+------+------+------------+-------------+
+|LPDDR/sysclk_2x_180_ |              |      |      |            |             |
+|            bufpll_o |         Local|      |   37 |  0.723     |  1.570      |
++---------------------+--------------+------+------+------------+-------------+
+|LPDDR/LPDDR/mcb_ui_t |              |      |      |            |             |
+|op_0/mcb_raw_wrapper |              |      |      |            |             |
+|   _inst/ioi_drp_clk |         Local|      |   22 |  0.000     |  0.002      |
++---------------------+--------------+------+------+------------+-------------+
+|LPDDR/LPDDR/mcb_ui_t |              |      |      |            |             |
+|op_0/mcb_raw_wrapper |              |      |      |            |             |
+|_inst/idelay_dqs_ioi |              |      |      |            |             |
+|                  _s |         Local|      |    1 |  0.000     |  0.002      |
++---------------------+--------------+------+------+------------+-------------+
+|LPDDR/LPDDR/mcb_ui_t |              |      |      |            |             |
+|op_0/mcb_raw_wrapper |              |      |      |            |             |
+|_inst/idelay_dqs_ioi |              |      |      |            |             |
+|                  _m |         Local|      |    1 |  0.000     |  0.002      |
++---------------------+--------------+------+------+------------+-------------+
+|LPDDR/LPDDR/mcb_ui_t |              |      |      |            |             |
+|op_0/mcb_raw_wrapper |              |      |      |            |             |
+|_inst/idelay_udqs_io |              |      |      |            |             |
+|                 i_s |         Local|      |    1 |  0.000     |  0.002      |
++---------------------+--------------+------+------+------------+-------------+
+|LPDDR/LPDDR/mcb_ui_t |              |      |      |            |             |
+|op_0/mcb_raw_wrapper |              |      |      |            |             |
+|_inst/idelay_udqs_io |              |      |      |            |             |
+|                 i_m |         Local|      |    1 |  0.000     |  0.002      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Number of Timing Constraints that were not applied: 4
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     0.309ns|     9.691ns|       0|           0
+  G_PLL0_CLKOUT2 = PERIOD TIMEGRP         " | HOLD        |     0.232ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT2" TS_sys_clk_pin         HIGH  |             |            |            |        |            
+  50|             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk_400_0000MHzPLL0_nobuf = PERIOD TIM | MINPERIOD   |     0.901ns|     1.599ns|       0|           0
+  EGRP "clk_400_0000MHzPLL0_nobuf"          |             |            |            |        |            
+  TS_sys_clk_pin * 4 HIGH 50|             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk_400_0000MHz180PLL0_nobuf = PERIOD  | MINPERIOD   |     0.901ns|     1.599ns|       0|           0
+  TIMEGRP         "clk_400_0000MHz180PLL0_n |             |            |            |        |            
+  obuf" TS_sys_clk_pin * 4 PHASE 1.25 ns HI |             |            |            |        |            
+  GH         50|             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     6.666ns|     3.334ns|       0|           0
+  pin" 100 MHz HIGH 50|             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "axi_ethernetlite_0_PHY_rx_clk_pin_IB | NETSKEW     |     4.397ns|     1.603ns|       0|           0
+  UF" MAXSKEW = 6 ns                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "Ethernet100M/Ethernet100M/phy_tx_clk | NETSKEW     |     4.463ns|     1.537ns|       0|           0
+  _i" MAXSKEW = 6 ns                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TSTXOUT_Ethernet100M = MAXDELAY FROM TIME | MAXDELAY    |     5.760ns|     4.240ns|       0|           0
+  GRP "TXCLK_GRP_Ethernet100M" TO         T |             |            |            |        |            
+  IMEGRP "PADS" 10 ns                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  OFFSET = IN 6 ns BEFORE COMP "axi_etherne | SETUP       |     6.195ns|    -0.195ns|       0|           0
+  tlite_0_PHY_rx_clk_pin"                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "axi_ethernetlite_0_PHY_rx_clk_pin_IB | SETUP       |     8.719ns|    15.088ns|       0|           0
+  UF" PERIOD = 40 ns HIGH 14 ns             | HOLD        |     0.069ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  NET "Ethernet100M/Ethernet100M/phy_tx_clk | SETUP       |     9.137ns|    13.894ns|       0|           0
+  _i" PERIOD = 40 ns HIGH 14 ns             | HOLD        |     0.382ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi4_0_reset_resync_path" TIG    | MAXDELAY    |         N/A|     6.964ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi4lite_0_reset_resync_path" TI | MAXDELAY    |         N/A|     6.936ns|     N/A|           0
+  G                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_LPDDR_CALIB_DONE_SYNCH_path" | N/A         |         N/A|         N/A|     N/A|         N/A
+   TIG                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_LPDDR_SYS_RST_SYNCH_path" TI | SETUP       |         N/A|     1.669ns|     N/A|           0
+  G                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_microblaze_0_dlmb_POR_FF_I_p | SETUP       |         N/A|     3.059ns|     N/A|           0
+  ath" TIG                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_microblaze_0_ilmb_POR_FF_I_p | SETUP       |         N/A|     3.710ns|     N/A|           0
+  ath" TIG                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_microblaze_0_Interrupt_path" | SETUP       |         N/A|     3.217ns|     N/A|           0
+   TIG                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_AXI_TX_FP_Ethernet100M_path" TIG | SETUP       |         N/A|    10.367ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TX_AXI_FP_Ethernet100M_path" TIG | SETUP       |         N/A|     4.585ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_AXI_RX_FP_Ethernet100M_path" TIG | SETUP       |         N/A|    10.556ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_RX_AXI_FP_Ethernet100M_path" TIG | SETUP       |         N/A|     1.376ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_microblaze_0_Reset_path" TIG | SETUP       |         N/A|     3.465ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_intr_sync_p1_microblaze_0_intc_p | SETUP       |         N/A|    -0.891ns|     N/A|           0
+  ath" TIG                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_sync_microblaze_0_intc_path" TIG | SETUP       |         N/A|     9.545ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      3.334ns|      9.691ns|            0|            0|            0|       533932|
+| TS_clk_400_0000MHz180PLL0_nobu|      2.500ns|      1.599ns|          N/A|            0|            0|            0|            0|
+| f                             |             |             |             |             |             |             |             |
+| TS_clk_400_0000MHzPLL0_nobuf  |      2.500ns|      1.599ns|          N/A|            0|            0|            0|            0|
+| TS_clock_generator_0_clock_gen|     10.000ns|      9.691ns|          N/A|            0|            0|       533932|            0|
+| erator_0_SIG_PLL0_CLKOUT2     |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 25 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 1 mins 6 secs 
+Total CPU time to PAR completion: 56 secs 
+
+Peak Memory Usage:  425 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 29
+Number of info messages: 1
+
+Writing design to file SaturnV3Ethernet100M.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml SaturnV3Ethernet100M.twx SaturnV3Ethernet100M.ncd
+SaturnV3Ethernet100M.pcf 
+#----------------------------------------------#
+Release 14.7 - Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+Loading device for application Rf_Device from file '6slx45.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
+   "SaturnV3Ethernet100M" is an NCD, version 3.2, device xc6slx45, package
+csg324, speed -2
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6 ns BEFORE COMP
+   "axi_ethernetlite_0_PHY_rx_clk_pin";> [SaturnV3Ethernet100M.pcf(14814)], is
+   specified without a duration.  This will result in a lack of hold time checks
+   in timing reports.  If hold time checks are desired a duration value should
+   be specified following the 'VALID' keyword.
+
+WARNING:Timing:3223 - Timing constraint PATH
+   "TS_TIG_LPDDR_CALIB_DONE_SYNCH_path" TIG; ignored during timing analysis.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more
+   information, see the TSI report.  Please consult the Xilinx Command Line
+   Tools User Guide for information on generating a TSI report.
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -e 3 -xml
+SaturnV3Ethernet100M.twx SaturnV3Ethernet100M.ncd SaturnV3Ethernet100M.pcf
+
+
+Design file:              SaturnV3Ethernet100M.ncd
+Physical constraint file: SaturnV3Ethernet100M.pcf
+Device,speed:             xc6slx45,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths option. All paths that are not constrained will be reported in
+   the unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a 50 Ohm transmission line loading model.  For the details of
+   this model, and for more information on accounting for different loading conditions, please see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0 (Setup/Max: 0, Hold: 0)
+
+Constraints cover 534474 paths, 2 nets, and 25822 connections
+
+Design statistics:
+   Minimum period:  15.088ns (Maximum frequency:  66.278MHz)
+   Maximum path delay from/to any node:   4.240ns
+   Maximum net skew:   1.603ns
+
+
+Analysis completed Wed Jul 16 18:28:52 2014
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 2
+Number of info messages: 4
+Total time: 15 secs 
+
+
+xflow done!
+touch __xps/SaturnV3Ethernet100M_routed
+xilperl C:/Xilinx/14.7/ISE_DS/EDK/data/fpga_impl/observe_par.pl -error yes implementation/SaturnV3Ethernet100M.par
+Analyzing implementation/SaturnV3Ethernet100M.par
+"*********************************************"
+"Running Bitgen.."
+"*********************************************"
+cd implementation & bitgen -w -f bitgen.ut SaturnV3Ethernet100M & cd ..
+Release 14.7 - Bitgen P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+Loading device for application Rf_Device from file '6slx45.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
+   "SaturnV3Ethernet100M" is an NCD, version 3.2, device xc6slx45, package
+csg324, speed -2
+Opened constraints file SaturnV3Ethernet100M.pcf.
+
+Wed Jul 16 18:29:09 2014
+
+Running DRC.
+WARNING:PhysDesignRules:367 - The signal
+   <Ethernet100M/Ethernet100M/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY
+   _COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvf
+   ifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_W
+   riteThrough.DCache_I1/Mram_cacheline_copy1_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_W
+   riteThrough.DCache_I1/Mram_cacheline_copy3_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_W
+   riteThrough.DCache_I1/Mram_cacheline_copy4_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_W
+   riteThrough.DCache_I1/Mram_cacheline_copy5_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Using_DCache.Using_W
+   riteThrough.DCache_I1/Mram_cacheline_copy2_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[0].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[8].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[2].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[1].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr<31>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr<30>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Ethernet100M/Ethernet100M/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY
+   _COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvf
+   ifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[13].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[12].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[14].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[11].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[10].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[15].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[9].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[3].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[5].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[4].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[6].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register
+   _File_I/Using_LUT6.All_RAM32M[7].ram32m_i_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   axi_ethernetlite_0_PHY_rst_n_pin_PULLUP is set but the tri state is not
+   configured. 
+DRC detected 0 errors and 26 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
+Creating bit map...
+Saving bit stream in "saturnv3ethernet100m.bit".
+Bitstream generation is complete.
+Done!
+
+********************************************************************************
+At Local date and time: Wed Jul 16 18:30:19 2014
+ make -f SaturnV3Ethernet100M.make clean started...
+rm -f implementation/SaturnV3Ethernet100M.ngc
+rm -f implementation/SaturnV3Ethernet100M_proc_sys_reset_0_wrapper.ngc implementation/SaturnV3Ethernet100M_microblaze_0_intc_wrapper.ngc implementation/SaturnV3Ethernet100M_microblaze_0_ilmb_wrapper.ngc implementation/SaturnV3Ethernet100M_microblaze_0_i_bram_ctrl_wrapper.ngc implementation/SaturnV3Ethernet100M_microblaze_0_dlmb_wrapper.ngc implementation/SaturnV3Ethernet100M_microblaze_0_d_bram_ctrl_wrapper.ngc implementation/SaturnV3Ethernet100M_microblaze_0_bram_block_wrapper.ngc implementation/SaturnV3Ethernet100M_microblaze_0_wrapper.ngc implementation/SaturnV3Ethernet100M_debug_module_wrapper.ngc implementation/SaturnV3Ethernet100M_clock_generator_0_wrapper.ngc implementation/SaturnV3Ethernet100M_timer_wrapper.ngc implementation/SaturnV3Ethernet100M_axi4lite_0_wrapper.ngc implementation/SaturnV3Ethernet100M_axi4_0_wrapper.ngc implementation/SaturnV3Ethernet100M_lpddr_wrapper.ngc implementation/SaturnV3Ethernet100M_ft2232_uart_wrapper.ngc implementation/SaturnV3Ethernet100M_ethernet100m_wrapper.ngc implementation/SaturnV3Ethernet100M_i2c_interface_wrapper.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+rm -f implementation/SaturnV3Ethernet100M.bmm
+rm -rf implementation/cache
+rm -f implementation/SaturnV3Ethernet100M.bit
+rm -f implementation/SaturnV3Ethernet100M.ncd
+rm -f implementation/SaturnV3Ethernet100M_bd.bmm 
+rm -f implementation/SaturnV3Ethernet100M_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/SaturnV3Ethernet100M_bits
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp SaturnV3Ethernet100M.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf __xps/ps7_instance.mhs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+rm -f _impact.cmd
+Done!

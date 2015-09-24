@@ -1,0 +1,25 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for LM4550 Audio Expansion Module on Waxwing Development Board            #
+# To use it in your project :                                                                   #
+# * Remove or comment the lines corresponding to unused pins                                    #
+# * Rename the used signals according to the your project                                       #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+ 
+   # Clock 100 MHz
+     NET "CLK"           LOC = "V10"   | IOSTANDARD = LVCMOS33 | Period = 100 MHz;
+	 NET "Rst"                           IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST | PULLDOWN; 
+	 
+####################################################################################################################################################
+#                                            LM4550 Audio Expansion Module                                                                         #
+####################################################################################################################################################		
+####################################################################################################################################################
+#                                                    Header P4                                    	                                               #
+####################################################################################################################################################
+
+    
+    NET "AC97SDO"       LOC = "A6"    | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97SDI"       LOC = "D11"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97Sync"      LOC = "H16"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97BitClock"  LOC = "C11"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+    NET "AC97Rstn"      LOC = "H15"   | IOSTANDARD = LVCMOS33 | DRIVE = 8  | SLEW = FAST;
+	

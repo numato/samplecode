@@ -1,0 +1,3144 @@
+17:32:45 **** Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+libgen -hw ../SaturnV3Ethernet100M_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Runnning DRC for lwIP library... 
+
+
+
+lwIP can be used with the following EMAC peripherals found in your system:
+ethernet100m
+
+Running generate.
+Little Endian system
+
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling lwIP"
+"Compiling lwIP adapter for Xilinx MAC"
+"Creating archive liblwip4.a"
+"Compiling uartlite"
+"Compiling emaclite"
+"Compiling iic"
+"Compiling bram"
+"Compiling intc"
+"Compiling tmrctr"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+17:33:08 **** Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+../src/platform.c: In function 'timer_callback':
+../src/platform.c:39:2: warning: implicit declaration of function 'tcp_fasttmr' [-Wimplicit-function-declaration]
+../src/platform.c:43:3: warning: implicit declaration of function 'tcp_slowtmr' [-Wimplicit-function-declaration]
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/platform_mb.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_mb.d" -MT"src/platform_mb.d" -o "src/platform_mb.o" "../src/platform_mb.c"
+'Finished building: ../src/platform_mb.c'
+' '
+'Building file: ../src/platform_ppc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_ppc.d" -MT"src/platform_ppc.d" -o "src/platform_ppc.o" "../src/platform_ppc.c"
+'Finished building: ../src/platform_ppc.c'
+' '
+'Building file: ../src/platform_zynq.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynq.d" -MT"src/platform_zynq.d" -o "src/platform_zynq.o" "../src/platform_zynq.c"
+'Finished building: ../src/platform_zynq.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 112764	   1560	 750444	 864768	  d3200	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:40:26 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:53:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
+../src/main.c:54:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
+../src/main.c:55:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\SaurnV3Ethernet100M\sdk\SaturnV3Ethernet\Debug/../src/main.c:105: undefined reference to `IicEepromExample'
+collect2: ld returned 1 exit status
+make: *** [SaturnV3Ethernet.elf] Error 1
+17:40:55 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'SetupInterruptSystem':
+../src/main.c:323:2: warning: implicit declaration of function 'Xil_ExceptionInit' [-Wimplicit-function-declaration]
+../src/main.c:325:2: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+../src/main.c:325:31: error: 'XIL_EXCEPTION_ID_INT' undeclared (first use in this function)
+../src/main.c:325:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:326:6: error: 'Xil_ExceptionHandler' undeclared (first use in this function)
+../src/main.c:326:27: error: expected ')' before 'XIntc_InterruptHandler'
+../src/main.c:329:2: warning: implicit declaration of function 'Xil_ExceptionEnable' [-Wimplicit-function-declaration]
+make: *** [src/main.o] Error 1
+17:41:16 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'SetupInterruptSystem':
+../src/main.c:323:2: warning: implicit declaration of function 'Xil_ExceptionInit' [-Wimplicit-function-declaration]
+../src/main.c:325:2: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+../src/main.c:325:31: error: 'XIL_EXCEPTION_ID_INT' undeclared (first use in this function)
+../src/main.c:325:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:326:6: error: 'Xil_ExceptionHandler' undeclared (first use in this function)
+../src/main.c:326:27: error: expected ')' before 'XIntc_InterruptHandler'
+../src/main.c:329:2: warning: implicit declaration of function 'Xil_ExceptionEnable' [-Wimplicit-function-declaration]
+make: *** [src/main.o] Error 1
+17:43:05 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118692	   1608	 750572	 870872	  d49d8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:43:35 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118692	   1608	 750572	 870872	  d49d8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:44:14 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+17:44:28 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:44:35 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:44:52 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+17:44:54 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:45:04 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:46:07 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+17:46:11 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:50:45 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118932	   1608	 750572	 871112	  d4ac8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:51:36 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:52:05 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118932	   1608	 750572	 871112	  d4ac8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:52:11 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:52:49 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118932	   1608	 750572	 871112	  d4ac8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:52:59 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:54:25 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118936	   1608	 750568	 871112	  d4ac8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:54:50 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:56:44 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119008	   1608	 750568	 871184	  d4b10	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:56:53 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:57:34 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119008	   1608	 750568	 871184	  d4b10	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+17:57:42 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+17:59:56 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119108	   1608	 750572	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+18:00:03 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+18:00:36 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119108	   1608	 750572	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+18:00:42 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119108	   1608	 750572	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+18:00:55 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+18:01:27 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119112	   1608	 750568	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+18:01:42 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119108	   1608	 750572	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+18:01:52 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+18:03:46 **** Clean-only build of configuration Debug for project SaturnV3Ethernet ****
+make clean 
+rm -rf  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o  ./src/echo.d ./src/main.d ./src/platform.d ./src/platform_mb.d ./src/platform_ppc.d ./src/platform_zynq.d  SaturnV3Ethernet.elf.size  SaturnV3Ethernet.elf.elfcheck  SaturnV3Ethernet.elf
+' '
+18:03:46 **** Clean-only build of project SaturnV3Ethernet_bsp ****
+make -k clean 
+rm -rf microblaze_0
+18:03:51 **** Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+libgen -hw ../SaturnV3Ethernet100M_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Runnning DRC for lwIP library... 
+
+
+
+lwIP can be used with the following EMAC peripherals found in your system:
+ethernet100m
+
+Running generate.
+Little Endian system
+
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling lwIP"
+"Compiling lwIP adapter for Xilinx MAC"
+"Creating archive liblwip4.a"
+"Compiling uartlite"
+"Compiling emaclite"
+"Compiling iic"
+"Compiling bram"
+"Compiling intc"
+"Compiling tmrctr"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+18:04:31 **** Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+../src/platform.c: In function 'timer_callback':
+../src/platform.c:39:2: warning: implicit declaration of function 'tcp_fasttmr' [-Wimplicit-function-declaration]
+../src/platform.c:43:3: warning: implicit declaration of function 'tcp_slowtmr' [-Wimplicit-function-declaration]
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/platform_mb.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_mb.d" -MT"src/platform_mb.d" -o "src/platform_mb.o" "../src/platform_mb.c"
+'Finished building: ../src/platform_mb.c'
+' '
+'Building file: ../src/platform_ppc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_ppc.d" -MT"src/platform_ppc.d" -o "src/platform_ppc.o" "../src/platform_ppc.c"
+'Finished building: ../src/platform_ppc.c'
+' '
+'Building file: ../src/platform_zynq.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynq.d" -MT"src/platform_zynq.d" -o "src/platform_zynq.o" "../src/platform_zynq.c"
+'Finished building: ../src/platform_zynq.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119108	   1608	 750572	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+18:05:05 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+18:05:27 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+18:06:02 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+18:06:22 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:20:20 **** Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+libgen -hw ../SaturnV3Ethernet100M_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Runnning DRC for lwIP library... 
+
+
+
+lwIP can be used with the following EMAC peripherals found in your system:
+ethernet100m
+
+Running generate.
+Little Endian system
+
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling lwIP"
+"Compiling lwIP adapter for Xilinx MAC"
+"Creating archive liblwip4.a"
+"Compiling uartlite"
+"Compiling emaclite"
+"Compiling iic"
+"Compiling bram"
+"Compiling intc"
+"Compiling tmrctr"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+10:21:25 **** Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.d" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+../src/platform.c: In function 'timer_callback':
+../src/platform.c:39:2: warning: implicit declaration of function 'tcp_fasttmr' [-Wimplicit-function-declaration]
+../src/platform.c:43:3: warning: implicit declaration of function 'tcp_slowtmr' [-Wimplicit-function-declaration]
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/platform_mb.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_mb.d" -MT"src/platform_mb.d" -o "src/platform_mb.o" "../src/platform_mb.c"
+'Finished building: ../src/platform_mb.c'
+' '
+'Building file: ../src/platform_ppc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_ppc.d" -MT"src/platform_ppc.d" -o "src/platform_ppc.o" "../src/platform_ppc.c"
+'Finished building: ../src/platform_ppc.c'
+' '
+'Building file: ../src/platform_zynq.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynq.d" -MT"src/platform_zynq.d" -o "src/platform_zynq.o" "../src/platform_zynq.c"
+'Finished building: ../src/platform_zynq.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:24:08 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:35:52 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118916	   1608	 750572	 871096	  d4ab8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:45:17 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+10:46:10 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:46:30 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:47:02 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:47:29 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+10:47:36 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:49:08 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:350:13: warning: 'ReceiveHandler' defined but not used [-Wunused-function]
+../src/main.c:369:13: warning: 'StatusHandler' defined but not used [-Wunused-function]
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118828	   1608	 750572	 871008	  d4a60	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:49:25 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+10:49:29 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:50:23 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:50:45 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+10:50:53 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:51:27 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:51:37 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:53:59 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:54:12 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+10:54:16 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:55:24 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:55:29 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:55:43 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:56:31 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:185:47: error: invalid suffix "r" on integer constant
+make: *** [src/main.o] Error 1
+10:56:39 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:56:43 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:57:02 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:24: error: expected identifier before numeric constant
+../src/main.c:186:24: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+make: *** [src/main.o] Error 1
+10:57:33 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:58:17 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118916	   1608	 750572	 871096	  d4ab8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+10:58:22 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+10:59:59 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 1 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic *' but argument is of type 'int'
+../src/main.c:194:5: warning: passing argument 1 of 'SetupInterruptSystem' makes pointer from integer without a cast [enabled by default]
+../src/main.c:53:12: note: expected 'struct XIic *' but argument is of type 'int'
+../src/main.c:202:5: warning: passing argument 1 of 'XIic_SetRecvHandler' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:513:6: note: expected 'struct XIic *' but argument is of type 'int'
+../src/main.c:202:5: warning: passing argument 2 of 'XIic_SetRecvHandler' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:513:6: note: expected 'void *' but argument is of type 'int'
+../src/main.c:203:5: warning: passing argument 1 of 'XIic_SetStatusHandler' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:517:6: note: expected 'struct XIic *' but argument is of type 'int'
+../src/main.c:203:5: warning: passing argument 2 of 'XIic_SetStatusHandler' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:517:6: note: expected 'void *' but argument is of type 'int'
+../src/main.c:208:5: warning: passing argument 1 of 'XIic_SetAddress' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:505:5: note: expected 'struct XIic *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118896	   1608	 750568	 871072	  d4aa0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:00:04 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:00:40 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:00:45 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:02:07 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750828	 871360	  d4bc0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:02:15 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:02:42 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750828	 871360	  d4bc0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:02:47 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:04:04 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750828	 871360	  d4bc0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:04:10 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:04:25 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750828	 871360	  d4bc0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:04:30 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:04:51 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:13:02 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:13:21 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+11:13:30 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:14:08 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:14:14 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:14:38 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118920	   1608	 750568	 871096	  d4ab8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:14:44 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:16:52 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118920	   1608	 750568	 871096	  d4ab8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:16:56 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:17:46 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:218:9: warning: passing argument 1 of 'ReadID' makes pointer from integer without a cast [enabled by default]
+../src/main.c:51:5: note: expected 'u8 *' but argument is of type 'u32'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:17:50 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:18:16 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:218:9: warning: passing argument 1 of 'ReadID' makes pointer from integer without a cast [enabled by default]
+../src/main.c:51:5: note: expected 'u8 *' but argument is of type 'u32'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118924	   1608	 750572	 871104	  d4ac0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:18:20 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:21:05 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:218:9: warning: passing argument 1 of 'ReadID' makes pointer from integer without a cast [enabled by default]
+../src/main.c:51:5: note: expected 'u8 *' but argument is of type 'u32'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118964	   1608	 750572	 871144	  d4ae8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:21:10 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:21:34 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:218:9: warning: passing argument 1 of 'ReadID' makes pointer from integer without a cast [enabled by default]
+../src/main.c:51:5: note: expected 'u8 *' but argument is of type 'u32'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118960	   1608	 750568	 871136	  d4ae0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:21:39 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:22:07 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:22:19 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:218:9: warning: passing argument 1 of 'ReadID' makes pointer from integer without a cast [enabled by default]
+../src/main.c:51:5: note: expected 'u8 *' but argument is of type 'u32'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118964	   1608	 750572	 871144	  d4ae8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:22:24 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:22:58 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:218:9: warning: passing argument 1 of 'ReadID' makes pointer from integer without a cast [enabled by default]
+../src/main.c:51:5: note: expected 'u8 *' but argument is of type 'u32'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118972	   1608	 750572	 871152	  d4af0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:23:02 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:23:29 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118972	   1608	 750572	 871152	  d4af0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:23:33 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:24:05 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118968	   1608	 750568	 871144	  d4ae8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:24:10 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:24:57 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:25:01 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:27:14 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:27:18 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:27:37 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:27:52 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:27:58 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:28:44 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+11:29:20 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:33:42 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:33:50 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:35:25 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:35:29 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:37:13 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+11:37:16 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:37:24 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:37:35 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:37:58 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+11:38:00 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:38:18 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:38:28 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:38:37 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:40:31 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+11:40:37 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:41:41 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:41:51 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:43:03 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118992	   1608	 750568	 871168	  d4b00	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:43:08 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:43:28 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118996	   1608	 750572	 871176	  d4b08	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:43:32 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:45:28 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+../src/main.c: In function 'ReadID':
+../src/main.c:245:5: warning: passing argument 2 of 'XIic_MasterRecv' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:528:5: note: expected 'u8 *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:45:32 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:46:04 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+../src/main.c: In function 'ReadID':
+../src/main.c:245:5: warning: passing argument 2 of 'XIic_MasterRecv' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:528:5: note: expected 'u8 *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:46:08 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:48:29 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:48:33 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:50:05 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:51:48 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119012	   1608	 750572	 871192	  d4b18	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:51:52 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:52:42 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750572	 871160	  d4af8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:52:47 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:53:25 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750828	 871416	  d4bf8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:53:29 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:53:55 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750828	 871416	  d4bf8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:54:13 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+11:54:16 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:54:45 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750828	 871416	  d4bf8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+11:54:57 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+11:55:00 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+11:58:22 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+11:58:28 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:10:22 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750764	 871352	  d4bb8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+12:10:45 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+12:10:49 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:12:04 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:186:13: warning: passing argument 2 of 'XIic_CfgInitialize' makes pointer from integer without a cast [enabled by default]
+../../SaturnV3Ethernet_bsp/microblaze_0/include/xiic.h:497:5: note: expected 'struct XIic_Config *' but argument is of type 'int'
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750700	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+12:12:09 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:12:56 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750700	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+12:13:03 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:14:45 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750700	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+12:14:49 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:15:10 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:16:42 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+12:16:45 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:17:20 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750700	 871288	  d4b78	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+12:17:26 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:18:11 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118980	   1608	 750828	 871416	  d4bf8	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+12:18:15 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+12:18:48 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:14:35 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'GetMACID':
+../src/main.c:217:20: error: 'SendHandler' undeclared (first use in this function)
+../src/main.c:217:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: At top level:
+../src/main.c:513:13: warning: 'SendHandler' defined but not used [-Wunused-function]
+make: *** [src/main.o] Error 1
+13:15:44 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121484	   1608	 750636	 873728	  d5500	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+13:16:06 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+13:16:09 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:17:25 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121420	   1608	 750636	 873664	  d54c0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+13:17:39 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:18:06 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121408	   1608	 750632	 873648	  d54b0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+13:18:11 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:18:49 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121408	   1608	 750632	 873648	  d54b0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+13:18:55 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:19:10 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+13:19:13 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:19:43 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121408	   1608	 750632	 873648	  d54b0	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+13:19:48 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:20:10 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121372	   1608	 750636	 873616	  d5490	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+13:20:14 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:32:39 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+13:32:46 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:36:08 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121364	   1608	 750636	 873608	  d5488	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+13:36:25 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+13:36:30 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:52:05 **** Auto Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../SaturnV3Ethernet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: SaturnV3Ethernet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SaturnV3Ethernet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SaturnV3Ethernet.elf"  ./src/echo.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: SaturnV3Ethernet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SaturnV3Ethernet.elf  |tee "SaturnV3Ethernet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121364	   1608	 750636	 873608	  d5488	SaturnV3Ethernet.elf
+'Finished building: SaturnV3Ethernet.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck SaturnV3Ethernet.elf -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe microblaze_0  |tee "SaturnV3Ethernet.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../SaturnV3Ethernet100M_hw_platform/system.xml -pe
+microblaze_0 SaturnV3Ethernet.elf 
+
+ELF file	: SaturnV3Ethernet.elf
+elfcheck passed.
+'Finished building: SaturnV3Ethernet.elf.elfcheck'
+' '
+13:52:33 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:52:49 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+13:52:52 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:53:09 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+13:53:11 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:53:25 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:53:46 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:54:08 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
+13:54:20 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+13:55:11 **** Auto Build of project SaturnV3Ethernet_bsp ****
+make -k all 
+'Finished building libraries'
+13:55:18 **** Incremental Build of configuration Debug for project SaturnV3Ethernet ****
+make all 
+make: Nothing to be done for `all'.
