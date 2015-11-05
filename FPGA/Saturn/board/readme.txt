@@ -1,1 +1,0 @@
-This folder contains schematics and layout files for Saturn Spartan6 FPGA module. You will need KiCad to open and edit this project.

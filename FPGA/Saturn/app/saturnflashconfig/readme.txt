@@ -1,1 +1,0 @@
-This application loads the FPGA configuration binary data from a file and write it to the onboard flash. You will need wxDevC++ to open and build this project.

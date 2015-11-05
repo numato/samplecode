@@ -1,1 +1,0 @@
-This project uses java-simple-serial-connector for accessing serial port. More details about jssc including license is available at https://code.google.com/p/java-simple-serial-connector/
