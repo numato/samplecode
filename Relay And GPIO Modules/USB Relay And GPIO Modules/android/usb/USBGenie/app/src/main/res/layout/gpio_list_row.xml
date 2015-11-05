@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="@dimen/line_height"
+    android:gravity="center_vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gpioRowImage"
+        android:paddingLeft="@dimen/padding_short"
+        android:paddingRight="@dimen/padding_short"
+        android:src="@drawable/numato_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Large Text"
+        android:id="@+id/gpioRowText"
+        android:layout_margin="2dp" />
+
+    <CheckBox
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Output"
+        android:id="@+id/gpioRowCheckBox"
+        android:layout_marginLeft="@dimen/padding_large" />
+
+    <com.kyleduo.switchbutton.SwitchButton
+        android:id="@+id/gpioRowSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="4dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="4dp" />
+
+</LinearLayout>

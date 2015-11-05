@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 1 Channel USB Powered Relay Module-->
+    <usb-device vendor-id="10777" product-id="3077" />
+</resources>

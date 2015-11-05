@@ -1,0 +1,23 @@
+This application uses the following libraries without modification. These libraries are used for
+visually better UI and not required for core functionality.
+
+1. Norbsoft android-typeface-helper (Apache License V2.0)
+   https://github.com/norbsoft/android-typeface-helper
+
+2. JoanZapata android-iconify (Apache License V2.0)
+   https://github.com/JoanZapata/android-iconify/
+
+3. JakeWharton NineOldAndroids (Apache License V2.0)
+   https://github.com/JakeWharton/NineOldAndroids
+
+4. Daimajia AnimationEasingFunctions (MIT License)
+   https://github.com/daimajia/AnimationEasingFunctions
+
+5. Daimajia/AndroidViewAnimations (MIT License)
+   https://github.com/daimajia/AndroidViewAnimations
+
+6. JakeWharton butterknife (Apache License V2.0)
+   https://github.com/JakeWharton/butterknife
+
+7. Kyleduo SwitchButton (Apache License V2.0)
+   https://github.com/kyleduo/SwitchButton

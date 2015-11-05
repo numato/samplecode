@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Numato -->
+    <string name="app_name">Numato USBGenie</string>
+    <string name="app_name_short">USBGenie</string>
+    <string name="company_name_short">Numato</string>
+    <string name="company_name_long">Numato Lab</string>
+    <string name="lbl_lab">Lab</string>
+    <string name="numato_site_link">http://numato.com</string>
+
+
+
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_info">Information</string>
+    <string name="title_activity_device_view">View Device</string>
+    <string name="title_activity_info">Information</string>
+    <string name="pull_to_refresh">Pull to refresh...</string>
+    <string name="device_info">Device Info</string>
+    <string name="device_id">Device ID:</string>
+    <string name="usb_vendor_id">USB Vendor ID:</string>
+    <string name="usb_product_id">USB Product ID:</string>
+    <string name="lbl_name">Name:</string>
+    <string name="firmware_version">Firmware Version:</string>
+    <string name="default_missing_value">--</string>
+    <string name="lbl_analog">Analog</string>
+    <string name="usb_permission_decliend">No permission to access this device</string>
+    <string name="lbl_no_device_found">No devices found.</string>
+    <string name="lbl_device_found">device found.</string>
+    <string name="lbl_devices_found">devices found.</string>
+    <string name="message_refresh_device_info">New ID set. Press refresh to reload device info</string>
+    <string name="message_id_must_be_8_characters_long">New ID must be 8 characters long</string>
+    <string name="tag_info">tagInfo</string>
+    <string name="tag_relay">tagRelay</string>
+    <string name="tag_gpio">tagGpio</string>
+    <string name="tag_analog">tagAnalog</string>
+    <string name="lbl_info">Info</string>
+    <string name="lbl_relay">Relay</string>
+    <string name="lbl_gpio">GPIO</string>
+    <string name="lbl_analog_title">Analog</string>
+    <string name="message_failed_to_read_device_version">Failed to read device version</string>
+    <string name="message_failed_to_read_device_id">Failed to read device ID</string>
+
+</resources>
