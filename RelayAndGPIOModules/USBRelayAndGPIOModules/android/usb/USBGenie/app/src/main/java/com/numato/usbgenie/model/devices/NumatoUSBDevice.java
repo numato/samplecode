@@ -81,6 +81,14 @@ public class NumatoUSBDevice {
 
         /*Populate new devices here. Search for ADD_NEW_DEVICE to find other places where changes needed*/
         switch (driver.getDevice().getProductId()) {
+
+            case PID_USBGPIO8:
+                this.name = "8 Channel USB GPIO With Analog Inputs";
+                this.numberOfRelays = 0;
+                this.numberOfGpios = 8;
+                this.numberOfAnalogInputs = 6;
+                break;
+
             case NumatoUSBDevice.PID_USBPOWEREDRELAY1:
                 this.name = "1 Channel USB Powered Relay Module";
                 this.numberOfRelays = 1;
@@ -116,6 +124,7 @@ public class NumatoUSBDevice {
 
         /*Populate new devices here. Search for ADD_NEW_DEVICE to find other places where changes needed*/
         supportedDevices.add(NumatoUSBDevice.PID_USBPOWEREDRELAY1);
+        supportedDevices.add(NumatoUSBDevice.PID_USBGPIO8);
 
 
         return supportedDevices;
