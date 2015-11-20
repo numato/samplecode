@@ -38,7 +38,24 @@ public class NumatoUSBDevice {
     public static final int VID_NUMATOLAB = 0x2A19;
 
     /*Populate new devices here. Search for ADD_NEW_DEVICE to find other places where changes needed*/
+    /* USB GPIO Devices */
+    public static final int PID_USBGPIO8 = 0x0800;
+    public static final int PID_USBGPIO16 = 0x0801;
+    public static final int PID_USBGPIO32 = 0x0802;
+
+    /* USB Relay Devices */
+    public static final int PID_USBRELAY2 = 0x0C00;
+    public static final int PID_USBRELAY4 = 0x0C01;
+    public static final int PID_USBRELAY8 = 0x0C02;
+    public static final int PID_USBRELAY16 = 0x0C03;
+    public static final int PID_USBRELAY32 = 0x0C04;
     public static final int PID_USBPOWEREDRELAY1 = 0x0C05;
+    public static final int PID_USBPOWEREDRELAY2 = 0x0C06;
+    public static final int PID_USBPOWEREDRELAY4 = 0x0C07;
+    public static final int PID_USBSSR1 = 0x0C0A;
+    public static final int PID_USBSSR2 = 0x0C0B;
+    public static final int PID_USBSSR4 = 0x0C0C;
+    public static final int PID_USBSSR8 = 0x0C0D;
 
     private String name;
     private int index;
