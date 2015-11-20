@@ -37,7 +37,7 @@ This app uses a simple and minimal CDC driver to access the devices. The driver 
 * Add support for more devices
 
 ###License
-Copyright [2015] [Numato Systems Private Limited]
+Copyright 2015 Numato Systems Private Limited
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
