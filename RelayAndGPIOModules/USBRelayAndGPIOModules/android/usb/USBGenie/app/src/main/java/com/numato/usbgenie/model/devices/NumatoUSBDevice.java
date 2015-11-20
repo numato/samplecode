@@ -89,6 +89,13 @@ public class NumatoUSBDevice {
                 this.numberOfAnalogInputs = 6;
                 break;
 
+            case PID_USBGPIO16:
+                this.name = "16 Channel USB GPIO With Analog Inputs";
+                this.numberOfRelays = 0;
+                this.numberOfGpios = 16;
+                this.numberOfAnalogInputs = 7;
+                break;
+
             case NumatoUSBDevice.PID_USBPOWEREDRELAY1:
                 this.name = "1 Channel USB Powered Relay Module";
                 this.numberOfRelays = 1;
@@ -123,8 +130,9 @@ public class NumatoUSBDevice {
         ArrayList<Integer> supportedDevices = new ArrayList<Integer>();
 
         /*Populate new devices here. Search for ADD_NEW_DEVICE to find other places where changes needed*/
-        supportedDevices.add(NumatoUSBDevice.PID_USBPOWEREDRELAY1);
         supportedDevices.add(NumatoUSBDevice.PID_USBGPIO8);
+        supportedDevices.add(NumatoUSBDevice.PID_USBGPIO16);
+        supportedDevices.add(NumatoUSBDevice.PID_USBPOWEREDRELAY1);
 
 
         return supportedDevices;

@@ -32,9 +32,15 @@ public class Gpio {
     }
 
     public boolean getState(){
-        String cmdRelayRead = "gpio read " + Integer.toString(this.number) + "\r";
+        String cmdRelayRead;
         byte[] responseBuffer = new byte[64];
         int tmp = 0;
+
+        if(this.number <= 9){
+            cmdRelayRead = "gpio read " + Integer.toString(this.number) + "\r";
+        }else{
+            cmdRelayRead = "gpio read " + String.valueOf( Character.toChars(this.number + 0x37) ) + "\r";
+        }
 
         tmp = device.sendAndReceive(cmdRelayRead.getBytes(), cmdRelayRead.length(), responseBuffer, 32);
 
@@ -53,11 +59,19 @@ public class Gpio {
 
     public void setState(boolean state) {
         String cmdRelayState;
-        Log.d("Numato", "Setting GPIO State");
-        if (state == true) {
-            cmdRelayState = "gpio set " + this.number + "\r";
-        } else {
-            cmdRelayState = "gpio clear " + this.number + "\r";
+
+        if(this.number <= 9){
+            if (state == true) {
+                cmdRelayState = "gpio set " + this.number + "\r";
+            } else {
+                cmdRelayState = "gpio clear " + this.number + "\r";
+            }
+        }else{
+            if (state == true) {
+                cmdRelayState = "gpio set " + String.valueOf(Character.toChars(this.number + 0x37)) + "\r";
+            } else {
+                cmdRelayState = "gpio clear " + String.valueOf(Character.toChars(this.number + 0x37)) + "\r";
+            }
         }
 
         device.sendAndReceive(cmdRelayState.getBytes(), cmdRelayState.length(), null, 0);
