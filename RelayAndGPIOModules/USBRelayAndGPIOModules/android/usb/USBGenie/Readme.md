@@ -29,9 +29,9 @@ This app uses a simple and minimal CDC driver to access the devices. The driver 
 * Read() - Reads from default read endpoint
 
 ###Readily supported devices
-[8 Channel USB GPIO Module With Analog Inputs](http://numato.com/8-channel-usb-gpio-module-with-analog-inputs/ "8 Channel USB GPIO Module With Analog Inputs")
-[16 Channel USB GPIO Module With Analog Inputs](http://numato.com/16-channel-usb-gpio-module-with-analog-inputs/ "16 Channel USB GPIO Module With Analog Inputs")
-[1 Channel USB Powered Relay Module](http://numato.com/1-channel-usb-powered-relay-module.html "1 Channel USB Powered Relay Module")
+* [8 Channel USB GPIO Module With Analog Inputs](http://numato.com/8-channel-usb-gpio-module-with-analog-inputs/ "8 Channel USB GPIO Module With Analog Inputs")
+* [16 Channel USB GPIO Module With Analog Inputs](http://numato.com/16-channel-usb-gpio-module-with-analog-inputs/ "16 Channel USB GPIO Module With Analog Inputs")
+* [1 Channel USB Powered Relay Module](http://numato.com/1-channel-usb-powered-relay-module.html "1 Channel USB Powered Relay Module")
 
 ###Future improvements
 * Implement asynchronous IO calls
