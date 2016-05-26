@@ -14,7 +14,7 @@ User can also add their own IPs after the script is run, by opening the created 
 
 1. Vivado Design Suite with SDK installed. (Preferred 2015.2 and above)
 2. Provided Tcl Script
-3. [Numato Skoll BSB files](/NumatoVivadoBSB) for Vivado installed (**Important!**) [How To: [NumatoVivadoBSB/README.md](/NumatoVivadoBSB/README.md) ]
+3. [Numato Skoll BSB files](/FPGA/skoll/NumatoVivadoBSB) for Vivado installed (**Important!**) [How To: [NumatoVivadoBSB/README.md](/FPGA/skoll/NumatoVivadoBSB/README.md) ]
 4. Xilinx Platform Cable JTAG debugger (only used when actually programming the FPGA )
 5. Skoll Kintex 7 FPGA Module (only needed to program your design to FPGA)
 
