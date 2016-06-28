@@ -1,0 +1,52 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for AD9763 DAC Expansion Module on Elbert V2                             #
+# To use it in your project :                                                                  #
+# * Remove or comment the lines corresponding to unused pins                                   #
+# * Rename the used signals according to the your project                                      #
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+NET clk                  LOC = P129  | IOSTANDARD = LVCMOS33  | PERIOD = 12MHz;
+NET rst_n                LOC = P80   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+
+####################################################################################################################################################
+#                                                    AD9763 DAC Expansion Module                                                                   #
+####################################################################################################################################################	
+####################################################################################################################################################
+#                                                         DIP SWITCHES                                                                             #
+####################################################################################################################################################
+
+NET sel_n[3]             LOC = P70   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+NET sel_n[2]             LOC = P69   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+NET sel_n[1]             LOC = P68   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+NET sel_n[0]             LOC = P64   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST | PULLUP;
+
+####################################################################################################################################################
+#                                            Expansion Connector's HEADER P6, P2 AND P4	                                                         #
+####################################################################################################################################################
+
+NET ad9763_dac_clk2      LOC = P8    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_clk1      LOC = P7    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_wrt1      LOC = P5    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_wrt2      LOC = P3    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+
+NET ad9763_dac_dbp1[0]   LOC = P10   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[1]   LOC = P11   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[2]   LOC = P13   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[3]   LOC = P12   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[4]   LOC = P16   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[5]   LOC = P15   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[6]   LOC = P20   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[7]   LOC = P18   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[8]   LOC = P21   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp1[9]   LOC = P19   | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+
+NET ad9763_dac_dbp2[0]   LOC = P132  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[1]   LOC = P130  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[2]   LOC = P135  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[3]   LOC = P134  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[4]   LOC = P139  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[5]   LOC = P138  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[6]   LOC = P143  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[7]   LOC = P141  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[8]   LOC = P6    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
+NET ad9763_dac_dbp2[9]   LOC = P4    | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;
