@@ -1,10 +1,10 @@
-Seven segment LED display module demo code
+AD9763 DAC Expansion Module demo code
 Numato Lab
 http://www.numato.com
 http://www.numato.cc
 
-This package contains source and other files necessary to build Seven segment 
-LED display module demo for the following boards.
+This package contains source and other files necessary to build AD9763 DAC 
+Expansion Module demo for the following boards.
 
 1. Elbert V2 Spartan 3A FPGA Development Board
    http://numato.com/elbert-v2-spartan-3a-fpga-development-board.html
@@ -24,8 +24,8 @@ LED display module demo for the following boards.
 6. Waxwing Spartan 6 FPGA Development Board
    http://numato.com/waxwing-spartan-6-fpga-development-board.html
    
-The seven segment display module used to test this code is available at
-http://numato.com/fpga-boards/expansion-modules/seven-segment-led-display-expansion-module.html
+The AD9763 DAC Expansion Module used to test this code is available at
+http://numato.com/ad9763-dac-expansion-module/
 
 IO Breakout Boards make it easier to attach expansion modules to Saturn and
 Mimas. Please see links to IO Breakout boards below.
@@ -35,11 +35,11 @@ http://numato.com/fpga-boards/expansion-modules/io-breakout-module-for-saturn.ht
 There are two ways to build this project. Either using Xilinx ISE or running 
 easy to use batch files. ISE Webpack must be installed with proper license in 
 either case. By default the project is configured to build for XC6SLX45. To 
-build for a different device you need to open SevenSegmentExpansionModule.xise
+build for a different device you need to open AD9763DACExpansionModule.xise
 in ISE and change the device in project properties and rebuild.
 
 1. Building the project using Xilinx ISE
-   Open the project file SevenSegmentExpansionModule.xise using ISE. Right 
+   Open the project file AD9763DACExpansionModule.xise using ISE. Right 
    click on the "Generate Programming Files" process in the process window and
    select "Rerun all". You may need to add appropriate user constraints file to
    the project depending on which board you are building the project for. User
@@ -56,17 +56,3 @@ ISE Webpack software and license is available for free at http://www.xilinx.com
    
 When the build finishes successfully a .bin and a .bit file should be created in
 the folder name binary.
-
-----------------------------------------------------------------------------------------------------------------
-Sr No.  Numato Lab's FPGA Board    Header Used
-        
-1           Elbert V2               P7 – P6 
-2           Mimas*                  P3 – P6 
-3           Mimas V2                P7 – P6 
-4           Saturn LX16**           P8 – P10
-5           Saturn LX45**           P8 – P10
-6           Waxwing Carrier         P5 – P6 
-7           Waxwing Dev Board       P5 – P4 
-
-*  Mimas Expansion Connector connected to Header P1 of Mimas.
-** Saturn Expansion Connector connected to Header P2 of Saturn Spartan 6 Development Board.
