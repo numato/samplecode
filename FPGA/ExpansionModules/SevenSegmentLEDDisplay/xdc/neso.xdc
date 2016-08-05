@@ -1,5 +1,5 @@
  # On Board LED on Saturn Expansion Connector is OFF 
- # VGA Expansion Module (Headers P1 , P2 ) is connected to header P10 & P8  of IO Breakout Module for Neso
+ # Seven Segment Expansion Module (Headers P1 , P2 ) is connected to header P10 & P8  of IO Breakout Module for Neso
  # IO Breakout Module for Saturn is connected to right side of Neso
  
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
