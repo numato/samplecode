@@ -66,7 +66,7 @@ the folder name binary.
 ----------------------------------------------------------------------------------------------------------------
 Artix and Kintex 7 Series:
 
-There is a "SevenSegmentExpansionModule.xpr" vivado project file. Just open it by double
+There is a "LCDDisplay16x2.xpr" vivado project file. Just open it by double
 clicking. By default the project is configured for Skoll. Click "Generate Bitstream"
 and choose Yes in any subsequent dialog windows. For building for Neso, change the
 FPGA device to XC7A100T-CSG324 from "Project Settings" and set the "Neso" constraints 
