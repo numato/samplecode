@@ -3,7 +3,7 @@
 # Saturn_IO_Expansion is connectd to the right side Header of the Neso board (P5 Header)
 # Saturn_IO_Expansion LED module is off
 #P6,P5,P4,P3 Headers of LCD_Expansion module is connected to P12,P6,P7,P11 Headers of Saturun_IO_Expansion module
-#HOW TO CHECK PIN CONNECTION :5Inch LCD TFT Expansion Module --> saturn expansion module --> Skoll(Header P5) 
+#HOW TO CHECK PIN CONNECTION :5Inch LCD TFT Expansion Module --> saturn expansion module --> Neso(Header P5) 
 
 #Clock 100 MHz                            
 
