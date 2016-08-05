@@ -23,6 +23,12 @@ CS4344 Audio Expansion Module demo for the following boards.
 
 6. Waxwing Spartan 6 FPGA Development Board
    http://numato.com/waxwing-spartan-6-fpga-development-board.html
+
+7. Neso Artix 7 FPGA Module
+   https://numato.com/neso-artix-7-fpga-development-board/
+
+8. Skoll Kintex 7 FPGA Module
+   https://numato.com/skoll-kintex-7-fpga-development-board/
    
 The CS4344 Audio Expansion Module used to test this code is available at
 http://numato.com/fpga-boards/expansion-modules/cs4344-audio-expansion-module.html
@@ -31,6 +37,9 @@ IO Breakout Boards make it easier to attach expansion modules to Saturn and
 Mimas. Please see links to IO Breakout boards below.
 http://numato.com/fpga-boards/expansion-modules/io-breakout-module-for-mimas.html
 http://numato.com/fpga-boards/expansion-modules/io-breakout-module-for-saturn.html
+
+----------------------------------------------------------------------------------------------------------------
+Spartan 3 & 6 Series:
    
 There are two ways to build this project. Either using Xilinx ISE or running 
 easy to use batch files. ISE Webpack must be installed with proper license in 
@@ -53,9 +62,18 @@ in ISE and change the device in project properties and rebuild.
    variable for the batch files to work.
    
 ISE Webpack software and license is available for free at http://www.xilinx.com
-   
+
 When the build finishes successfully a .bin and a .bit file should be created in
 the folder name binary.
+
+----------------------------------------------------------------------------------------------------------------
+Artix and Kintex 7 Series:
+
+There is a "VGAExpansionModule.xpr" vivado project file. Just open it by double
+clicking. By default the project is configured for Skoll. Click "Generate Bitstream"
+and choose Yes in any subsequent dialog windows. For building for Neso, change the
+FPGA device to XC7A100T-CSG324 from "Project Settings" and set the "Neso" constraints 
+set to "Active". You may now select "Generate Bitstream" to build the project.
 
 ----------------------------------------------------------------------------------------------------------------
 Sr No.  Numato Lab's FPGA Board            Header Used
@@ -67,6 +85,8 @@ Sr No.  Numato Lab's FPGA Board            Header Used
 5              Saturn LX45**              P6  – Lower Ios
 6              Waxwing Carrier            P5  – Lower Ios
 7              Waxwing Dev Board          P3  – Lower Ios
-
+8              Neso(IO Expansion on P5)   P12 - Lower IOs
+9              Skoll(IO Expansion on P4)  P12 - Lower IOs
+    
 *  Mimas Expansion Connector connected to Header P1 of Mimas.
 ** Saturn Expansion Connector connected to Header P2 of Saturn Spartan 6 Development Board.
