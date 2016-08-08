@@ -75,7 +75,7 @@ Sr No.  Numato Lab's FPGA Board       Header Used
 5           Saturn LX45**             P7
 6           Waxwing Carrier           Not Available
 7           Waxwing Dev Board         P5
-8           Neso(IO Expansion on P5)  
+8           Neso(IO Expansion on P5)  P8-P10
 9           Skoll(IO Expansion on P5) P12-P6
 
 *  Mimas Expansion Connector connected to Header P1 of Mimas.
