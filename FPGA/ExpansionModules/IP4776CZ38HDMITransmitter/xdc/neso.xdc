@@ -1,9 +1,9 @@
 #HDMI cable is connected to IP4776CZ38ExpansionModuleTransmitter
 #On Board LED on Saturn Expansion Connector is OFF 
 #IP4776CZ38ExpansionModuleTransmitter module is connected to header P8 & P10 of saturn expansion module
-#Saturn expansion module is connected to right side of Skoll board(kintex7)
+#Saturn expansion module is connected to right side of Neso board(kintex7)
 #HOW TO CHECK PIN CONNECTION
-        #IP4776CZ38ExpansionModuleTransmitter --> saturn expansion module --> Skoll(Header P5) 
+        #IP4776CZ38ExpansionModuleTransmitter --> saturn expansion module --> Neso(Header P5) 
         
 #####################################################################
 #                          Clocks 100 MHz                            #
