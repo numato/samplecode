@@ -1,5 +1,5 @@
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-# This file is a .ucf for AD9763 DAC Expansion Modules on Saturn Expansion Connector            #
+# This file is a .xdc for AD9763 DAC Expansion Modules on Saturn Expansion Connector            #
 # To use it in your project :                                                                   #
 # * Remove or comment the lines corresponding to unused pins                                    #
 # * Rename the used signals according to the your project                                       #
