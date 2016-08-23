@@ -2,9 +2,9 @@
 #### MimasV2 UART RTL Sample Code
 Numato Lab
 
-http://www.numato.com
+https://www.numato.com
 
-http://www.numato.cc
+https://docs.numato.com
 
 License : CC BY-SA ( http:-creativecommons.org/licenses/by-sa/2.0/ )
 
