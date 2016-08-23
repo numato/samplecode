@@ -4,7 +4,7 @@ Numato Lab
 
 https://www.numato.com
 
-https://docs.numato.com
+https://blog.numato.com
 
 License : CC BY-SA ( http:-creativecommons.org/licenses/by-sa/2.0/ )
 
