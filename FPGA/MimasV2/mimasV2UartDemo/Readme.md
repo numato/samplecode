@@ -1,9 +1,12 @@
 	
 #### MimasV2 UART RTL Sample Code
 Numato Lab
+
 http://www.numato.com
+
 http://www.numato.cc
-License : CC BY-SA (http:-creativecommons.org/licenses/by-sa/2.0/)
+
+License : CC BY-SA ( http:-creativecommons.org/licenses/by-sa/2.0/ )
 
 This package contains source, third party and other necessary files to build MimasV2 UART democode for the following boards.
 1. MimasV2 Spartan6 FPGA development board.
