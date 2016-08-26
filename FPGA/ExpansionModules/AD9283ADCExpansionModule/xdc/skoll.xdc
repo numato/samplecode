@@ -1,3 +1,15 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .xdc for AD9283 ADC Expansion Modules on Saturn Expansion Connector            #
+# To use it in your project :                                                                   #
+# * Remove or comment the lines corresponding to unused pins                                    #
+# * Rename the used signals according to the your project                                       #
+#																								#
+#	*ADC Expansion module with Skoll Kintex 7 Board.                                            #
+#	*Input is from ADC Expansion module															#
+#	*ADC Expansion module (P2 & P3)is connected to Saturn Expansion module 					    #
+#    Headers (P6 & P12)																		#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
 set_property CFGBVS VCCO [current_design]
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 
