@@ -25,7 +25,7 @@ AC'97 Stereo Audio Codec Expansion Module demo for the following boards.
 6. Waxwing Spartan 6 FPGA Development Board
    http://numato.com/waxwing-spartan-6-fpga-development-board.html
    
-7.Skoll Kintex 7 FPGA Development Board
+7. Skoll Kintex 7 FPGA Development Board
    http://numato.com/skoll-kintex-7-fpga-development-board/
    
 The LM4550 AC'97 Stereo Audio Codec Expansion Module used to test this code is available at
