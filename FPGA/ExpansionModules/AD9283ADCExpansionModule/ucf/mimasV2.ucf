@@ -1,0 +1,29 @@
+#####################################################################
+#                          Clock 100 MHz                            #
+#####################################################################
+	 CONFIG VCCAUX = "3.3" ;
+	 NET "CLK"                  LOC = V10     | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz ;
+#####################################################################
+#                          Reset		                                #
+#####################################################################
+	 NET  "RST_n"              LOC = U5       | IOSTANDARD = LVCMOS33 | PULLUP;
+#####################################################################
+#                          Uart			                             #
+#####################################################################
+	 NET "tx"                  LOC = B8      |  IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+	 
+##################################################################################
+#       ADC9283ExpansionModule (P3 & P2) on P9 & P8 Onboard headers of mimasV2   #
+##################################################################################
+    NET "ADC_Din[6]"                 LOC = H17      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 1
+    NET "ADC_Din[7]"                 LOC = H18      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 2
+    NET "ADC_Din[4]"                 LOC = J16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3
+    NET "ADC_Din[5]"                 LOC = J18      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4
+    NET "ADC_Din[2]"                 LOC = K15      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 5
+    NET "ADC_Din[3]"                 LOC = K16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 6
+    NET "ADC_Din[0]"                 LOC = L15      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 7
+    NET "ADC_Din[1]"                 LOC = L16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 8
+	 
+    NET "ADC_PWR"                  LOC = R10     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3
+    NET "ADC_CLK"                  LOC = T10     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4
+	 
