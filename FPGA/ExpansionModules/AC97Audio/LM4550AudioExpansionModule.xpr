@@ -18,14 +18,14 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="E:/github_1/samplecode/FPGA/ExpansionModules/AC97Audio/src/series7/AC97Controller.v">
+      <File Path="$PPRDIR/src/series7/AC97Controller.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="E:/github_1/samplecode/FPGA/ExpansionModules/AC97Audio/src/series7/LM4550AudioExpansionModule.v">
+      <File Path="$PPRDIR/src/series7/LM4550AudioExpansionModule.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -40,7 +40,7 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="E:/github_1/samplecode/FPGA/ExpansionModules/AC97Audio/xdc/skoll.xdc">
+      <File Path="$PPRDIR/xdc/skoll.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
