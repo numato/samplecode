@@ -1,3 +1,4 @@
+
 LM4550 AC'97 Stereo Audio Codec Expansion Module demo code
 Numato Lab
 http://www.numato.com
@@ -23,6 +24,9 @@ AC'97 Stereo Audio Codec Expansion Module demo for the following boards.
 
 6. Waxwing Spartan 6 FPGA Development Board
    http://numato.com/waxwing-spartan-6-fpga-development-board.html
+   
+7. Skoll Kintex 7 FPGA Development Board
+   http://numato.com/skoll-kintex-7-fpga-development-board/
    
 The LM4550 AC'97 Stereo Audio Codec Expansion Module used to test this code is available at
 http://numato.com/fpga-boards/expansion-modules/lm4550-ac97-stereo-audio-codec-expansion-module.html
@@ -58,6 +62,12 @@ When the build finishes successfully a .bin and a .bit file should be created in
 the folder name binary.
 
 ----------------------------------------------------------------------------------------------------------------
+Kintex 7 Series:
+
+There is a "LM4550AudioExpansionModule.xpr" vivado project file. Just open it by double
+clicking. By default the project is configured for Skoll. Click "Generate Bitstream"
+and choose Yes in any subsequent dialog windows.
+----------------------------------------------------------------------------------------------------------------
 Sr No.  Numato Lab's FPGA Board    Header Used
         
 1          Elbert V2                  P1 
@@ -67,6 +77,7 @@ Sr No.  Numato Lab's FPGA Board    Header Used
 5          Saturn LX45**              P10
 6          Waxwing Carrier            P5
 7          Waxwing Dev Board          P4
+8          Skoll(IO Expansion on P5)  P12-P1
 
 *  Mimas Expansion Connector connected to Header P1 of Mimas.
 ** Saturn Expansion Connector connected to Header P2 of Saturn Spartan 6 Development Board.
