@@ -1,0 +1,208 @@
+##-----------------------------------------------------------------------------
+##
+## (c) Copyright 2007, 2008, 2009 Xilinx, Inc. All rights reserved.
+##
+## This file contains confidential and proprietary information
+## of Xilinx, Inc. and is protected under U.S. and
+## international copyright and other intellectual property
+## laws.
+##
+## DISCLAIMER
+## This disclaimer is not a license and does not grant any
+## rights to the materials distributed herewith. Except as
+## otherwise provided in a valid license issued to you by
+## Xilinx, and to the maximum extent permitted by applicable
+## law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+## WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+## AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+## BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+## INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+## (2) Xilinx shall not be liable (whether in contract or tort,
+## including negligence, or under any other theory of
+## liability) for any loss or damage of any kind or nature
+## related to, arising under or in connection with these
+## materials, including for any direct, or any indirect,
+## special, incidental, or consequential loss or damage
+## (including loss of data, profits, goodwill, or any type of
+## loss or damage suffered as a result of any action brought
+## by a third party) even if such damage or loss was
+## reasonably foreseeable or Xilinx had been advised of the
+## possibility of the same.
+##
+## CRITICAL APPLICATIONS
+## Xilinx products are not designed or intended to be fail-
+## safe, or for use in any application requiring fail-safe
+## performance, such as life-support or safety devices or
+## systems, Class III medical devices, nuclear facilities,
+## applications related to the deployment of airbags, or any
+## other applications that could lead to death, personal
+## injury, or severe property or environmental damage
+## (individually and collectively, "Critical
+## Applications"). Customer assumes the sole risk and
+## liability of any use of Xilinx products in Critical
+## Applications, subject only to applicable laws and
+## regulations governing limitations on product liability.
+##
+## THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+## PART OF THIS FILE AT ALL TIMES.
+##
+##-----------------------------------------------------------------------------
+## Project    : Spartan-6 Integrated Block for PCI Express
+## File       : xilinx_pcie_1_lane_ep_xc6slx45t-fgg484-3.ucf
+## Description: Example User Constraints File
+##
+## Use this file only with the device listed below.  Any other
+## combination is invalid.  Do not modify this file except in
+## regions designated for "User" constraints.
+##-----------------------------------------------------------------------------
+
+###############################################################################
+# Define Device, Package And Speed Grade
+###############################################################################
+
+CONFIG PART = xc6slx45t-fgg484-3;
+
+###############################################################################
+# User Time Names / User Time Groups / Time Specs
+###############################################################################
+
+###############################################################################
+# User Physical Constraints
+###############################################################################
+
+###############################################################################
+# Pinout and Related I/O Constraints
+###############################################################################
+
+#
+# SYS reset (input) signal.  The sys_reset_n signal should be
+# obtained from the PCI Express interface if possible.  For
+# slot based form factors, a system reset signal is usually
+# present on the connector.  For cable based form factors, a
+# system reset signal may not be available.  In this case, the
+# system reset signal must be generated locally by some form of
+# supervisory circuit.  You may change the IOSTANDARD and LOC
+# to suit your requirements and VCCO voltage banking rules.
+#
+
+#NET sys_reset_n      LOC = XXX  | IOSTANDARD = LVCMOS25 | PULLUP | NODELAY;
+
+# SYS clock 100 or 125 MHz (input) signal. The sys_clk_p and sys_clk_n
+# signals are the PCI Express reference clock. Spartan-6 GTP
+# Transceiver architecture requires the use of dedicated clock
+# resources (FPGA input pins) associated with each GTP Transceiver Tile.
+# To use these pins an IBUFDS primitive (refclk_ibuf) is
+# instantiated in the example design.
+# Please refer to the Spartan-6 GTP Transceiver User Guide
+# for guidelines regarding clock resource selection.
+#
+
+NET  sys_clk_n       LOC = B10;
+NET  sys_clk_p       LOC = A10;
+
+#
+# Transceiver instance placement.  This constraint selects the
+# transceiver to be used, which also dictates the pinout for the
+# transmit and receive differential pairs.  Please refer to the
+# Spartan-6 GTP Transceiver User Guide for more
+# information.
+#
+# PCIe Lane 0
+INST PCIe_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i LOC = GTPA1_DUAL_X0Y0;
+NET   pci_exp_txp  LOC = B6;
+NET   pci_exp_txn  LOC = A6;
+NET   pci_exp_rxp  LOC = D7;
+NET   pci_exp_rxn  LOC = C7;
+
+NET   sys_reset_n  LOC = C18   | IOSTANDARD = "LVCMOS33" | PULLUP ;
+
+
+###############################################################################
+# Physical Constraints
+###############################################################################
+//GPIOs
+NET PORT1[7]        LOC = A20    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;          
+NET PORT1[6]        LOC = B20    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;   
+NET PORT1[5]        LOC = A19    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT1[4]        LOC = C19    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT1[3]        LOC = A18    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT1[2]        LOC = B18    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT1[1]        LOC = D19    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT1[0]        LOC = D18    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+
+
+NET PORT2[7]        LOC = E6    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;          
+NET PORT2[6]        LOC = E5    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;   
+NET PORT2[5]        LOC = F16    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT2[4]        LOC = E16    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT2[3]        LOC = A17    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT2[2]        LOC = C17    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT2[1]        LOC = G11    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT2[0]        LOC = H12    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+
+NET PORT3[7]        LOC = A4    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;          
+NET PORT3[6]        LOC = C4    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;   
+NET PORT3[5]        LOC = D3    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT3[4]        LOC = C3    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT3[3]        LOC = G15    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT3[2]        LOC = H14    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT3[1]        LOC = F15    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT3[0]        LOC = F14    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;
+
+NET PORT4[7]        LOC = G7    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;          
+NET PORT4[6]        LOC = H6    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;   
+NET PORT4[5]        LOC = D1    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT4[4]        LOC = D2    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT4[3]        LOC = E4    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT4[2]        LOC = F3    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT4[1]        LOC = G4    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT4[0]        LOC = H4    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;
+
+NET PORT5[7]        LOC = J17    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;          
+NET PORT5[6]        LOC = j16    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;   
+NET PORT5[5]        LOC = H17    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT5[4]        LOC = H16    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT5[3]        LOC = B22    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT5[2]        LOC = B21    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT5[1]        LOC = H8    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT5[0]        LOC = J7    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;
+
+NET PORT6[7]        LOC = F17    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;          
+NET PORT6[6]        LOC = G16    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;   
+NET PORT6[5]        LOC = A5    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT6[4]        LOC = C5    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT6[3]        LOC = F9    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT6[2]        LOC = G8    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT6[1]        LOC = H11    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT6[0]        LOC = H10    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;
+
+NET PORT7[7]        LOC = A3    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;          
+NET PORT7[6]        LOC = B3    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;   
+NET PORT7[5]        LOC = A2    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT7[4]        LOC = B2    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT7[3]        LOC = D5    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT7[2]        LOC = D4    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT7[1]        LOC = F8    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;  
+NET PORT7[0]        LOC = F7    | IOSTANDARD = "LVCMOS33" | DRIVE = 8 | SLEW = FAST;
+
+
+###############################################################################
+# Timing Constraints
+###############################################################################
+
+#
+# Ignore timing on asynchronous signals.
+#
+NET sys_reset_n TIG;
+
+#
+# Timing requirements and related constraints.
+#
+NET sys_clk_c PERIOD = 10ns;
+
+NET PCIe_i/gt_refclk_out(0) TNM_NET = GT_REFCLK_OUT;
+TIMESPEC TS_GT_REFCLK_OUT = PERIOD GT_REFCLK_OUT 10ns HIGH 50 % ;
+
+###############################################################################
+# End
+###############################################################################
