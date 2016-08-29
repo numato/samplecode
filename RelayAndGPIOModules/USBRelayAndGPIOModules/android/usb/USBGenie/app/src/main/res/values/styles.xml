@@ -1,0 +1,45 @@
+<resources>
+
+
+    <!-- Texts -->
+    <style name="TextView" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+
+    <style name="TitleText" parent="TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TitleLight" parent="TitleText">
+        <item name="android:textColor">@color/text_light</item>
+    </style>
+
+    <style name="TitleBlue" parent="TitleText">
+        <item name="android:textColor">@color/blue2</item>
+    </style>
+
+    <style name="TextLink" parent="TextView">
+        <item name="android:textColor">@color/blue2</item>
+    </style>
+
+    <style name="SectionTitle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:layout_marginTop">@dimen/padding_large</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+
+    <style name="DeviceInfoTab">
+        <item name="android:padding">@dimen/padding_xlarge</item>
+        <item name="android:background">@drawable/card</item>
+    </style>
+
+    <style name="TextSmall">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+
+</resources>

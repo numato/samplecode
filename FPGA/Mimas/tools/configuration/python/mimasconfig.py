@@ -31,6 +31,7 @@
 #Example (Windows) : python mimasconfig.py /dev/ttyACM0 mimas.bin
 #Example (Ubuntun 14.04) : python3 mimasconfig.py COM3 mimas.bin
 
+#!/usr/bin/python3
 import sys
 import serial
 import struct

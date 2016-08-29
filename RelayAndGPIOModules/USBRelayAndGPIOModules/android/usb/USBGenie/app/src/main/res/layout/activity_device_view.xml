@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.numato.usbgenie.ui.DeviceViewActivity">
+
+    <LinearLayout
+        android:id="@+id/dummyLayout"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"/>
+
+    <TabHost
+        android:id="@+id/tabHostDeviceAView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_menu_base"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/tabInfo"
+                    style="@style/DeviceInfoTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:id="@+id/scrollView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SectionTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/device_info"
+                                />
+
+                            <TextView
+                                android:id="@+id/lblDeviceID"
+                                android:layout_width="185dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:text="@string/device_id"
+                                />
+
+                            <TextView
+                                android:id="@+id/lblUsbVendorId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:text="@string/usb_vendor_id"
+                                />
+
+                            <TextView
+                                android:id="@+id/lblUsbProductId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:text="@string/usb_product_id"
+                                />
+
+                            <TextView
+                                android:id="@+id/lblDeviceName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:text="@string/lbl_name"
+                                />
+
+                            <TextView
+                                android:id="@+id/lblFwVerison"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:text="@string/firmware_version"
+                                />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Update Device ID"
+                                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                            <EditText
+                                android:id="@+id/txtDeviceSpecificId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:editable="true"
+                                android:maxLength="8"/>
+
+                            <Button
+                                android:id="@+id/btnUpdateId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Click Here To Update Device ID"/>
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabRelay"
+                    style="@style/DeviceInfoTab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/listViewRelays"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabGpio"
+                    style="@style/DeviceInfoTab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/listViewGpios"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabAnalog"
+                    style="@style/DeviceInfoTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/listViewAnalog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
+</RelativeLayout>

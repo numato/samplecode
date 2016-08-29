@@ -19,7 +19,7 @@
      NET "rw"               LOC = U7  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # Read/Write PIN of LCD
     
   # Four bits LCD Data
-     NET "LCD_out[3]"       LOC = V4  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 14 on LCD
-     NET "LCD_out[2]"       LOC = U5  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 13 on LCD
-     NET "LCD_out[1]"       LOC = V5  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 12 on LCD
-     NET "LCD_out[0]"       LOC = R3  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 11 on LCD	 
+     NET "LCD_out[0]"       LOC = V4  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 14 on LCD
+     NET "LCD_out[1]"       LOC = U5  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 13 on LCD
+     NET "LCD_out[2]"       LOC = V5  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 12 on LCD
+     NET "LCD_out[3]"       LOC = R3  | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST;                 # PIN 11 on LCD	 

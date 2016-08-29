@@ -31,6 +31,8 @@
 #Example (Windows) : python elbertconfig.py /dev/ttyACM0 elbertv2.bin
 #Example (Ubuntun 14.04) : python3 elbertconfig.py COM3 elbertv2.bin
 
+#!/usr/bin/python3
+
 import sys
 import serial
 import struct

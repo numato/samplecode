@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="1"
+              tools:context="com.numato.usbgenie.ui.InfoActivity">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_xxlarge"
+            android:background="@drawable/card"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_short"
+                    android:src="@drawable/numato_icon_large"/>
+
+                <TextView
+                    style="@style/TitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/company_name_short"
+                    android:textAllCaps="true"
+                    android:textSize="35dip"
+                    />
+
+                <TextView
+                    style="@style/TitleBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_short"
+                    android:text="@string/lbl_lab"
+                    android:textAllCaps="true"
+                    android:textSize="35dip"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/numato_site_link"
+                style="@style/TextLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/numato_site_link"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warranty Disclaimer"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This software and it&apos;s source code are provided &quot;as is&quot; and without any express or implied warranties, including, without limitation, the implied warranties of merchantability and fitness for a particular purpose.\n\nPlease remember, this is a demo application, and comes with limitations."
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Credits"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Norbsoft android-typeface-helper\n2. JoanZapata android-iconify\n3. JakeWharton NineOldAndroids\n4. Daimajia AnimationEasingFunctions\n5. Daimajia/AndroidViewAnimations\n6. JakeWharton butterknife\n7. Kyleduo SwitchButton"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1, 2, 3, 6, 7 Apache 2.0 License\n5,6 MIT License. More information about licenses and other info in License.txt bundled with the source code."
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
