@@ -6,18 +6,21 @@ http://blog.numato.com
 This package contains source and other files necessary to build AD9283 ADC 
 Expansion Module demo for the following boards.
 
-1. Mimas V2 Spartan 6 Development Board
-   http://numato.com/mimas-v2-spartan-6-fpga-development-board-with-ddr-sdram.html  
+1. Elbert V2 Spartan 3A FPGA Development Board
+   http://numato.com/elbert-v2-spartan-3a-fpga-development-board.html 
 
-2. Skoll Kintex 7 FPGA Module
+2. Mimas V2 Spartan 6 Development Board
+   http://numato.com/mimas-v2-spartan-6-fpga-development-board-with-ddr-sdram.html 
+
+3. Skoll Kintex 7 FPGA Module
    https://numato.com/skoll-kintex-7-fpga-development-board/  
    
 The AD9283 ADC Expansion Module used to test this code is available at
 https://numato.com/ad9283-adc-expansion-module/
 
 ----------------------------------------------------------------------------------------------------------------
-Spartan 6 Series:
-   
+Spartan 3 & 6 Series:
+
 There are two ways to build this project. Either using Xilinx ISE or running 
 easy to use batch files. ISE Webpack must be installed with proper license in 
 either case. By default the project is configured to build for XC6SLX9. To 
@@ -54,7 +57,10 @@ and choose Yes in any subsequent dialog windows.
 
 Sr No.  Numato Lab's FPGA Board    Header Used
 
-1       Mimas V2                    P9-P8        
-2       Skoll(IO Expansion on P5)   P12-P6
+1       Elbert V2 *   		    P1-P6
+2	Mimas V2                    P9-P8  	       
+3       Skoll(IO Expansion on P5)   P12-P6
+
+*  RXI pin of FT232RL breakout Module (http://numato.com/ft232rl-breakout-module/) connected to 7th pin of Header P4 on ElbertV2.
 
 

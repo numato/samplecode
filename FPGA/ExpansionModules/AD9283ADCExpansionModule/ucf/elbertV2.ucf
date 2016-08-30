@@ -1,0 +1,27 @@
+CONFIG VCCAUX = "3.3" ;
+##################################################################### 
+# 									Clock 12 MHz									  #
+#####################################################################
+NET "CLK"      LOC = P129  | IOSTANDARD = LVCMOS33 | PERIOD = 12MHz;
+##################################################################### 
+# 									Reset & uart_tx   							  #
+#####################################################################  
+NET "RST_n"    LOC = P125  | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12 | PULLUP;
+NET "tx"       LOC = P130  | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12 ;
+
+########################################################################
+#       ADC9283ExpansionModule on P1 & P6 Onboard headers of elbertV2      #
+########################################################################
+	 NET "ADC_Din[6]"           LOC = P31   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+    NET "ADC_Din[7]"           LOC = P32   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+    NET "ADC_Din[4]"           LOC = P28   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+    NET "ADC_Din[5]"           LOC = P30   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+    NET "ADC_Din[2]"           LOC = P27   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+    NET "ADC_Din[3]"           LOC = P29   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+    NET "ADC_Din[0]"           LOC = P24   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+    NET "ADC_Din[1]"           LOC = P25   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+
+	 NET "ADC_PWR"           LOC = P18   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+    NET "ADC_CLK"           LOC = P20   | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+	 
+
