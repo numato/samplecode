@@ -1,0 +1,6 @@
+"Pin Name","Pin Index","LOC","DIFF_TERM","DRIVE","IOSTANDARD","SLEW","TIG","PULLUP","PULLDOWN"
+"CLK_100MHZ",,"AB13",,,"LVCMOS33",,,,
+,,,,,,,,,
+,,,,,,,,,
+"FX2_UART_SOUT",,"P18",,,"LVCMOS33",,,,
+"FX2_UART_SIN",,"T17",,,"LVCMOS33",,,,

@@ -1,0 +1,72 @@
+BEGIN Opsis
+
+OPTION VLNV = Numato Lab|bsb_lib.boards|Opsis|1.0
+
+OPTION FAMILY = spartan6
+OPTION DEVICE = xc6slx45t
+OPTION PACKAGE = fgg484
+OPTION SPEED_GRADE = -3
+OPTION JTAG_POSITION = 1
+OPTION SPEC_URL = www.numato.com/saturn-spartan-6-fpga-development-board-with-ddr-sdram
+OPTION CONTACT_INFO_URL = http://numato.com/contactus
+OPTION VendorName = Numato Lab
+OPTION DisplayName = Opsis 
+OPTION LONG_DESC = "Numato Lab Opsis Spartan-6 module XC6SLX45t with MT41J128M16 256Mbyte DDR3, 128Mb SPI Flash and FX2 USB interface."
+
+IO_INTERFACE IO_IF = clock_0,     IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|clock|1.0
+IO_INTERFACE IO_IF = reset_0,     IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|reset|1.0
+IO_INTERFACE IO_IF = FX2_UART, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|uart|1.0
+IO_INTERFACE IO_IF = MCB_DDR3,    IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|ddr3_sdram|1.0
+#IO_INTERFACE IO_IF = memory_0, IO_TYPE = hide_122_XIL_MEMORY_V1
+
+PARAMETER refclk_frequency_0 = 100000000, DT = INTEGER, RANGE=(100000000:100000000), ASSIGNMENT=CONSTANT, IO_IF = clock_0, IO_IS = frequency
+PARAMETER reset_polarity = 0,             DT = STRING,                               ASSIGNMENT=CONSTANT, IO_IF = reset_0, IO_IS = RST_POLARITY
+
+
+# MCB_DDR3
+PARAMETER MCB_DDR3_MEM_PARTNO_ID = MT41J128M16XX-125, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = MCB_DDR3, IO_IS = C_MEM_PARTNO
+PARAMETER MCB_DDR3_BYPASS_CORE_UCF_ID = 0,            DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = MCB_DDR3, IO_IS = C_BYPASS_CORE_UCF
+PARAMETER MCB_DDR3_MEM_TYPE_ID = DDR3,                DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = MCB_DDR3, IO_IS = C_MEM_TYPE
+PARAMETER MCB_DDR3_MCB_RZQ_LOC_ID = R7,               DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = MCB_DDR3, IO_IS = C_MCB_RZQ_LOC
+PARAMETER MCB_DDR3_MCB_ZIO_LOC_ID = K7,               DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = MCB_DDR3, IO_IS = C_MCB_ZIO_LOC
+PARAMETER MCB_DDR3_MCB_PERFORMANCE_ID = EXTENDED,     DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = MCB_DDR3, IO_IS = C_MCB_PERFORMANCE
+PARAMETER MEMORY_0_BASEADDR_ID = 0xb0000000,          DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = MCB_DDR3, IO_IS = MEMORY_0_BASEADDR
+PARAMETER MEMORY_0_HIGHADDR_ID = 0xbfffffff,          DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = MCB_DDR3, IO_IS = MEMORY_0_HIGHADDR
+PARAMETER MCB_DDR3_MCB_MEM_ADDR_WIDTH = 14,           DT = STRING, ASSIGNMENT=CONSTANT,IO_IF = MCB_DDR3, IO_IS = C_MEM_ADDR_WIDTH
+
+# FX2 UART
+PARAMETER FX2_UART_BAUDRATE_ID = 9600,      DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = FX2_UART, IO_IS = C_BAUDRATE
+PARAMETER FX2_UART_DATA_BITS_ID = 8,         DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = FX2_UART, IO_IS = C_DATA_BITS
+PARAMETER FX2_UART_USE_PARITY_ID = 0,        DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = FX2_UART, IO_IS = C_USE_PARITY 
+PARAMETER FX2_UART_ODD_PARITY_ID = 1,        DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = FX2_UART, IO_IS = C_ODD_PARITY
+
+
+PORT CLK_100MHZ = "", DIR = I, IO_IF = clock_0, IO_IS = CLK,   SIGIS=CLK, ASSIGNMENT=CONSTANT
+PORT RESET = "",      DIR = I, IO_IF = reset_0, IO_IS = RESET, SIGIS=RST, ASSIGNMENT=CONSTANT
+
+
+PORT FX2_UART_SOUT = "", DIR = O, IO_IF = FX2_UART, IO_IS = sout
+PORT FX2_UART_SIN = "",  DIR = I, IO_IF = FX2_UART, IO_IS = sin
+
+
+PORT mcbx_dram_clk = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = ck
+PORT mcbx_dram_clk_n = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = ck_n
+PORT mcbx_dram_cke = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = cke
+PORT mcbx_dram_odt = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = odt
+PORT mcbx_dram_ras_n = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = ras_n
+PORT mcbx_dram_cas_n = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = cas_n
+PORT mcbx_dram_we_n = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = we_n
+PORT mcbx_dram_udm = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = dmu
+PORT mcbx_dram_ldm = "", 		DIR = O, 				IO_IF = MCB_DDR3, IO_IS = dml
+PORT mcbx_dram_ba = "", 		DIR = O,  VEC = [2:0],	IO_IF = MCB_DDR3, IO_IS = ba
+PORT mcbx_dram_addr = "", 		DIR = O,  VEC = [13:0],	IO_IF = MCB_DDR3, IO_IS = a
+PORT mcbx_dram_ddr3_rst = "", 	DIR = O, 				IO_IF = MCB_DDR3, IO_IS = reset_n
+PORT mcbx_dram_dq = "", 		DIR = IO, VEC = [15:0],	IO_IF = MCB_DDR3, IO_IS = dq
+PORT mcbx_dram_dqs = "", 		DIR = IO, 				IO_IF = MCB_DDR3, IO_IS = dqs
+PORT mcbx_dram_dqs_n = "", 		DIR = IO, 				IO_IF = MCB_DDR3, IO_IS = dqs_n
+PORT mcbx_dram_udqs = "", 		DIR = IO, 				IO_IF = MCB_DDR3, IO_IS = dqsu
+PORT mcbx_dram_udqs_n = "", 	DIR = IO, 				IO_IF = MCB_DDR3, IO_IS = dqsu_n
+PORT rzq = "", 					DIR = IO, 				IO_IF = MCB_DDR3, IO_IS = rzq
+PORT zio = "", 					DIR = IO, 				IO_IF = MCB_DDR3, IO_IS = zio
+
+END
