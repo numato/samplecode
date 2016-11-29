@@ -14,6 +14,7 @@
 		
         <user_parameter name="CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE" value="1"/> 
         <user_parameter name="CONFIG.PCW_QSPI_PERIPHERAL_ENABLE" value="1"/> 
+		<user_parameter name="CONFIG.PCW_QSPI_GRP_FBCLK_ENABLE" value="1"/> 
 
         <user_parameter name="CONFIG.PCW_SD0_PERIPHERAL_ENABLE" value="1"/> 
         <user_parameter name="CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ" value="100"/> 
