@@ -16,11 +16,11 @@ set_property -dict { PACKAGE_PIN "AA18"   IOSTANDARD LVCMOS33 } [get_ports { LED
 set_property -dict { PACKAGE_PIN "AB18"   IOSTANDARD LVCMOS33 } [get_ports { LED[7] }];
 
 # Port P7 of IO Expansion Module
-set_property -dict { PACKAGE_PIN "AA20"   IOSTANDARD LVCMOS33 } [get_ports { Switch[0] }];
-set_property -dict { PACKAGE_PIN "AB21"   IOSTANDARD LVCMOS33 } [get_ports { Switch[1] }];
-set_property -dict { PACKAGE_PIN "R16"    IOSTANDARD LVCMOS33 } [get_ports { Switch[2] }];
-set_property -dict { PACKAGE_PIN "T16"    IOSTANDARD LVCMOS33 } [get_ports { Switch[3] }];
-set_property -dict { PACKAGE_PIN "T15"    IOSTANDARD LVCMOS33 } [get_ports { Switch[4] }];
-set_property -dict { PACKAGE_PIN "U15"    IOSTANDARD LVCMOS33 } [get_ports { Switch[5] }];
-set_property -dict { PACKAGE_PIN "J16"    IOSTANDARD LVCMOS33 } [get_ports { Switch[6] }];
-set_property -dict { PACKAGE_PIN "J17"    IOSTANDARD LVCMOS33 } [get_ports { Switch[7] }];
+set_property -dict { PACKAGE_PIN "AA20"   PULLUP TRUE   IOSTANDARD LVCMOS33 } [get_ports { Switch[0] }];
+set_property -dict { PACKAGE_PIN "AB21"   PULLUP TRUE   IOSTANDARD LVCMOS33 } [get_ports { Switch[1] }];
+set_property -dict { PACKAGE_PIN "R16"    PULLUP TRUE   IOSTANDARD LVCMOS33 } [get_ports { Switch[2] }];
+set_property -dict { PACKAGE_PIN "T16"    PULLUP TRUE   IOSTANDARD LVCMOS33 } [get_ports { Switch[3] }];
+set_property -dict { PACKAGE_PIN "T15"    PULLUP TRUE   IOSTANDARD LVCMOS33 } [get_ports { Switch[4] }];
+set_property -dict { PACKAGE_PIN "U15"    PULLUP TRUE   IOSTANDARD LVCMOS33 } [get_ports { Switch[5] }];
+set_property -dict { PACKAGE_PIN "J16"    PULLUP TRUE   IOSTANDARD LVCMOS33 } [get_ports { Switch[6] }];
+set_property -dict { PACKAGE_PIN "J17"    PULLUP TRUE   IOSTANDARD LVCMOS33 } [get_ports { Switch[7] }];
