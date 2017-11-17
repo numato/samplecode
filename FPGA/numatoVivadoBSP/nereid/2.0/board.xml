@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
 <board schema_version="2.0" vendor="numato.com" name="Nereid" display_name="Nereid" url="www.numato.com/" preset_file="preset.xml" >
 <images>
-  <image name="" display_name="Nereid Kintex 7 BOARD" sub_type="board">
+  <image name="Nereid_board.jpg" display_name="Nereid Kintex 7 BOARD" sub_type="board">
     <description>Nereid Kintex7 Board File Image</description>
   </image>
 </images>
@@ -502,7 +502,7 @@
 			<preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
 		</preferred_ips>
         <port_maps>
-          <port_map logical_port="TRI_I" physical_port="gpio_u1_port4" dir="in" left="30" right="0"> 
+          <port_map logical_port="TRI_I" physical_port="gpio_u1_port4" dir="in" left="31" right="0"> 
             <pin_maps>
               <pin_map port_index="0" component_pin="gpio_u1_port4_0"/> 
               <pin_map port_index="1" component_pin="gpio_u1_port4_1"/> 
@@ -535,9 +535,10 @@
               <pin_map port_index="28" component_pin="gpio_u1_port4_28"/> 
               <pin_map port_index="29" component_pin="gpio_u1_port4_29"/> 
               <pin_map port_index="30" component_pin="gpio_u1_port4_30"/> 
+              <pin_map port_index="31" component_pin="gpio_u1_port4_31"/> 
             </pin_maps>
           </port_map>
-          <port_map logical_port="TRI_O" physical_port="gpio_u1_port4" dir="out" left="30" right="0"> 
+          <port_map logical_port="TRI_O" physical_port="gpio_u1_port4" dir="out" left="31" right="0"> 
             <pin_maps>
               <pin_map port_index="0" component_pin="gpio_u1_port4_0"/> 
               <pin_map port_index="1" component_pin="gpio_u1_port4_1"/> 
@@ -570,9 +571,10 @@
               <pin_map port_index="28" component_pin="gpio_u1_port4_28"/> 
               <pin_map port_index="29" component_pin="gpio_u1_port4_29"/> 
               <pin_map port_index="30" component_pin="gpio_u1_port4_30"/>
+              <pin_map port_index="31" component_pin="gpio_u1_port4_31"/>
             </pin_maps>
           </port_map>
-          <port_map logical_port="TRI_T" physical_port="gpio_u1_port4" dir="out" left="30" right="0"> 
+          <port_map logical_port="TRI_T" physical_port="gpio_u1_port4" dir="out" left="31" right="0"> 
             <pin_maps>
               <pin_map port_index="0" component_pin="gpio_u1_port4_0"/> 
               <pin_map port_index="1" component_pin="gpio_u1_port4_1"/> 
@@ -605,6 +607,69 @@
               <pin_map port_index="28" component_pin="gpio_u1_port4_28"/> 
               <pin_map port_index="29" component_pin="gpio_u1_port4_29"/> 
               <pin_map port_index="30" component_pin="gpio_u1_port4_30"/> 
+              <pin_map port_index="31" component_pin="gpio_u1_port4_31"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+      </interface>
+      
+      <interface mode="master" name="gpio_u1_port5" type="xilinx.com:interface:gpio_rtl:1.0" of_component="gpio_u1_port5" preset_proc="gpio_u1_port5_preset">
+		<preferred_ips>
+			<preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+		</preferred_ips>
+        <port_maps>
+          <port_map logical_port="TRI_I" physical_port="gpio_u1_port5" dir="in" left="13" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="gpio_u1_port5_0"/> 
+              <pin_map port_index="1" component_pin="gpio_u1_port5_1"/> 
+              <pin_map port_index="2" component_pin="gpio_u1_port5_2"/> 
+              <pin_map port_index="3" component_pin="gpio_u1_port5_3"/> 
+              <pin_map port_index="4" component_pin="gpio_u1_port5_4"/> 
+              <pin_map port_index="5" component_pin="gpio_u1_port5_5"/> 
+              <pin_map port_index="6" component_pin="gpio_u1_port5_6"/> 
+              <pin_map port_index="7" component_pin="gpio_u1_port5_7"/> 
+              <pin_map port_index="8" component_pin="gpio_u1_port5_8"/> 
+              <pin_map port_index="9" component_pin="gpio_u1_port5_9"/> 
+              <pin_map port_index="10" component_pin="gpio_u1_port5_10"/> 
+              <pin_map port_index="11" component_pin="gpio_u1_port5_11"/> 
+              <pin_map port_index="12" component_pin="gpio_u1_port5_12"/> 
+              <pin_map port_index="13" component_pin="gpio_u1_port5_13"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="TRI_O" physical_port="gpio_u1_port5" dir="out" left="13" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="gpio_u1_port5_0"/> 
+              <pin_map port_index="1" component_pin="gpio_u1_port5_1"/> 
+              <pin_map port_index="2" component_pin="gpio_u1_port5_2"/> 
+              <pin_map port_index="3" component_pin="gpio_u1_port5_3"/> 
+              <pin_map port_index="4" component_pin="gpio_u1_port5_4"/> 
+              <pin_map port_index="5" component_pin="gpio_u1_port5_5"/> 
+              <pin_map port_index="6" component_pin="gpio_u1_port5_6"/> 
+              <pin_map port_index="7" component_pin="gpio_u1_port5_7"/> 
+              <pin_map port_index="8" component_pin="gpio_u1_port5_8"/> 
+              <pin_map port_index="9" component_pin="gpio_u1_port5_9"/> 
+              <pin_map port_index="10" component_pin="gpio_u1_port5_10"/> 
+              <pin_map port_index="11" component_pin="gpio_u1_port5_11"/> 
+              <pin_map port_index="12" component_pin="gpio_u1_port5_12"/> 
+              <pin_map port_index="13" component_pin="gpio_u1_port5_13"/>              
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="TRI_T" physical_port="gpio_u1_port5" dir="out" left="13" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="gpio_u1_port5_0"/> 
+              <pin_map port_index="1" component_pin="gpio_u1_port5_1"/> 
+              <pin_map port_index="2" component_pin="gpio_u1_port5_2"/> 
+              <pin_map port_index="3" component_pin="gpio_u1_port5_3"/> 
+              <pin_map port_index="4" component_pin="gpio_u1_port5_4"/> 
+              <pin_map port_index="5" component_pin="gpio_u1_port5_5"/> 
+              <pin_map port_index="6" component_pin="gpio_u1_port5_6"/> 
+              <pin_map port_index="7" component_pin="gpio_u1_port5_7"/> 
+              <pin_map port_index="8" component_pin="gpio_u1_port5_8"/> 
+              <pin_map port_index="9" component_pin="gpio_u1_port5_9"/> 
+              <pin_map port_index="10" component_pin="gpio_u1_port5_10"/> 
+              <pin_map port_index="11" component_pin="gpio_u1_port5_11"/> 
+              <pin_map port_index="12" component_pin="gpio_u1_port5_12"/> 
+              <pin_map port_index="13" component_pin="gpio_u1_port5_13"/>              
             </pin_maps>
           </port_map>
         </port_maps>
@@ -684,9 +749,12 @@
   	<description>GPIO Header u1 Port3 31 to 0</description>
   </component>
   <component name="gpio_u1_port4" display_name="GPIO Header u1 Port4" type="chip" sub_type="led" major_group="GPIO">
-  	<description>GPIO Header u1 Port4 30 to 0</description>
+  	<description>GPIO Header u1 Port4 31 to 0</description>
   </component>
-    <component name="sys_clock" display_name="System Clock" type="chip" sub_type="system_clock" major_group="Clocks">
+  <component name="gpio_u1_port5" display_name="GPIO Header u1 Port5" type="chip" sub_type="led" major_group="GPIO">
+  	<description>GPIO Header u1 Port5 13 to 0</description>
+  </component>
+  <component name="sys_clock" display_name="System Clock" type="chip" sub_type="system_clock" major_group="Clocks">
   	<description>3.3V Single-Ended 100MHz oscillator used as system clock on the board</description>
   </component>
   <component name="reset" display_name="FPGA Reset" type="chip" sub_type="system_reset" major_group="Reset">
@@ -731,7 +799,10 @@
     <connection_map name="part0_gpio_u1_port3_1" c1_st_index="103" c1_end_index="134" c2_st_index="0" c2_end_index="31"/>
   </connection>
   <connection name="part0_gpio_u1_port4" component1="part0" component2="gpio_u1_port4">
-    <connection_map name="part0_gpio_u1_port4_1" c1_st_index="135" c1_end_index="165" c2_st_index="0" c2_end_index="30"/>
+    <connection_map name="part0_gpio_u1_port4_1" c1_st_index="135" c1_end_index="166" c2_st_index="0" c2_end_index="31"/>
+  </connection> 
+  <connection name="part0_gpio_u1_port5" component1="part0" component2="gpio_u1_port5">
+    <connection_map name="part0_gpio_u1_port5_1" c1_st_index="167" c1_end_index="180" c2_st_index="0" c2_end_index="13"/>
   </connection>  
  </connections>
 </board>
