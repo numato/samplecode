@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
 <board schema_version="2.0" vendor="numato.com" name="Nereid" display_name="Nereid" url="www.numato.com/" preset_file="preset.xml" >
 <images>
-  <image name="Nereid_board.jpg" display_name="Nereid Kintex 7 BOARD" sub_type="board">
+  <image name="" display_name="Nereid Kintex 7 BOARD" sub_type="board">
     <description>Nereid Kintex7 Board File Image</description>
   </image>
 </images>

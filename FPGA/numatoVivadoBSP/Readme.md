@@ -1,6 +1,6 @@
 # How to install Numato Board Support Files for Vivado
 
- In this current directory, there is a folders named neso, skoll and styx.
+ In this current directory, there are folders for Numato 7-Series boards such as neso, skoll, nereid styx etc.
 
 ## Install  
 
