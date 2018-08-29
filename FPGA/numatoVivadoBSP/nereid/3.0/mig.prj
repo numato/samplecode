@@ -8,8 +8,8 @@
     <DataDepth_En>1024</DataDepth_En>
     <LowPower_En>ON</LowPower_En>
     <XADC_En>Enabled</XADC_En>
-    <TargetFPGA>xc7k160t-fbg676/-1</TargetFPGA>
-    <Version>3.0</Version>
+    <TargetFPGA>xc7k160t-fbg676/-2</TargetFPGA>
+    <Version>4.1</Version>
     <SystemClock>No Buffer</SystemClock>
     <ReferenceClock>Use System Clock</ReferenceClock>
     <SysResetPolarity>ACTIVE LOW</SysResetPolarity>
@@ -35,13 +35,14 @@
         <DataMask>1</DataMask>
         <ECC>Disabled</ECC>
         <Ordering>Normal</Ordering>
-        <CustomPart>TRUE</CustomPart>
-        <NewPartName>SamsungM471b</NewPartName>
-        <RowAddress>15</RowAddress>
+        <BankMachineCnt>4</BankMachineCnt>
+        <CustomPart>FALSE</CustomPart>
+        <NewPartName></NewPartName>
+        <RowAddress>16</RowAddress>
         <ColAddress>10</ColAddress>
         <BankAddress>3</BankAddress>
         <MemoryVoltage>1.35V</MemoryVoltage>
-        <C0_MEM_SIZE>2147483648</C0_MEM_SIZE>
+        <C0_MEM_SIZE>4294967296</C0_MEM_SIZE>
         <UserMemoryAddressMap>BANK_ROW_COLUMN</UserMemoryAddressMap>
         <PinSelection>
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL135" PADName="AF7" SLEW="" name="ddr3_addr[0]" IN_TERM="" />
@@ -50,6 +51,7 @@
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL135" PADName="W10" SLEW="" name="ddr3_addr[12]" IN_TERM="" />
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL135" PADName="Y8" SLEW="" name="ddr3_addr[13]" IN_TERM="" />
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL135" PADName="Y10" SLEW="" name="ddr3_addr[14]" IN_TERM="" />
+            <Pin VCCAUX_IO="" IOSTANDARD="SSTL135" PADName="W9" SLEW="" name="ddr3_addr[15]" IN_TERM="" />
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL135" PADName="AE7" SLEW="" name="ddr3_addr[1]" IN_TERM="" />
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL135" PADName="AC7" SLEW="" name="ddr3_addr[2]" IN_TERM="" />
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL135" PADName="AB7" SLEW="" name="ddr3_addr[3]" IN_TERM="" />
@@ -166,7 +168,7 @@
             <Pin PADName="No connect" Bank="Select Bank" name="tg_compare_error" />
         </System_Control>
         <TimingParameters>
-            <Parameters twtr="7.5" trrd="10" trefi="7.8" tfaw="40" trtp="7.5" tcke="7.5" trfc="260" trp="15" tras="37.5" trcd="15" />
+            <Parameters twtr="7.5" trrd="5" trefi="7.8" tfaw="27" trtp="7.5" tcke="5" trfc="260" trp="13.91" tras="34" trcd="13.91" />
         </TimingParameters>
         <mrBurstLength name="Burst Length" >8 - Fixed</mrBurstLength>
         <mrBurstType name="Read Burst Type and Length" >Sequential</mrBurstType>
@@ -191,7 +193,7 @@
         <PortInterface>AXI</PortInterface>
         <AXIParameters>
             <C0_C_RD_WR_ARB_ALGORITHM>RD_PRI_REG</C0_C_RD_WR_ARB_ALGORITHM>
-            <C0_S_AXI_ADDR_WIDTH>31</C0_S_AXI_ADDR_WIDTH>
+            <C0_S_AXI_ADDR_WIDTH>32</C0_S_AXI_ADDR_WIDTH>
             <C0_S_AXI_DATA_WIDTH>512</C0_S_AXI_DATA_WIDTH>
             <C0_S_AXI_ID_WIDTH>1</C0_S_AXI_ID_WIDTH>
             <C0_S_AXI_SUPPORTS_NARROW_BURST>0</C0_S_AXI_SUPPORTS_NARROW_BURST>
