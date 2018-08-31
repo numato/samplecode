@@ -1,7 +1,7 @@
 #License
 #-------
-#This code is published and shared by Numato Systems Pvt Ltd under GNU LGPL 
-#license with the hope that it may be useful. Read complete license at 
+#This code is published and shared by Numato Systems Pvt Ltd under GNU LGPL
+#license with the hope that it may be useful. Read complete license at
 #http://www.gnu.org/licenses/lgpl.html or write to Free Software Foundation,
 #51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
@@ -11,7 +11,7 @@
 #coding practices that will satisfy safety and security necessary for your final
 #application.
 
-#This demo code demonstrates how to turn on/off a relay
+#This demo code demonstrates how to read the status of a relay
 
 import sys
 import serial
@@ -23,7 +23,7 @@ else:
 	portName = sys.argv[1];
 	relayNum = sys.argv[2];
 
-#Open port for communication	
+#Open port for communication
 serPort = serial.Serial(portName, 19200, timeout=1)
 
 #Send "relay read" command
@@ -33,9 +33,9 @@ response = serPort.read(25)
 
 if(response.find("on") > 0):
 	print "Relay " + str(relayNum) +" is ON"
-	
+
 elif(response.find("off") > 0):
 	print "Relay " + str(relayNum) +" is OFF"
-	
+
 #Close the port
 serPort.close()
