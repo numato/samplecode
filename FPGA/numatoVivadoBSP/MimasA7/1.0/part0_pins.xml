@@ -11,7 +11,7 @@
   <pin index="7" name ="eth_txd_0" iostandard="LVCMOS33" loc="V18"/>
   <pin index="8" name = "eth_txd_1" iostandard="LVCMOS33" loc="U18"/>
   <pin index="9" name ="eth_txd_2" iostandard="LVCMOS33" loc="V17"/>
-  <pin index="10" name ="eth_txd_3" iostandard="LVCMOS333" loc="U17"/>
+  <pin index="10" name ="eth_txd_3" iostandard="LVCMOS33" loc="U17"/>
   <pin index="11" name ="eth_tx_ctl" iostandard="LVCMOS33" loc="T20"/>
   <pin index="12" name ="eth_tx_clk" iostandard="LVCMOS33" loc="U20"/>
   <pin index="13" name ="eth_rxd_0" iostandard="LVCMOS33" loc="AB18"/>
