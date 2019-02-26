@@ -7,7 +7,7 @@
 # Max_Freq == 0 mean use maximum speed of device
 # Use 1500000 for all cable connected cables and max for all on board cables
 
-narvi         ftdi   15000000 0x2A19:0x100D::2:0x00:0x4B:0x00:0x00
+narvi         ftdi   30000000 0x2A19:0x100D::2:0x00:0x4B:0x00:0x00
 mimas_a7      ftdi   30000000 0x2A19:0x1009::2:0x00:0x4B:0x00:0x00
 ftdi          ftdi    1500000 0x0403:0x6010:
 papilio       ftdi    6000000 0x0403:0x6010:
