@@ -24,5 +24,5 @@ To run the Migen code you need to install Migen. Once Migen is installed, run th
 After running the code, in the directory where the Python file is saved, you will find a folder named “build”. 
 In this build folder, you will get .bit and .bin file. Using Tenagra or XC3SProg, program the .bit or .bin file to Mimas A7 FPGA Board. 
 To observe the output, open any serial terminal (PuTTY, Tera Term etc) to the corresponding COM Port of the board and set its BaudRate to 115200. 
-After the board is programmed, you will observe the following output in serial terminal
+After the board is programmed, you will observe "Hello World!" being printed on serial terminal.
 
