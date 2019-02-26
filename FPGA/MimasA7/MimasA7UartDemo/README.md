@@ -19,7 +19,7 @@ Tools Required:
 4. Tenagra or XC3SProg.
 
 
-To run the Migen code you need to install Migen. Once Migen is installed, copy the Migen code from the src and save it as a Python file and run this Python file.
+To run the Migen code you need to install Migen. Once Migen is installed, run the Python file from "src" folder.
 
 After running the code, in the directory where the Python file is saved, you will find a folder named “build”. 
 In this build folder, you will get .bit and .bin file. Using Tenagra or XC3SProg, program the .bit or .bin file to Mimas A7 FPGA Board. 
