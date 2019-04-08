@@ -1,0 +1,35 @@
+// BMM LOC annotation file.
+//
+// Release 14.6 -  P.20131013, build 3.0.10 Apr 3, 2013
+// Copyright (c) 1995-2019 Xilinx, Inc.  All rights reserved.
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'microblaze_0', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP microblaze_0 MICROBLAZE-LE 100
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'microblaze_0' address space 'microblaze_0_bram_block_combined' 0x00000000:0x00003FFF (16 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE microblaze_0_bram_block_combined RAMB16 [0x00000000:0x00003FFF]
+        BUS_BLOCK
+            microblaze_0_bram_block/microblaze_0_bram_block/ramb16bwer_0 RAMB16 [31:28] [0:4095] INPUT = microblaze_0_bram_block_combined_0.mem PLACED = X3Y28;
+            microblaze_0_bram_block/microblaze_0_bram_block/ramb16bwer_1 RAMB16 [27:24] [0:4095] INPUT = microblaze_0_bram_block_combined_1.mem PLACED = X3Y26;
+            microblaze_0_bram_block/microblaze_0_bram_block/ramb16bwer_2 RAMB16 [23:20] [0:4095] INPUT = microblaze_0_bram_block_combined_2.mem PLACED = X2Y26;
+            microblaze_0_bram_block/microblaze_0_bram_block/ramb16bwer_3 RAMB16 [19:16] [0:4095] INPUT = microblaze_0_bram_block_combined_3.mem PLACED = X2Y30;
+            microblaze_0_bram_block/microblaze_0_bram_block/ramb16bwer_4 RAMB16 [15:12] [0:4095] INPUT = microblaze_0_bram_block_combined_4.mem PLACED = X3Y30;
+            microblaze_0_bram_block/microblaze_0_bram_block/ramb16bwer_5 RAMB16 [11:8] [0:4095] INPUT = microblaze_0_bram_block_combined_5.mem PLACED = X2Y22;
+            microblaze_0_bram_block/microblaze_0_bram_block/ramb16bwer_6 RAMB16 [7:4] [0:4095] INPUT = microblaze_0_bram_block_combined_6.mem PLACED = X2Y28;
+            microblaze_0_bram_block/microblaze_0_bram_block/ramb16bwer_7 RAMB16 [3:0] [0:4095] INPUT = microblaze_0_bram_block_combined_7.mem PLACED = X3Y24;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+

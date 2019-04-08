@@ -1,0 +1,12 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            04/08/2019 - 11:46
+SOURCE          download.bin
+DEVICE          16384K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0x5EBE506A
+START_ADDRESS   0x00000000 END_ADDRESS 0x0016A673 DIRECTION_UP   "SaturnV3Linux_rp.bit" 6slx45csg324
+START_ADDRESS   0x00500000 END_ADDRESS 0x00A72D43 DIRECTION_UP   "saturn_linux.bin" DATAFILE

@@ -1,0 +1,27 @@
+#
+# pin constraints
+#
+NET CLK_100MHZ LOC = "V10"  |  IOSTANDARD = "LVCMOS33";
+NET FT2232_UART_SIN LOC = "L17"  |  IOSTANDARD = "LVCMOS33";
+NET FT2232_UART_SOUT LOC = "L18"  |  IOSTANDARD = "LVCMOS33";
+#
+# additional constraints
+#
+
+NET "CLK_100MHZ" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz;
+
+#Saturn does not have a pre assigned IO as reset input. So there are two possible
+#ways to handle reset. First option is to pull down the RESET net so
+#that microblaze will come out of reset immediately after powerup and will stay
+#that way forever. The upside of this solution is that it doesn't need a dedicated
+#IO. But the downside is that you can not do a hardware reset. And if in the future
+#the default reset input net name changes to something other than "RESET", this would
+#break. The second option is to use a dedicated IO for reset and enable pulldown on 
+#that IO. We have used the the first method below. 
+NET "RESET" PULLDOWN;
+
+NET axi_spi_0_SCK_pin LOC = "R15"  |  IOSTANDARD = "LVCMOS33";
+NET axi_spi_0_SS_pin LOC = "V3"  |  IOSTANDARD = "LVCMOS33";
+NET axi_spi_0_MOSI_pin LOC = "T13"  |  IOSTANDARD = "LVCMOS33";
+NET axi_spi_0_MISO_pin LOC = "R13"  |  IOSTANDARD = "LVCMOS33";

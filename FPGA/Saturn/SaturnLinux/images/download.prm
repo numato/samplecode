@@ -1,0 +1,18 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p bin -c FF -o download -s 16384 -u 0 SaturnV3Linux_rp.bit -data_file up 500000 saturn_linux.bin -spi 
+
+PROM download.prm map: Mon Apr 08 11:46:08 2019
+
+Calculating PROM checksum with fill value ff
+
+Format        Bin
+Size          16384K
+PROM start    00000000
+PROM end      00ffffff
+PROM checksum 5ebe506a
+
+        Addr1        Addr2                     Date File(s)
+     00000000     0016a673     Apr 08 11:45:31 2019 SaturnV3Linux_rp.bit
+     00500000     00a72d43     Apr 08 11:40:05 2019 saturn_linux.bin

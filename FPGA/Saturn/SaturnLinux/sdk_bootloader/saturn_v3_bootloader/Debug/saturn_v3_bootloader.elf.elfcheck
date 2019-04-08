@@ -1,0 +1,9 @@
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../xps_hw_platform/system.xml -pe microblaze_0
+saturn_v3_bootloader.elf 
+
+ELF file	: saturn_v3_bootloader.elf
+elfcheck passed.

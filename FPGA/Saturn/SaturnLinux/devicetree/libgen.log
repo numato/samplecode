@@ -1,0 +1,124 @@
+Release 14.7 - libgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw SaturnV3Linux.xml -lp device-tree -pe microblaze_0
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+#--------------------------------------
+# device-tree BSP DRC...
+#--------------------------------------
+Running generate.
+#--------------------------------------
+# device-tree BSP generate...
+#--------------------------------------
+--- device tree generator version: v1.1 ---
+generating xilinx.dts
+Clock Port Summary:
+proc_sys_reset_0.Slowest_sync_clk connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+microblaze_0_intc.S_AXI_ACLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+microblaze_0_ilmb.LMB_CLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+microblaze_0_i_bram_ctrl.LMB_Clk connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+microblaze_0_i_bram_ctrl.BRAM_Clk_A connected to
+microblaze_0_i_bram_ctrl_2_microblaze_0_bram_block_BRAM_Clk:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+    CLK_INPORT = 
+    CLK_FACTOR = 
+microblaze_0_dlmb.LMB_CLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+microblaze_0_d_bram_ctrl.LMB_Clk connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+microblaze_0_d_bram_ctrl.BRAM_Clk_A connected to
+microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Clk:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+    CLK_INPORT = 
+    CLK_FACTOR = 
+microblaze_0_bram_block.BRAM_Clk_A connected to
+microblaze_0_i_bram_ctrl_2_microblaze_0_bram_block_BRAM_Clk:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+microblaze_0_bram_block.BRAM_Clk_B connected to
+microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Clk:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+microblaze_0.CLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+debug_module.S_AXI_ACLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+debug_module.Dbg_Clk_0 connected to microblaze_0_debug_Dbg_Clk:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT2 connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT0 connected to clk_400_0000MHzPLL0_nobuf:
+    CLK_FREQ_HZ = 400000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT1 connected to clk_400_0000MHz180PLL0_nobuf:
+    CLK_FREQ_HZ = 400000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKIN connected to CLK_100MHZ:
+    CLK_FREQ_HZ = 100000000
+axi_timer_0.S_AXI_ACLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+axi4lite_0.INTERCONNECT_ACLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+axi4lite_0.S_AXI_ACLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi4lite_0.M_AXI_ACLK connected to
+clk_100_0000MHzPLL0&clk_100_0000MHzPLL0&clk_100_0000MHzPLL0&clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi4_0.interconnect_aclk connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+axi4_0.S_AXI_ACLK connected to clk_100_0000MHzPLL0&clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi4_0.M_AXI_ACLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+lpddr.s0_axi_aclk connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+lpddr.ui_clk connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+lpddr.mcbx_dram_clk_n connected to mcbx_dram_clk_n:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+    CLK_INPORT = 
+    CLK_FACTOR = 
+lpddr.mcbx_dram_clk connected to mcbx_dram_clk:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+    CLK_INPORT = 
+    CLK_FACTOR = 
+lpddr.sysclk_2x connected to clk_400_0000MHzPLL0_nobuf:
+    CLK_FREQ_HZ = 400000000
+lpddr.sysclk_2x_180 connected to clk_400_0000MHz180PLL0_nobuf:
+    CLK_FREQ_HZ = 400000000
+ft2232_uart.S_AXI_ACLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+axi_spi_0.S_AXI_ACLK connected to clk_100_0000MHzPLL0:
+    CLK_FREQ_HZ = 100000000
+IP connected to bus: axi4_0
+-master M_AXI_DC axi4_0 microblaze_0
+-master M_AXI_IC axi4_0 microblaze_0
+-slave S0_AXI axi4_0 lpddr
+IP connected to bus: axi4lite_0
+-master M_AXI_DP axi4lite_0 microblaze_0
+-slave S_AXI axi4lite_0 microblaze_0_intc
+-slave S_AXI axi4lite_0 axi_timer_0
+-slave S_AXI axi4lite_0 ft2232_uart
+-slave S_AXI axi4lite_0 axi_spi_0
+Clock Frequency: 100000000
+{spi0 aliasref axi_spi_0 0} {serial0 aliasref ft2232_uart 0}
+WARNING:EDK - !: More than one memory found.  Note that most platforms don't
+   support non-contiguous memory maps!
+
+WARNING:EDK - !: Try to find out the main memory controller!
+
+Running post_generate.
+Running execs_generate.

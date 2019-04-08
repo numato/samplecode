@@ -1,0 +1,1 @@
+This folder contains SDK project for bootloader.
