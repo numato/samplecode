@@ -1,0 +1,3 @@
+PROCESSOR=microblaze_0
+REPOSITORIES=-lp E:/Test_and_Scratchpad/Galatea_45LXT/galatealinux/device_tree_old -lp E:/Test_and_Scratchpad/Galatea_45LXT/galatealinux/device-tree-xlnx
+HWSPEC=../xps_hw_platform/system.xml

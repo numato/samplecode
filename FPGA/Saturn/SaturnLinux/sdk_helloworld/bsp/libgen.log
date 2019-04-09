@@ -1,0 +1,24 @@
+Release 14.7 - libgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../xps_hw_platform/system.xml -lp
+E:/Test_and_Scratchpad/Galatea_45LXT/galatealinux/device_tree_old -lp
+E:/Test_and_Scratchpad/Galatea_45LXT/galatealinux/device-tree-xlnx -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-multiply-high
+-mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v8.50.c  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-multiply-high
+-mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v8.50.c  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+Running execs_generate.
