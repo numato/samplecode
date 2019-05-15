@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<part_info part_name="xc7a100tfgg484-1">
+<part_info part_name="xc7a200tfbg484-2">
 <pins>
   <pin index="0" name ="clk" iostandard="LVCMOS33" loc="W19"/>
   <pin index="1" name ="reset" iostandard="LVCMOS33" loc="P17"/>
