@@ -106,6 +106,10 @@ begin
                      Red <= rgb (7 downto 5);
                      Green <= rgb (4 downto 2);
                      Blue <= rgb (1 downto 0);  
+                   else
+                     Red <= b"000";
+                     Green <= b"000";
+                     Blue <= b"00";
                    end if;
                  end if;
                divide_by_2 := not divide_by_2;
