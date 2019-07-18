@@ -40,7 +40,7 @@ import com.numato.usbgenie.utils.ui.AnimatedTabHostListener;
 
 import java.io.IOException;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -68,10 +68,10 @@ public class DeviceViewActivity extends BaseActivity {
     // FIELDS
     // ------------------------------------------------------------------------
 
-    @Bind(R.id.tabHostDeviceAView)
+    @BindView(R.id.tabHostDeviceAView)
     public TabHost tabHost;
 
-    @Bind(android.R.id.tabs)
+    @BindView(android.R.id.tabs)
     public TabWidget tabWidget;
 
     // Device manager

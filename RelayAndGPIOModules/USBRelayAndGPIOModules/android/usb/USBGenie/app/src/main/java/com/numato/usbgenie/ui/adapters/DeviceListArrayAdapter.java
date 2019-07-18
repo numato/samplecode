@@ -30,7 +30,7 @@ import com.norbsoft.typefacehelper.TypefaceHelper;
 import com.numato.usbgenie.R;
 import com.numato.usbgenie.model.devices.NumatoUSBDevice;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class DeviceListArrayAdapter extends ArrayAdapter<NumatoUSBDevice> {
@@ -41,9 +41,9 @@ public class DeviceListArrayAdapter extends ArrayAdapter<NumatoUSBDevice> {
     // ------------------------------------------------------------------------
 
     public class ViewHolder {
-        @Bind(R.id.deviceRowImage)
+        @BindView(R.id.deviceRowImage)
         public ImageView image;
-        @Bind(R.id.deviceRowText)
+        @BindView(R.id.deviceRowText)
         public TextView text;
 
         public ViewHolder(View view) {

@@ -51,7 +51,7 @@ import com.numato.usbgenie.model.devices.NumatoDevicesHelper;
 import com.numato.usbgenie.model.devices.NumatoUSBDevice;
 import com.numato.usbgenie.ui.adapters.DeviceListArrayAdapter;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
@@ -75,13 +75,13 @@ public class MainActivity extends BaseActivity implements SwipeRefreshLayout.OnR
     // FIELDS
     // ------------------------------------------------------------------------
 
-    @Bind(R.id.devices_swipe_to_refresh)
+    @BindView(R.id.devices_swipe_to_refresh)
     public SwipeRefreshLayout mDevicesSwipeRefreshLayout;
 
-    @Bind(R.id.deviceListView)
+    @BindView(R.id.deviceListView)
     public ListView mDeviceListView;
 
-    @Bind(R.id.swipe_to_refresh_container)
+    @BindView(R.id.swipe_to_refresh_container)
     public LinearLayout mSwipeTorefreshContainer;
 
     private DevicesManager mDevicesManager;

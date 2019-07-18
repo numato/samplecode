@@ -16,11 +16,7 @@ limitations under the License.
 
 package com.numato.usbgenie.ui.adapters;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +33,10 @@ import com.norbsoft.typefacehelper.TypefaceHelper;
 import com.numato.usbgenie.R;
 import com.numato.usbgenie.model.devices.Gpio;
 
-import butterknife.Bind;
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -52,13 +51,13 @@ public class GpioArrayAdapter extends ArrayAdapter<Gpio> {
 
     public class ViewHolder {
 
-        @Bind(R.id.gpioRowImage)
+        @BindView(R.id.gpioRowImage)
         public ImageView rowImage;
-        @Bind(R.id.gpioRowText)
+        @BindView(R.id.gpioRowText)
         public TextView rowText;
-        @Bind(R.id.gpioRowSwitch)
+        @BindView(R.id.gpioRowSwitch)
         public Switch rowSwitch;
-        @Bind(R.id.gpioRowCheckBox)
+        @BindView(R.id.gpioRowCheckBox)
         public CheckBox rowCheckBox;
 
         public ViewHolder(View view) {

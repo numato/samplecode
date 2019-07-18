@@ -35,7 +35,7 @@ import com.numato.usbgenie.business.AppConstant;
 import com.numato.usbgenie.business.GeneralSettings;
 import com.numato.usbgenie.model.devices.Analog;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -50,15 +50,15 @@ public class AnalogArrayAdapter extends ArrayAdapter<Analog> {
 
     public class ViewHolder {
 
-        @Bind(R.id.analogRowImage)
+        @BindView(R.id.analogRowImage)
         public ImageView rowImage;
-        @Bind(R.id.analogRowText)
+        @BindView(R.id.analogRowText)
         public TextView rowText;
-        @Bind(R.id.analogrowResultText)
+        @BindView(R.id.analogrowResultText)
         public TextView analogrowResultText;
-        @Bind(R.id.analogrowResultPercentage)
+        @BindView(R.id.analogrowResultPercentage)
         public TextView analogrowResultPercentage;
-        @Bind(R.id.analogRowProgressBar)
+        @BindView(R.id.analogRowProgressBar)
         public ProgressBar rowProgressBar;
 
         public ViewHolder(View view) {
