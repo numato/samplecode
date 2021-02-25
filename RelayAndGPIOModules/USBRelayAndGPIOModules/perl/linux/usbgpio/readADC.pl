@@ -1,16 +1,5 @@
 #!/usr/bin/perl -w
 use strict;
-# Numato Lab - http://numato.com
-# This Perl sample script opens the port and sends two commands to the device. These commands 
-# will turn on GPIO0, wait for 2 seconds and then turn off.
-# Please follow the steps below to test the script.
-#
-# 1. Install Perl and then install Device::SerialPort perl modules from the following link
-#    Device::SerialPort (For Linux) - http://search.cpan.org/dist/Device-SerialPort/SerialPort.pm
-# 2. Attach the Relay Module to the PC and note the port identifier corresponding to the device
-# 3. Update the line below that starts with "$portName =" with the port number for your device
-# 4. Comment/uncomment lines below as necessary (see associated comments)
-# 5. Run the script by entering the command "perl usbgpio.pl" at command line
 
 use Device::SerialPort;
 use Time::HiRes;
@@ -53,16 +42,16 @@ sub readCmd($) { # Command that expects a response
 }
 
 ###########################################################################################
-# Get version and id
-###########################################################################################	
-
-print "ver: " . &readCmd("ver") . "\n";
-print "id: " . &readCmd("id get") . "\n";
-
-###########################################################################################
-# GPIO commands set/clear/read
+# Read all 7 ADC channels
 ###########################################################################################
 
-&sendCmd("gpio set 0");
-&sendCmd("gpio clear 0");
-print "Value received " . &readCmd("gpio read 0") . "\n";
+&sendCmd("gpio iodir ffff");
+my @avg = (0,0,0,0,0,0,0);
+my $numSamp = 105;
+for(my $i = 0; $i < $numSamp; $i++) {
+  for(my $j = 0; $j < 7; $j++) { $avg[$j] += &readCmd("adc read $j"); }
+}
+print "Average:";
+for(my $j = 0; $j < 7; $j++) { print " " . ($avg[$j] / $numSamp); }
+print "\n";
+
