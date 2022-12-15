@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component> 
+<vendor></vendor>
+<library></library>
+<name>PF_CCC_C0_PF_CCC_C0_0_PF_CCC</name>
+<version></version>
+<hwModel>
+<views>
+<view>
+<name>HDL</name>
+<fileSetRef>HDL_FILESET</fileSetRef>
+</view>
+</views>
+</hwModel>
+<fileSets>
+<fileSet fileSetId="HDL_FILESET">
+<file>
+<name>PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v</name>
+<userFileType>verilogSource</userFileType>
+</file>
+</fileSet>
+</fileSets>
+</component>

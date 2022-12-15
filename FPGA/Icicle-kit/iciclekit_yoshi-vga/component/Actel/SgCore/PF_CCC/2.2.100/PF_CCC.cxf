@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><Component xmlns="http://actel.com/sweng/afi"><name>PF_CCC</name><vendor>Actel</vendor><library>SgCore</library><version>2.2.100</version><fileSets/><hwModel><views><view><name>HDL</name></view></views></hwModel></Component>

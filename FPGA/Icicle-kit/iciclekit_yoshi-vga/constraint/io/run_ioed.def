@@ -1,0 +1,40 @@
+data HELP_TYPE_DES 2
+data DESIGN display_top
+data HPATH 'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/designer/display_top'
+data CPATH 'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/constraint/io'
+data CDIR 'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/constraint'
+data NLV_HIDE_OPTION_DLG 1
+data REGION_DEFCOLOR_EMPTY 2143322112
+data REGION_DEFCOLOR_INCLUSIVE 2147442270
+data REGION_DEFCOLOR_EXCLUSIVE 2143338688
+data REGION_DEFCOLOR_CLOCK 16735838
+data ETYPE IO
+data FAM PolarFireSoC
+data DIE PA5SOC250T_ES
+data PACKAGE fcvg484
+data SPEED -1
+data HYDRA_EXPORT_DATA 1
+data HYDRA_PRESERVE_DATA_FILES 1
+data VCCI_1.2_VOLTR EXT
+data VCCI_1.5_VOLTR EXT
+data VCCI_1.8_VOLTR EXT
+data VCCI_2.5_VOLTR EXT
+data VCCI_3.3_VOLTR EXT
+data FLOW_TYPE NEW
+data PLANNER_IOMODE 1
+data AFL 'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/designer/display_top/COMPILE/display_top.afl'
+data ADL 'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/designer/display_top/display_top.adl'
+data LOC 'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/designer/display_top/COMPILE/display_top.loc'
+data SEG 'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/designer/display_top/COMPILE/display_top.seg'
+
+data IO_PDC_0 'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/constraint/io/yoshi-vga.pdc'
+data TARGET_IOPDC  'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/constraint/io/yoshi-vga.pdc'
+data TARGET_FPPDC  'D:/Gayathri/polarfire_soc/iciclekit_yoshi-vga_wrking/iciclekit_yoshi-vga/constraint/fp/user.pdc'
+data TARGET_DEVICES_FOR_MIGRATION 'PA5SOC250T_ES '
+data RESTRICTPROBEPINS 1
+data RESTRICTSPIPINS 0
+data GDEV_SKIP_UNASSIGN_CMP_CHECK    1 
+data HIDE_MIGRATION_PINS_MENU        1 
+data PLANNER_IS_READONLY   0 
+data IO_DEFT_STD LVCMOS18
+

@@ -1,0 +1,157 @@
+# Microsemi I/O Physical Design Constraints file
+
+# User I/O Constraints file 
+
+# Version: 2022.1 2022.1.0.10
+
+# Family: PolarFireSoC , Die: MPFS250T_ES , Package: FCVG484
+
+# Date generated: Mon Nov 28 10:43:47 2022 
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+set_io -port_name KEY_LEFT  \
+    -pin_name G17           \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION INPUT
+
+
+set_io -port_name KEY_RIGHT   \
+    -pin_name F11             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -USE_LANE_CALIB_CODE Yes  \
+    -DIRECTION INPUT
+
+
+set_io -port_name KEY_START  \
+    -pin_name H17            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INPUT
+
+
+set_io -port_name KEY_UP  \
+    -pin_name G15         \
+    -fixed true           \
+    -io_std LVCMOS33      \
+    -DIRECTION INPUT
+
+
+set_io -port_name {blue[0]}  \
+    -pin_name D9             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {blue[1]}  \
+    -pin_name D8             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name clk_in  \
+    -pin_name W12         \
+    -fixed true           \
+    -DIRECTION INPUT
+
+
+set_io -port_name {green[0]}  \
+    -pin_name C9              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {green[1]}  \
+    -pin_name D6              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {green[2]}  \
+    -pin_name B5              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name hard_reset_n  \
+    -pin_name D13               \
+    -fixed true                 \
+    -io_std LVCMOS33            \
+    -DIRECTION INPUT
+
+
+set_io -port_name hsync  \
+    -pin_name E14        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {red[0]}  \
+    -pin_name C6            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {red[1]}  \
+    -pin_name B4            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {red[2]}  \
+    -pin_name C5            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name vsync  \
+    -pin_name G12        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
+
+#
+#Ports using Dedicated Pins
+
+#
+
