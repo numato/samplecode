@@ -1,0 +1,467 @@
+KEY LIBERO "2022.1"
+KEY CAPTURE "2022.1.0.10"
+KEY DEFAULT_IMPORT_LOC "C:\Actelprj\A3P_Verilog_labs\lab2"
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VERILOG"
+KEY VERILOGMODE "SYSTEMVERILOG"
+KEY VHDLMODE "VHDL2008"
+KEY SYSTEMVERILOGMFCU "FALSE"
+KEY UseConstraintFlowTechnology "TRUE"
+KEY VendorTechnology_Family "PolarFireSoC"
+KEY VendorTechnology_Die "PA5SOC250T_ES"
+KEY VendorTechnology_Package "fcvg484"
+KEY VendorTechnology_Speed "-1"
+KEY VendorTechnology_DieVoltage "1.0"
+KEY VendorTechnology_PART_RANGE "EXT"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
+KEY VendorTechnology_IO_DEFT_STD "LVCMOS18"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE "0"
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "PA5SOC250T_ES"
+KEY VendorTechnology_TEMPR "EXT"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.2_VOLTR "EXT"
+KEY VendorTechnology_VCCI_1.5_VOLTR "EXT"
+KEY VendorTechnology_VCCI_1.8_VOLTR "EXT"
+KEY VendorTechnology_VCCI_2.5_VOLTR "EXT"
+KEY VendorTechnology_VCCI_3.3_VOLTR "EXT"
+KEY VendorTechnology_VOLTR "EXT"
+KEY ProjectLocation ""
+KEY ProjectDescription ""
+KEY UseRootLocationForLinkedFiles "FALSE"
+KEY RootLocationENVForLinkedFiles ""
+KEY RootLocationForLinkedFiles ""
+KEY GlobalIncludePaths ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY MemoryMapDrcSeverity "FALSE"
+KEY LossOfDataDRCSeverity "TRUE"
+KEY IdWidthMismatchDRCSeverity "TRUE"
+KEY SimulationType "VERILOG"
+KEY Vendor "Actel"
+KEY ActiveRoot "display_top::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+VALUE="Impl2",NUM=2
+VALUE="Impl3",NUM=3
+VALUE="Impl4",NUM=4
+VALUE="Impl5",NUM=5
+CURREV=5
+ENDLIST
+LIST GlobalIncludeFileList
+VALUE "hdl/display_top.v"
+ENDLIST
+LIST FileManager
+VALUE "<project>\component\Actel\SgCore\PF_CCC\2.2.100\PF_CCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1669371644"
+SIZE="279"
+PARENT="<project>\component\work\PF_CCC_C0\PF_CCC_C0.cxf"
+ENDFILE
+VALUE "<project>\component\work\PF_CCC_C0\PF_CCC_C0.cxf,actgen_cxf"
+STATE="utd"
+TIME="1671004252"
+SIZE="18282"
+ENDFILE
+VALUE "<project>\component\work\PF_CCC_C0\PF_CCC_C0.v,hdl"
+STATE="utd"
+TIME="1671004252"
+SIZE="10397"
+PARENT="<project>\component\work\PF_CCC_C0\PF_CCC_C0.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1669371644"
+SIZE="479"
+PARENT="<project>\component\work\PF_CCC_C0\PF_CCC_C0.cxf"
+ENDFILE
+VALUE "<project>\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v,hdl"
+STATE="utd"
+TIME="1671004252"
+SIZE="3990"
+PARENT="<project>\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\constraint\io\yoshi-vga.pdc,io_pdc"
+STATE="utd"
+TIME="1671004252"
+SIZE="3156"
+IS_TARGET="TRUE"
+ENDFILE
+VALUE "<project>\hdl\background_ghost_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="3670948"
+ENDFILE
+VALUE "<project>\hdl\binary2bcd.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="3766"
+ENDFILE
+VALUE "<project>\hdl\blocks_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="65850"
+ENDFILE
+VALUE "<project>\hdl\display_top.v,hdl"
+STATE="utd"
+TIME="1671004252"
+SIZE="9962"
+GLOBALINCLUDEFILE="TRUE"
+ENDFILE
+VALUE "<project>\hdl\eggs.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="9569"
+ENDFILE
+VALUE "<project>\hdl\eggs_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="65848"
+ENDFILE
+VALUE "<project>\hdl\enemy_collision.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="2550"
+ENDFILE
+VALUE "<project>\hdl\gameover_display.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="874"
+ENDFILE
+VALUE "<project>\hdl\gameover_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="56132"
+ENDFILE
+VALUE "<project>\hdl\game_logo_display.v,hdl"
+STATE="utd"
+TIME="1671004252"
+SIZE="879"
+ENDFILE
+VALUE "<project>\hdl\game_logo_rom.v,hdl"
+STATE="utd"
+TIME="1671004252"
+SIZE="708883"
+ENDFILE
+VALUE "<project>\hdl\game_state_machine.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="4494"
+ENDFILE
+VALUE "<project>\hdl\ghost_bottom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="6433"
+ENDFILE
+VALUE "<project>\hdl\ghost_crazy.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="6088"
+ENDFILE
+VALUE "<project>\hdl\ghost_crazy_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="25055"
+ENDFILE
+VALUE "<project>\hdl\ghost_normal_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="25056"
+ENDFILE
+VALUE "<project>\hdl\ghost_top.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="6431"
+ENDFILE
+VALUE "<project>\hdl\grounded.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="3424"
+ENDFILE
+VALUE "<project>\hdl\hearts_display.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="2432"
+ENDFILE
+VALUE "<project>\hdl\hearts_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="25050"
+ENDFILE
+VALUE "<project>\hdl\numbers_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="103112"
+ENDFILE
+VALUE "<project>\hdl\platforms.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="3959"
+ENDFILE
+VALUE "<project>\hdl\score_dispplay.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="4261"
+ENDFILE
+VALUE "<project>\hdl\vga_sync.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="3184"
+ENDFILE
+VALUE "<project>\hdl\walls_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="25049"
+ENDFILE
+VALUE "<project>\hdl\yoshi_ghost_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="65855"
+ENDFILE
+VALUE "<project>\hdl\yoshi_rom.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="65849"
+ENDFILE
+VALUE "<project>\hdl\yoshi_sprite.v,hdl"
+STATE="utd"
+TIME="1669371644"
+SIZE="29898"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "display_top::work"
+FILE "<project>\hdl\display_top.v,hdl"
+LIST PNRConstraints
+VALUE "<project>\constraint\io\yoshi-vga.pdc,io_pdc"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+SdfCorner=slow_lv_ht
+PliPath=C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+UseCustomPliPath=false
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+OnDemandBuildDH=TRUE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=TRUE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+AbortFlowOn3.3V_IO_ON=FALSE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Synplify Pro ME"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="ModelSim ME Pro"
+FUNCTION="Simulation"
+TOOL="ModelSim Pro Edition"
+LOCATION="C:\Microsemi\Libero_SoC_v2022.1\ModelSimPro\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="C:\Microsemi\Libero_SoC_v2022.1\Identify\bin\identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
+ENDLIST
+LIST ModuleSubBlockList
+LIST "background_ghost_rom::work","hdl\background_ghost_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "binary2bcd::work","hdl\binary2bcd.v","FALSE","FALSE"
+ENDLIST
+LIST "blocks_rom::work","hdl\blocks_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "display_top::work","hdl\display_top.v","FALSE","FALSE"
+SUBBLOCK "PF_CCC_C0::work","component\work\PF_CCC_C0\PF_CCC_C0.v","TRUE","FALSE"
+SUBBLOCK "background_ghost_rom::work","hdl\background_ghost_rom.v","FALSE","FALSE"
+SUBBLOCK "eggs::work","hdl\eggs.v","FALSE","FALSE"
+SUBBLOCK "enemy_collision::work","hdl\enemy_collision.v","FALSE","FALSE"
+SUBBLOCK "game_logo_display::work","hdl\game_logo_display.v","FALSE","FALSE"
+SUBBLOCK "game_state_machine::work","hdl\game_state_machine.v","FALSE","FALSE"
+SUBBLOCK "gameover_display::work","hdl\gameover_display.v","FALSE","FALSE"
+SUBBLOCK "ghost_bottom::work","hdl\ghost_bottom.v","FALSE","FALSE"
+SUBBLOCK "ghost_crazy::work","hdl\ghost_crazy.v","FALSE","FALSE"
+SUBBLOCK "ghost_top::work","hdl\ghost_top.v","FALSE","FALSE"
+SUBBLOCK "grounded::work","hdl\grounded.v","FALSE","FALSE"
+SUBBLOCK "hearts_display::work","hdl\hearts_display.v","FALSE","FALSE"
+SUBBLOCK "platforms::work","hdl\platforms.v","FALSE","FALSE"
+SUBBLOCK "score_display::work","hdl\score_dispplay.v","FALSE","FALSE"
+SUBBLOCK "vga_sync::work","hdl\vga_sync.v","FALSE","FALSE"
+SUBBLOCK "yoshi_sprite::work","hdl\yoshi_sprite.v","FALSE","FALSE"
+ENDLIST
+LIST "eggs::work","hdl\eggs.v","FALSE","FALSE"
+SUBBLOCK "eggs_rom::work","hdl\eggs_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "eggs_rom::work","hdl\eggs_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "enemy_collision::work","hdl\enemy_collision.v","FALSE","FALSE"
+ENDLIST
+LIST "game_logo_display::work","hdl\game_logo_display.v","FALSE","FALSE"
+SUBBLOCK "game_logo_rom::work","hdl\game_logo_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "game_logo_rom::work","hdl\game_logo_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "game_state_machine::work","hdl\game_state_machine.v","FALSE","FALSE"
+ENDLIST
+LIST "gameover_display::work","hdl\gameover_display.v","FALSE","FALSE"
+SUBBLOCK "gameover_rom::work","hdl\gameover_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "gameover_rom::work","hdl\gameover_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "ghost_bottom::work","hdl\ghost_bottom.v","FALSE","FALSE"
+SUBBLOCK "ghost_normal_rom::work","hdl\ghost_normal_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "ghost_crazy::work","hdl\ghost_crazy.v","FALSE","FALSE"
+SUBBLOCK "ghost_crazy_rom::work","hdl\ghost_crazy_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "ghost_crazy_rom::work","hdl\ghost_crazy_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "ghost_normal_rom::work","hdl\ghost_normal_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "ghost_top::work","hdl\ghost_top.v","FALSE","FALSE"
+SUBBLOCK "ghost_normal_rom::work","hdl\ghost_normal_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "grounded::work","hdl\grounded.v","FALSE","FALSE"
+ENDLIST
+LIST "hearts_display::work","hdl\hearts_display.v","FALSE","FALSE"
+SUBBLOCK "hearts_rom::work","hdl\hearts_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "hearts_rom::work","hdl\hearts_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "numbers_rom::work","hdl\numbers_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "PF_CCC_C0::work","component\work\PF_CCC_C0\PF_CCC_C0.v","TRUE","FALSE"
+SUBBLOCK "PF_CCC_C0_PF_CCC_C0_0_PF_CCC::work","component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v","FALSE","FALSE"
+ENDLIST
+LIST "PF_CCC_C0_PF_CCC_C0_0_PF_CCC::work","component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v","FALSE","FALSE"
+ENDLIST
+LIST "platforms::work","hdl\platforms.v","FALSE","FALSE"
+SUBBLOCK "blocks_rom::work","hdl\blocks_rom.v","FALSE","FALSE"
+SUBBLOCK "walls_rom::work","hdl\walls_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "score_display::work","hdl\score_dispplay.v","FALSE","FALSE"
+SUBBLOCK "binary2bcd::work","hdl\binary2bcd.v","FALSE","FALSE"
+SUBBLOCK "numbers_rom::work","hdl\numbers_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "vga_sync::work","hdl\vga_sync.v","FALSE","FALSE"
+ENDLIST
+LIST "walls_rom::work","hdl\walls_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "yoshi_ghost_rom::work","hdl\yoshi_ghost_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "yoshi_rom::work","hdl\yoshi_rom.v","FALSE","FALSE"
+ENDLIST
+LIST "yoshi_sprite::work","hdl\yoshi_sprite.v","FALSE","FALSE"
+SUBBLOCK "yoshi_ghost_rom::work","hdl\yoshi_ghost_rom.v","FALSE","FALSE"
+SUBBLOCK "yoshi_rom::work","hdl\yoshi_rom.v","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+VALUE "constraint\io\yoshi-vga.pdc"
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST
